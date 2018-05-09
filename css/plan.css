@@ -16,48 +16,48 @@
     fill: #999;
 }
 
-.cls-1, .cls-2, .cls-23, .cls-3, .cls-4, .cls-5, .cls-7, .cls-8, .cls-9 {
+.cls-1, .cls-10, .cls-11, .cls-23, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
     stroke: #000;
 }
 
-.cls-1, .cls-13, .cls-2, .cls-23, .cls-3, .cls-4, .cls-5, .cls-7, .cls-8, .cls-9 {
+.cls-1, .cls-10, .cls-11, .cls-13, .cls-23, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
     stroke-miterlimit: 10;
 }
 
-.cls-2, .cls-4, .cls-6 {
+.cls-2 {
+    fill: #ccc;
+}
+
+.cls-10, .cls-3, .cls-9 {
     fill: #630;
 }
 
-.cls-13, .cls-2, .cls-3, .cls-8 {
-    stroke-width: 0.5px;
-}
-
-.cls-3 {
-    fill: #ff0;
-}
-
-.cls-4, .cls-5, .cls-7, .cls-9 {
-    stroke-width: 0.25px;
-}
-
-.cls-5 {
-    fill: #300;
-}
-
-.cls-15, .cls-23, .cls-7, .cls-8 {
-    fill: #fff;
-}
-
-.cls-9 {
-    fill: #c33;
-}
-
-.cls-10 {
+.cls-4 {
     fill: #ff9;
 }
 
+.cls-15, .cls-23, .cls-5, .cls-6 {
+    fill: #fff;
+}
+
+.cls-5, .cls-7, .cls-8, .cls-9 {
+    stroke-width: 0.25px;
+}
+
+.cls-10, .cls-11, .cls-13, .cls-6 {
+    stroke-width: 0.5px;
+}
+
+.cls-7 {
+    fill: #c33;
+}
+
+.cls-8 {
+    fill: #300;
+}
+
 .cls-11 {
-    fill: #ccc;
+    fill: #ff0;
 }
 
 .cls-12 {
@@ -86,7 +86,6 @@
 
 .cls-20 {
     fill: #848e9a;
-    transform-origin: center center;
 }
 
 .cls-21 {
