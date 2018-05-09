@@ -1,0 +1,98 @@
+#plan{
+    width: 75%;
+    height: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frigoAnime{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cls-1, .cls-17 {
+    fill: #999;
+}
+
+.cls-1, .cls-2, .cls-23, .cls-3, .cls-4, .cls-5, .cls-7, .cls-8, .cls-9 {
+    stroke: #000;
+}
+
+.cls-1, .cls-13, .cls-2, .cls-23, .cls-3, .cls-4, .cls-5, .cls-7, .cls-8, .cls-9 {
+    stroke-miterlimit: 10;
+}
+
+.cls-2, .cls-4, .cls-6 {
+    fill: #630;
+}
+
+.cls-13, .cls-2, .cls-3, .cls-8 {
+    stroke-width: 0.5px;
+}
+
+.cls-3 {
+    fill: #ff0;
+}
+
+.cls-4, .cls-5, .cls-7, .cls-9 {
+    stroke-width: 0.25px;
+}
+
+.cls-5 {
+    fill: #300;
+}
+
+.cls-15, .cls-23, .cls-7, .cls-8 {
+    fill: #fff;
+}
+
+.cls-9 {
+    fill: #c33;
+}
+
+.cls-10 {
+    fill: #ff9;
+}
+
+.cls-11 {
+    fill: #ccc;
+}
+
+.cls-12 {
+    fill: #333;
+}
+
+.cls-13 {
+    stroke: #666;
+}
+
+.cls-14 {
+    fill: #ffc;
+}
+
+.cls-16 {
+    fill: #666;
+}
+
+.cls-18 {
+    fill: #5f6573;
+}
+
+.cls-19 {
+    fill: #535667;
+}
+
+.cls-20 {
+    fill: #848e9a;
+    transform-origin: center center;
+}
+
+.cls-21 {
+    fill: #59606c;
+}
+
+.cls-22 {
+    fill: #5e6472;
+}
