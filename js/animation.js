@@ -4,12 +4,8 @@ let motionPath = anime({
     rotate: {
         value:[-45,-135]
     },
-    translateX:{
-        value:[0,-215],
-    },
-    translateY:[0,-245],
     easing: 'linear',
-    duration: 2000,
+    duration: 750,
     autoplay: false
 });
 
