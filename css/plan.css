@@ -6,12 +6,6 @@
     margin-right: auto;
 }
 
-.frigoAnime{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .cls-1, .cls-17 {
     fill: #999;
 }
@@ -22,6 +16,31 @@
 
 .cls-1, .cls-10, .cls-11, .cls-13, .cls-23, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
     stroke-miterlimit: 10;
+}
+
+.porteSalleConf{
+    transform-origin: 7px 116px;
+}
+
+.porteExterieur{
+    transform-origin: 425px 1px;
+}
+
+.porteSalleDeBain{
+    transform-origin: 406px 90px;
+}
+
+.porte{
+    stroke: #000;
+    stroke-miterlimit: 10;
+    fill: #630;
+
+}
+
+.poigne{
+    stroke: #000;
+    stroke-miterlimit: 10;
+    fill: #ff0;
 }
 
 .cls-2 {
@@ -86,6 +105,7 @@
 
 .cls-20
 {
+    fill: #4e555b;
     transform-origin: 150px 175px;
 }
 
