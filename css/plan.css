@@ -84,14 +84,19 @@
     fill: #535667;
 }
 
-.cls-20 {
+.cls-20
+{
+    transform-origin: 150px 175px;
+}
+
+#porte3-2 {
     fill: #848e9a;
 }
 
-.cls-21 {
+#porte2-2 {
     fill: #59606c;
 }
 
-.cls-22 {
+#porte1-2 {
     fill: #5e6472;
 }
