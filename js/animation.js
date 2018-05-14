@@ -1,4 +1,4 @@
-
+/*
 let frigoOverture = anime({
     targets: '.cls-20',
     rotate: {
@@ -18,7 +18,7 @@ let frigoFermeture = anime({
     easing: 'linear',
     duration: 750,
     autoplay: false
-});
+});*/
 
 let porteSalleDeConfO = anime({
     targets: '.porteSalleConf',
@@ -107,10 +107,10 @@ let eauRobinetF = anime({
     autoplay: false
 
 });
-
+/*
 document.querySelector('.frigoAnimeO').onclick = frigoOverture.restart;
 
-document.querySelector('.frigoAnimeF').onclick = frigoFermeture.restart;
+document.querySelector('.frigoAnimeF').onclick = frigoFermeture.restart;*/
 
 document.querySelector('.porteConfO').onclick = porteSalleDeConfO.restart;
 

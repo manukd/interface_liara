@@ -1,4 +1,4 @@
-#plan{
+#plan {
     width: 75%;
     height: 75%;
     display: block;
@@ -6,72 +6,81 @@
     margin-right: auto;
 }
 
-.cls-1, .cls-17 {
-    fill: #999;
-}
-
-.cls-1, .cls-10, .cls-11, .cls-23, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
-    stroke: #000;
-}
-
-.cls-1, .cls-10, .cls-11, .cls-13, .cls-23, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
-    stroke-miterlimit: 10;
-}
-
-.porteSalleConf{
+.porteSalleConf {
     transform-origin: 0px 116px;
 }
 
-.porteExterieur{
+.porteExterieur {
     transform-origin: 425px 1px;
 }
 
-.porteSalleDeBain{
+.porteSalleDeBain {
     transform-origin: 406px 99px;
 }
 
-.porte{
+.porte {
     stroke: #000;
     stroke-miterlimit: 10;
     fill: #630;
 
 }
 
-.poigne{
+.poigne {
     stroke: #000;
     stroke-miterlimit: 10;
     fill: #ff0;
 }
 
-.cls-2 {
-    fill: #ccc;
+.portefrigo {
+    transform-origin: 150px 175px;
 }
 
-.cls-10, .cls-3, .cls-9 {
-    fill: #630;
-}
 
-.cls-4 {
-    fill: #ff9;
-}
-
-.cls-15, .cls-23, .cls-5, .cls-6 {
+.cls-1, .cls-22, .cls-31, .cls-35, .cls-4 {
     fill: #fff;
 }
 
-.cls-5, .cls-7, .cls-8, .cls-9 {
-    stroke-width: 0.25px;
+.cls-1, .cls-10, .cls-11, .cls-29, .cls-3, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-37, .cls-38, .cls-4, .cls-9 {
+    stroke: #000;
 }
 
-.cls-10, .cls-11, .cls-13, .cls-6 {
+.cls-1, .cls-10, .cls-11, .cls-16, .cls-18, .cls-20, .cls-29, .cls-3, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-4, .cls-9 {
+    stroke-miterlimit: 10;
+}
+
+.cls-2, .cls-33, .cls-34 {
+    fill: none;
+}
+
+.cls-14, .cls-20, .cls-3 {
+    fill: #630;
+}
+
+.cls-10, .cls-11, .cls-16, .cls-18, .cls-3, .cls-30, .cls-34, .cls-4, .cls-9 {
     stroke-width: 0.5px;
 }
 
+.cls-5 {
+    fill: #f0b17e;
+}
+
+.cls-6 {
+    fill: #fec189;
+}
+
 .cls-7 {
-    fill: #c33;
+    fill: #2596f1;
 }
 
 .cls-8 {
+    fill: #3b2621;
+}
+
+.cls-9 {
+    fill: #c1272d;
+}
+
+.cls-10 {
     fill: #300;
 }
 
@@ -79,44 +88,71 @@
     fill: #ff0;
 }
 
-.cls-12 {
-    fill: #333;
+.cls-12, .cls-29, .cls-32, .cls-37 {
+    fill: #999;
 }
 
 .cls-13 {
-    stroke: #666;
+    fill: #fc3;
 }
 
-.cls-14 {
-    fill: #ffc;
+.cls-15 {
+    fill: #333;
 }
 
 .cls-16 {
-    fill: #666;
+    stroke: #666;
+}
+
+.cls-17 {
+    fill: #ffc;
 }
 
 .cls-18 {
-    fill: #5f6573;
+    fill: #ff9;
+    stroke: #c90;
 }
 
 .cls-19 {
+    fill: #c90;
+}
+
+.cls-20, .cls-35, .cls-36 {
+    stroke: #333;
+}
+
+.cls-20, .cls-31, .cls-32, .cls-33, .cls-35, .cls-36 {
+    stroke-width: 0.25px;
+}
+
+.cls-21, .cls-30, .cls-36 {
+    fill: #ccc;
+}
+
+.cls-23 {
+    fill: #666;
+}
+
+.cls-24 {
+    fill: #5f6573;
+}
+
+.cls-25 {
     fill: #535667;
 }
 
-.cls-20
-{
-    fill: #4e555b;
-    transform-origin: 150px 175px;
-}
-
-#porte3-2 {
+.cls-26 {
     fill: #848e9a;
 }
 
-#porte2-2 {
+.cls-27 {
     fill: #59606c;
 }
 
-#porte1-2 {
+.cls-28 {
     fill: #5e6472;
+}
+
+.cls-29 {
+    stroke-width: 0.75px;
 }
