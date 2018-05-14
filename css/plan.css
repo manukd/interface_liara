@@ -31,8 +31,16 @@
     fill: #ff0;
 }
 
-.portefrigo {
+.porteFrigoAnime {
     transform-origin: 150px 175px;
+}
+
+.porteFrigo {
+    fill: #848e9a;
+}
+
+.poigneFrigo {
+    fill: #5e6472;
 }
 
 
