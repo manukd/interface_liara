@@ -86,6 +86,27 @@ let porteSalleDeBainF = anime({
 
 });
 
+let eauRobinetO = anime({
+    targets: '.robinetBaque',
+    fill: {
+        value: ['#fff','#005cbf']
+    },
+    easing: 'easeInBack',
+    duration: 1000,
+    autoplay: false
+
+});
+
+let eauRobinetF = anime({
+    targets: '.robinetBaque',
+    fill: {
+        value: ['#005cbf', '#fff']
+    },
+    easing: 'easeInQuart',
+    duration: 200,
+    autoplay: false
+
+});
 
 document.querySelector('.frigoAnimeO').onclick = frigoOverture.restart;
 
@@ -103,13 +124,11 @@ document.querySelector('.porteSalleDeBainOB').onclick = porteSalleDeBainO.restar
 
 document.querySelector('.porteSalleDeBainFB').onclick = porteSalleDeBainF.restart;
 
+document.querySelector('.eauRobinetOB').onclick = eauRobinetO.restart;
+
+document.querySelector('.eauRobinetFB').onclick = eauRobinetF.restart;
+
 const socket = new WebSocket('ws://172.24.24.3:6091');
-
-// socket.addEventListener('message', function (ev) {
-//     var d = JSON.parse(ev.data);
-//     console.log('X : ' + d.lst_RFIDPosition[1].Coord.X);
-// })
-
 
 let motionPath = anime({
     targets: '.cls-20',
