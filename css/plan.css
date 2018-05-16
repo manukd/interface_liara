@@ -6,6 +6,10 @@
     margin-right: auto;
 }
 
+.zone_cuisine{
+    background: url("../img/plancher.png");
+}
+
 .porteSalleConf {
     transform-origin: 0px 116px;
 }
@@ -99,7 +103,7 @@
 }
 
 
-.cls-1, .cls-22, .cls-31, .cls-35, .cls-4 {
+.cls-22, .cls-31, .cls-35 {
     fill: #fff;
 }
 
@@ -113,10 +117,6 @@
 
 .cls-2, .cls-33, .cls-34 {
     fill: none;
-}
-
-.cls-14, .cls-20, .cls-3 {
-    fill: #630;
 }
 
 .cls-10, .cls-11, .cls-16, .cls-18, .cls-3, .cls-30, .cls-34, .cls-4, .cls-9 {
@@ -139,14 +139,6 @@
     fill: #3b2621;
 }
 
-.cls-9 {
-    fill: #c1272d;
-}
-
-.cls-10 {
-    fill: #300;
-}
-
 .cls-11 {
     fill: #ff0;
 }
@@ -165,10 +157,6 @@
 
 .cls-16 {
     stroke: #666;
-}
-
-.cls-17 {
-    fill: #ffc;
 }
 
 .cls-18 {
