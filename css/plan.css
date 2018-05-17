@@ -6,10 +6,6 @@
     margin-right: auto;
 }
 
-.zone_cuisine{
-    background: url("../img/plancher.png");
-}
-
 .porteSalleConf {
     transform-origin: 0px 116px;
 }
@@ -115,7 +111,7 @@
     stroke-miterlimit: 10;
 }
 
-.cls-2, .cls-33, .cls-34 {
+.cls-33, .cls-34 {
     fill: none;
 }
 

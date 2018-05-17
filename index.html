@@ -7,26 +7,28 @@
     <title>Interface LIARA</title>
 </head>
 <body>
-<svg id="plan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559 267">
+<svg id="plan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559 267" overflow="visible">
 
     <!-- ------------------------------- IMAGE SOL ------------------------ -->
     <defs>
-        <pattern id="patternSol" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/plancher.png" ></image>
+        <pattern id="patternSol" x="0" y="0" height="30" width="30" patternUnits="userSpaceOnUse">
+            <image height="30" width="30" x="0" y="0" preserveAspectRatio="none" xlink:href="img/plancher4.jpg" ></image>
         </pattern>
+
     </defs>
 
+
     <defs>
-        <pattern id="patternSolSalleDeBain" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/plancher.png" ></image>
+        <pattern id="patternSolSalleDeBain" x="0" y="0" height="40" width="40" patternUnits="userSpaceOnUse">
+            <image height="40" width="40" x="0" y="0" preserveAspectRatio="none" xlink:href="img/sdb2.jpg" ></image>
         </pattern>
     </defs>
 
     <!-- -----------------------------  IMAGE MUR -------------------------- -->
 
     <defs>
-        <pattern id="patternMur" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/mur.jpg" ></image>
+        <pattern id="patternMur" x="0" y="0" height="50" width="50" patternUnits="userSpaceOnUse">
+            <image x="0" y="0" height="50" width="50" preserveAspectRatio="none" xlink:href="img/mur4.jpg" ></image>
         </pattern>
     </defs>
 
@@ -34,7 +36,7 @@
 
     <defs>
     <pattern id="patternFrigo" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-        <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/frigo1.jpg" ></image>
+        <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/frigo2.jpg" ></image>
     </pattern>
     </defs>
 
@@ -50,7 +52,7 @@
 
     <defs>
         <pattern id="patternEdredon" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/edredon.png" ></image>
+            <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/edredon.jpg" ></image>
         </pattern>
     </defs>
 
@@ -58,7 +60,7 @@
 
     <defs>
         <pattern id="patternPlanCuisine" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/marbre_plan_cuisine1.jpg"></image>
+            <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/marbre_plan_cuisine2.jpg"></image>
         </pattern>
     </defs>
 
@@ -80,7 +82,7 @@
 
     <defs>
         <pattern id="patternTable" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/table2.JPG"></image>
+            <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/table3.jpg"></image>
         </pattern>
     </defs>
 
@@ -94,15 +96,17 @@
 
     <title>plan_plat_bon_format</title>
 
-    <polygon id="Zone_morte" class="cls-1"
-             points="489.5 7.5 489.5 0.5 558.5 0.5 558.5 90.5 466.5 90.333 466.678 7.5 489.5 7.5"></polygon>
+    <polygon id="Zone_morte"
+             points="489.5 7.5 489.5 0.5 558.5 0.5 558.5 90.5 466.5 90.333 466.678 7.5 489.5 7.5"
+             fill="url(#patternSol)"></polygon>
     <polygon class="zone_chambre"
              points="263 125 263 8 458 8 458 90 388 90 388 238 270 238 270 125 263 125"
              fill="url(#patternSol)"></polygon>
     <polygon class="zone_cuisine"
-             points="145.5 174.5 140.5 169.5 65.5 244.5 5.5 184.5 5.5 69.456 5.5 44.5 42.5 7.5 261.5 7.5 261.5 202.5 225.5 238.5 154.5 238.5 118.5 202.5 118.153 201.847 145.5 174.5"
+             points="145.5 174.5 140.5 169.5 65.5 244.5 5.5 184.5 5.5 69.456 5.5 44.5 42.5 7.5 467 7.5 467 202.5 225.5 238.5 154.5 238.5 118.5 202.5 118.153 201.847 145.5 174.5"
              fill="url(#patternSol)"></polygon>
-    <polygon id="zone_sdb" class="cls-2" points="397 99 397 238 492 238 492 192 498 192 498 238 550 238 550 99 397 99"></polygon>
+    <polygon id="zone_sdb" class="cls-2" points="397 99 397 238 492 238 492 192 498 192 498 238 550 238 550 99 397 99"
+             fill="url(#patternSolSalleDeBain)"></polygon>
 
     <!-- ----------------------------------------------------------------------------------------------------------- -->
     <!-- -------------------------------------------- CHAMBRE ------------------------------------------------------ -->
