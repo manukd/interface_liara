@@ -2,7 +2,107 @@
 /* *************************************************** STYLE ******************************************************** */
 /* ****************************************************************************************************************** */
 
+.baignoireBordureExterieur {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.75px;
+    fill: #999;
+}
+.baignoireBordureInterieur {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+    fill: #ccc;
+}
+
+.baignoirefond {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+    fill: #fff;
+}
+
+.baignoireEvacuation {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+    fill: #999;
+}
+
+.reservoirEauWC {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+    fill: #ccc;
+}
+
+.lunnetteWC {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+    fill: #ccc;
+}
+
+.trouWC {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+    fill: #fff;
+}
+
+.evacuationWC {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+    fill: none;
+}
+
+.boutonEvacuationWC {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+    fill: none;
+}
+
+.visWC {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+    fill: none;
+}
+
+.couvercleReservoirEauWC {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+    fill: none;
+}
+
+.lavaboBordure {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+    fill: #ccc;
+}
+
+.lavaboBaque {
+    stroke: #333;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+    fill: #fff;
+}
+
+.lavaboRobinet {
+    stroke: #333;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+    fill: #ccc;
+}
 
 /* ****************************************************************************************************************** */
 /* *************************************************** ANIMATION **************************************************** */
 /* ****************************************************************************************************************** */
+
+
+/* n'existe pas en été 2018 */
+/* TODO */
