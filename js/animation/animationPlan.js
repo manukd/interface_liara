@@ -39,13 +39,22 @@ let porteSalleExterieurF = anime({
     easing: 'linear',
     duration: 750,
     autoplay: false
-
 });
 
 let porteSalleDeBainO = anime({
     targets: '.porteSalleDeBain',
     rotate: {
         value:[0,-90]
+    },
+    easing: 'linear',
+    duration: 750,
+    autoplay: false
+});
+
+let porteSalleDeBainF = anime({
+    targets: '.porteSalleDeBain',
+    rotate: {
+        value:[-90,0]
     },
     easing: 'linear',
     duration: 750,
