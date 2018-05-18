@@ -1,0 +1,20 @@
+.bordureBonhomme{
+    stroke: #000;
+    stroke-miterlimit: 10;
+}
+
+.corps{
+    fill: #f0b17e;
+}
+
+.chemise {
+    fill: #2596f1;
+}
+
+.cheveux {
+    fill: #3b2621;
+}
+
+.bonhommeAnime{
+    opacity:0;
+}
