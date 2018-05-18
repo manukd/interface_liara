@@ -270,5 +270,7 @@ body { background: #f2f2f2; }
     font-weight: 400;
     text-align: center;
 }
-.deneme span { font-size: 30px; font-weight: 200; }
-.deneme strong { position: absolute; right: 10px; top: 25px; font-size: 3
+.deneme .decimal { font-size: 30px; font-weight: 200; }
+.deneme .decimal:before { content: "."}
+
+.deneme strong { position: absolute; right: 10px; top: 25px; font-size: 34px;}
