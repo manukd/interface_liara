@@ -1,7 +1,31 @@
-const socket = new WebSocket('ws://172.24.24.3:6091');
+let path_socket = "oui";
+
+function setPath(path)
+{
+    path_socket = path;
+}
+// 'ws://172.24.24.3:6091'
+if(path_socket == '')
+{
+
+}
+try {
+    const socket = new WebSocket(path_socket);
+}
+catch (e) {
+    alertify.error("Votre adresse de websocket est invalide");
+}
+
+function closeSocket()
+{
+    socket.close();
+    path_socket="";
+}
 
 socket.onmessage = function (event)
 {
+
+    alertify.success("Connexion établie");
     let d = JSON.parse(event.data);
     for (let key in d){
         switch (d[key].ID)
