@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="css/appartement/salleDebain.css">
     <link rel="stylesheet" href="css/interface_de_controle/temperature.css">
     <link rel="stylesheet" href="css/interface.css">
+    <link rel="stylesheet" href="css/objetRFID/cuisineRFID.css">
     <title>Interface LIARA</title>
 </head>
 <body>
+
 <svg id="plan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559 267" overflow="visible">
 
     <title>SmartHome LIARA</title>
@@ -23,7 +25,7 @@
     <!-- ------------------------------- IMAGE SOL ------------------------ -->
     <defs>
         <pattern id="patternSol" x="0" y="0" height="30" width="30" patternUnits="userSpaceOnUse">
-            <image height="30" width="30" x="0" y="0" preserveAspectRatio="none" xlink:href="../ressource/img/plancher.jpg" ></image>
+           <image height="30" width="30" x="0" y="0" preserveAspectRatio="none" xlink:href="../ressource/img/plancher.jpg" ></image>
         </pattern>
 
     </defs>
@@ -104,7 +106,8 @@
     <polygon class="Zone_morte"
              points="489.5 7.5 489.5 0.5 558.5 0.5 558.5 90.5 466.5 90.333 466.678 7.5 489.5 7.5"
              fill="#FFFFFF"></polygon>
-    <image xlink:href="img/logo.png" x="470" y="30" width="90"></image>
+    <image xlink:href="../ressource/img/logo.png" x="470" y="30" width="90"></image>
+
     <polygon class="zone_chambre"
              points="263 125 263 8 458 8 458 90 388 90 388 238 270 238 270 125 263 125"
              fill="url(#patternSol)"></polygon>
@@ -279,17 +282,17 @@
     <rect class="tiroirAnimeDroit fondTiroir" x="226.25" y="160" width="16.5" height="18" rx="0.593" ry="0.593"></rect>
     <rect class="tiroirAnimeDroit faceTiroir" x="226.25" y="160" width="3" height="18"></rect>
     <rect class="tiroirAnimeDroit poignePlacard" x="225" y="168.5" width="4" height="1" rx="0.5" ry="0.5"
-          transform="translate(396 -58) rotate(90)"></rect>
+          transform="translate(396 -58) rotate(180)"></rect>
 
     <rect class="tiroirAnimeGauche fondTiroir" x="226.25" y="112" width="16.5" height="18" rx="0.593" ry="0.593"></rect>
     <rect class="tiroirAnimeGauche faceTiroir" x="226.25" y="112" width="3" height="18"></rect>
     <rect class="tiroirAnimeGauche poignePlacard" x="225" y="120.5" width="4" height="1" rx="0.5" ry="0.5"
-          transform="translate(348 -106) rotate(90)"></rect>
+          transform="translate(348 -106) rotate(180)"></rect>
 
     <rect class="fondTiroir" x="226.25" y="130" width="16.5" height="30" rx="0.593" ry="0.593"></rect>
     <rect class="faceTiroir" x="226.25" y="130" width="3" height="30"></rect>
     <rect class="poignePlacard" x="223.667" y="144.5" width="6.667" height="1" rx="0.5" ry="0.5"
-          transform="translate(372 -82) rotate(90)"></rect>
+          transform="translate(372 -82) rotate(180)"></rect>
 
     <path class="planTravailCuisine"
           d="M228.406,179.406l27.113,27.113a1.387,1.387,0,0,0,1.962,0l3.113-3.113a1.387,1.387,0,0,0,
@@ -417,7 +420,12 @@
     <!-- ----------------------------------------- LA FIN DE TOUTES CHOSES ----------------------------------------- -->
     <!-- ----------------------------------------------------------------------------------------------------------- -->
 
+    <ellipse class="tasse" cx="0" cy="0" rx="10" ry="10"></ellipse>
+
+
 </svg>
+
+<!--
 
 <button class="frigoAnimeO">Overture frigo frigo</button>
 <button class="frigoAnimeF">Fermeture frigo frigo</button>
@@ -427,8 +435,7 @@
 <button class="porteExterieurFB">Fermeture EX</button>
 <button class="porteSalleDeBainOB">Ouverture SB</button>
 <button class="porteSalleDeBainFB">Fermeture SB</button>
-<button class="eauRobinetOB">Ouverture robinet</button>
-<button class="eauRobinetFB">Fermeture robinet</button>
+
 <button class="portePlacardFrigoBasBO">Ouverture plbf</button>
 <button class="portePlacardFrigoBasBF">Fermeture plbf</button>
 
@@ -464,6 +471,11 @@
 
 <button class="litO">lit Ouverture</button>
 <button class="litF">Fermeture lit</button>
+
+<button class="eauRobinetOB">Ouverture robinet</button>
+<button class="eauRobinetFB">Fermeture robinet</button>
+
+-->
 
 <div class="container">
     <div class="de">
@@ -512,6 +524,7 @@
 <script src="js/animation/animationPlan.js"></script>
 <script src="js/animation/animationChambre.js"></script>
 <script src="js/websocket.js"></script>
+<script src="js/webSocketRFID.js"></script>
 
 </body>
 </html>
