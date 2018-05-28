@@ -1,11 +1,11 @@
 let porteSalleDeConfO = anime({
+    autoplay: false,
     targets: '.porteSalleConf',
     rotate: {
         value:[0,-90]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 
 });
 
@@ -15,8 +15,7 @@ let porteSalleDeConfF = anime({
         value:[-90,0]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 
 });
 
@@ -38,7 +37,6 @@ let porteSalleExterieurF = anime({
     },
     easing: 'linear',
     duration: 750,
-    autoplay: false
 });
 
 let porteSalleDeBainO = anime({
@@ -58,8 +56,6 @@ let porteSalleDeBainF = anime({
     },
     easing: 'linear',
     duration: 750,
-    autoplay: false
-
 });
 
 document.querySelector('.porteConfO').onclick = porteSalleDeConfO.restart;
