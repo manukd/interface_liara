@@ -57,15 +57,3 @@ let porteSalleDeBainF = anime({
     easing: 'linear',
     duration: 750,
 });
-
-document.querySelector('.porteConfO').onclick = porteSalleDeConfO.restart;
-
-document.querySelector('.porteConfF').onclick = porteSalleDeConfF.restart;
-
-document.querySelector('.porteExterieurOB').onclick = porteSalleExterieurO.restart;
-
-document.querySelector('.porteExterieurFB').onclick = porteSalleExterieurF.restart;
-
-document.querySelector('.porteSalleDeBainOB').onclick = porteSalleDeBainO.restart;
-
-document.querySelector('.porteSalleDeBainFB').onclick = porteSalleDeBainF.restart;

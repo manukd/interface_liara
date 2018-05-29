@@ -26,7 +26,3 @@ edredonF.add({
     targets: '.bonhommeAnime',
     opacity: 0
 });
-
-document.querySelector('.litO').onclick = edredonO.restart;
-
-document.querySelector('.litF').onclick = edredonF.restart;
