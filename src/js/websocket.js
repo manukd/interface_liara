@@ -130,24 +130,18 @@ socket.onmessage = function (event) {
             case "82c86a3a-5e65-4fa3-bf12-d5abef156e32" : // Temperature cuisine
                 let temp1 = d[key].AnalogValue.toFixed(1);
                 let TabTemp1 = temp1.toString().split(".");
-                console.log(temp1);
-                console.log(TabTemp1[0], TabTemp1[1]);
                 document.querySelector("#temp_manger .entier").innerHTML = TabTemp1[0];
                 document.querySelector("#temp_manger .decimal").innerHTML = TabTemp1[1];
                 break;
             case "4c07e71a-0e4c-4629-968a-06d9c24b0b48" : // Temperature chambre
                 let temp2 = d[key].AnalogValue.toFixed(1);
                 let TabTemp2 = temp2.toString().split(".");
-                console.log(temp2);
-                console.log(TabTemp2[0], TabTemp2[1]);
                 document.querySelector("#temp_chambre .entier").innerHTML = TabTemp2[0];
                 document.querySelector("#temp_chambre .decimal").innerHTML = TabTemp2[1];
                 break;
             case "886a9863-eae4-4402-96f6-b15db25ef6ab" : // Temperature salle de bain
                 let temp3 = d[key].AnalogValue.toFixed(1);
                 let TabTemp3 = temp3.toString().split(".");
-                console.log(temp3);
-                console.log(TabTemp3[0], TabTemp3[1]);
                 document.querySelector("#temp_sdb .entier").innerHTML = TabTemp3[0];
                 document.querySelector("#temp_sdb .decimal").innerHTML = TabTemp3[1];
                 break;

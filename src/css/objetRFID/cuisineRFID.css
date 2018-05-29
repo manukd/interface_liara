@@ -2,3 +2,8 @@
     fill: red;
     opacity: 0;
 }
+
+.sel {
+    fill: #c69500;
+    opacity: 0;
+}

@@ -9,7 +9,17 @@ socketRFID.onmessage = function (event) {
                     targets: '.tasse',
                     easing: 'linear',
                     translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
-                    translateY: ((d.lst_RFIDPosition[i].Coord.Y)*267)/400,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001994" :
+                console.log(d.lst_RFIDPosition[i].Coord);
+                let animeSel= anime({
+                    targets: '.sel',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
                     opacity: 1
                 });
                 break;
