@@ -15,14 +15,13 @@ let frigoFermeture = anime({
         value:[-135,-45]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 let eauRobinetO = anime({
     targets: '.robinetBaque',
     fill: {
-        value: ['#fff','#005cbf']
+        value: ['#A4A4A4','#005cbf']
     },
     easing: 'easeInBack',
     duration: 1000,
@@ -33,12 +32,10 @@ let eauRobinetO = anime({
 let eauRobinetF = anime({
     targets: '.robinetBaque',
     fill: {
-        value: ['#005cbf', '#fff']
+        value: ['#005cbf', '#A4A4A4']
     },
     easing: 'easeInQuart',
-    duration: 200,
-    autoplay: false
-
+    duration: 200
 });
 
 let portePlacardFrigoBasFO = anime({
@@ -58,8 +55,7 @@ let portePlacardFrigoBasFF = anime({
         value:[-45,0]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 
@@ -80,8 +76,7 @@ let portePlacardFrigoHautGFF = anime({
         value:[-45,0]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 let portePlacardFrigoHautDFO = anime({
@@ -101,8 +96,7 @@ let portePlacardFrigoHautDFF = anime({
         value:[45,0]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 let portePlacardEvierGFO = anime({
@@ -122,8 +116,7 @@ let portePlacardEvierGFF = anime({
         value:[45,0]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 let portePlacardEvierDFO = anime({
@@ -143,8 +136,7 @@ let portePlacardEvierDFF = anime({
         value:[-45,0]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 let portePlacardEvierHGGFO = anime({
@@ -164,8 +156,7 @@ let portePlacardEvierHGGFF = anime({
         value:[45,0]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 let portePlacardEvierHGDFO = anime({
@@ -185,8 +176,7 @@ let portePlacardEvierHGDFF = anime({
         value:[-45,0]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 let portePlacardEvierHDGFO = anime({
@@ -206,8 +196,7 @@ let portePlacardEvierHDGFF = anime({
         value:[45,0]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 let portePlacardEvierHDDFO = anime({
@@ -227,8 +216,7 @@ let portePlacardEvierHDDFF = anime({
         value:[-45,0]
     },
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 let tiroirAnimeDroitO = anime({
@@ -244,8 +232,7 @@ let tiroirAnimeDroitF = anime({
     targets: '.tiroirAnimeDroit',
     translateX: 0,
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
 
 
@@ -262,58 +249,5 @@ let tiroirAnimeGaucheF = anime({
     targets: '.tiroirAnimeGauche',
     translateX: 0,
     easing: 'linear',
-    duration: 750,
-    autoplay: false
+    duration: 750
 });
-
-document.querySelector('.frigoAnimeO').onclick = frigoOverture.restart;
-
-document.querySelector('.frigoAnimeF').onclick = frigoFermeture.restart;
-
-document.querySelector('.eauRobinetOB').onclick = eauRobinetO.restart;
-
-document.querySelector('.eauRobinetFB').onclick = eauRobinetF.restart;
-
-document.querySelector('.portePlacardFrigoBasBO').onclick = portePlacardFrigoBasFO.restart;
-
-document.querySelector('.portePlacardFrigoBasBF').onclick = portePlacardFrigoBasFF.restart;
-
-document.querySelector('.portePlacardFrigoHGBO').onclick = portePlacardFrigoHautGFO.restart;
-
-document.querySelector('.portePlacardFrigoHGBF').onclick = portePlacardFrigoHautGFF.restart;
-
-document.querySelector('.portePlacardFrigoHDBO').onclick = portePlacardFrigoHautDFO.restart;
-
-document.querySelector('.portePlacardFrigoHDBF').onclick = portePlacardFrigoHautDFF.restart;
-
-document.querySelector('.portePlacardEvierBGBO').onclick = portePlacardEvierGFO.restart;
-
-document.querySelector('.portePlacardEvierBGBF').onclick = portePlacardEvierGFF.restart;
-
-document.querySelector('.portePlacardEvierBDBO').onclick = portePlacardEvierDFO.restart;
-
-document.querySelector('.portePlacardEvierBDBF').onclick = portePlacardEvierDFF.restart;
-
-document.querySelector('.portePlacardEvierHGGBO').onclick = portePlacardEvierHGGFO.restart;
-
-document.querySelector('.portePlacardEvierHGGBF').onclick = portePlacardEvierHGGFF.restart;
-
-document.querySelector('.portePlacardEvierHGDBO').onclick = portePlacardEvierHGDFO.restart;
-
-document.querySelector('.portePlacardEvierHGDBF').onclick = portePlacardEvierHGDFF.restart;
-
-document.querySelector('.portePlacardEvierHDGBO').onclick = portePlacardEvierHDGFO.restart;
-
-document.querySelector('.portePlacardEvierHDGBF').onclick = portePlacardEvierHDGFF.restart;
-
-document.querySelector('.portePlacardEvierHDDBO').onclick = portePlacardEvierHDDFO.restart;
-
-document.querySelector('.portePlacardEvierHDDBF').onclick = portePlacardEvierHDDFF.restart;
-
-document.querySelector('.tiroirO').onclick = tiroirAnimeGaucheO.restart;
-
-document.querySelector('.tiroirF').onclick = tiroirAnimeGaucheF.restart;
-
-document.querySelector('.tiroir2O').onclick = tiroirAnimeDroitO.restart;
-
-document.querySelector('.tiroir2F').onclick = tiroirAnimeDroitF.restart;
