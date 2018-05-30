@@ -5,10 +5,7 @@ function setPath(path)
     path_socket = path;
 }
 // 'ws://172.24.24.3:6091'
-if(path_socket == '')
-{
 
-}
 try {
     const socket = new WebSocket(path_socket);
 }
