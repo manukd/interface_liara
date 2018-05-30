@@ -1,4 +1,4 @@
-let path_socket = "oui";
+let path_socket = "ws://172.24.24.3:6091";
 
 function setPath(path)
 {
@@ -22,10 +22,11 @@ function closeSocket()
     path_socket="";
 }
 
+const socket = new WebSocket(path_socket);
 socket.onmessage = function (event)
 {
 
-    alertify.success("Connexion établie");
+    //alertify.success("Connexion établie");
     let d = JSON.parse(event.data);
     for (let key in d) {
         switch (d[key].ID) {
@@ -143,6 +144,24 @@ socket.onmessage = function (event)
                 }
                 break;
             case "7fa342b1-6b29-456b-b357-cefc377643fd" : // Tiroir 2
+                if (d[key].DigitalValue === true) {
+                    tiroirAnimeDroitO.restart();
+                }
+                else {
+                    tiroirAnimeDroitF.restart();
+                }
+                break;
+
+
+            case "" : // Robinet cuisine
+                if (d[key].DigitalValue === true) {
+                    tiroirAnimeDroitO.restart();
+                }
+                else {
+                    tiroirAnimeDroitF.restart();
+                }
+                break;
+            case "8b87f340-c92d-4ea9-bf1d-f41ba88dd2ac" : // Lit
                 if (d[key].DigitalValue === true) {
                     tiroirAnimeDroitO.restart();
                 }
