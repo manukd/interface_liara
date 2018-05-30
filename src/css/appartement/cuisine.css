@@ -1,0 +1,97 @@
+/* ****************************************************************************************************************** */
+/* *************************************************** STYLE ******************************************************** */
+/* ****************************************************************************************************************** */
+
+.four {
+    fill: #333;
+}
+
+.plaqueDeCuisson {
+    stroke: #666;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+}
+
+.planTravailCuisine {
+    stroke: #333;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+}
+
+.robinetBordure {
+    fill: #ccc;
+}
+
+.arriereFrigo {
+    fill: #535667;
+}
+
+.porteFrigo {
+    fill: #848e9a;
+}
+
+.poigneFrigo {
+    fill: #5e6472;
+}
+
+.portePlacard {
+    fill: #fc3;
+}
+
+.poignePlacard {
+    fill: #999;
+}
+
+.fondTiroir{
+    stroke-miterlimit: 10;
+    fill: #ff9;
+    stroke: #c90;
+}
+
+.faceTiroir{
+    fill: #c90;
+}
+
+/* ****************************************************************************************************************** */
+/* *************************************************** ANIMATION **************************************************** */
+/* ****************************************************************************************************************** */
+
+.porteFrigoAnime {
+    transform-origin: 150px 175px;
+}
+
+.portePlacardFrigoBas{
+    transform-origin: 178px 206px;
+}
+
+.portePlacardFrigoHautDroit{
+    transform-origin: 210px 218px;
+}
+
+.portePlacardFrigoHautGauche{
+    transform-origin: 170px 218px;
+}
+
+.portePlacardEvierBasGauche {
+    transform-origin: 225px 110px;
+}
+
+.portePlacardEvierBasDroit {
+    transform-origin: 225px 177px;
+}
+
+.portePlacardEvierHautGaucheGauche {
+    transform-origin: 243px 127px;
+}
+
+.portePlacardEvierHautGaucheDroit {
+    transform-origin: 243px 149px;
+}
+
+.portePlacardEvierHautDroitGauche {
+    transform-origin: 243px 151px;
+}
+
+.portePlacardEvierHautDroitDroit {
+    transform-origin: 243px 192px;
+}

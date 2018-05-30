@@ -1,0 +1,46 @@
+#plan{
+    width: 75%;
+    height: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.murBordure{
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+}
+
+.porteSalleConf {
+    transform-origin: 0px 116px;
+}
+
+.porteExterieur {
+    transform-origin: 425px 1px;
+}
+
+.porteSalleDeBain {
+    transform-origin: 406px 99px;
+}
+
+.porte {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    fill: #630;
+
+}
+
+.poigne {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    fill: #ff0;
+}
+
+.bordureSalon {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+}
+
+
