@@ -1,9 +1,83 @@
-.tasse{
-    fill: red;
+.tasse1{
+    opacity: 0;
+}
+
+.tasse2{
+    opacity: 0;
+}
+
+.tasse3{
+    opacity: 0;
+}
+
+.tasse4{
+    opacity: 0;
+}
+
+.assiete1 {
+    opacity: 0;
+}
+
+.assiete2 {
+    opacity: 0;
+}
+
+.assiete3 {
+    opacity: 0;
+}
+
+.assiete4 {
+    opacity: 0;
+}
+
+.sAssiete1 {
+    /*opacity: 0;*/
+}
+
+.sAssiete2 {
+    opacity: 0;
+}
+
+.sAssiete3 {
+    opacity: 0;
+}
+
+.sAssiete4 {
+    opacity: 0;
+}
+
+.bol1 {
+    opacity: 0;
+}
+
+.bol2 {
+    opacity: 0;
+}
+
+.bol3 {
+    opacity: 0;
+}
+
+.bol4 {
+    opacity: 0;
+}
+
+.bouilloir {
+    opacity: 0;
+}
+
+.sucre {
+    opacity: 0;
+}
+
+.lait {
+    opacity: 0;
+}
+
+.chaudron {
     opacity: 0;
 }
 
 .sel {
-    fill: #c69500;
     opacity: 0;
 }
