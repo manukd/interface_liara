@@ -158,7 +158,7 @@ socket.onmessage = function (event)
                 }
                 break;
             case "8b87f340-c92d-4ea9-bf1d-f41ba88dd2ac" : // Lit
-                if (d[key].AnalogValue > 20) {
+                if (d[key].AnalogValue > 8) {
                     edredonO.restart();
                 }
                 else {

@@ -21,21 +21,22 @@ let frigoFermeture = anime({
 let eauRobinetO = anime({
     targets: '.robinetBaque',
     fill: {
-        value: ['#A4A4A4','#005cbf']
+        value: ['#005cbf', '#A4A4A4']
+
     },
     easing: 'easeInBack',
     duration: 1000,
-    autoplay: false
 
 });
 
 let eauRobinetF = anime({
     targets: '.robinetBaque',
     fill: {
-        value: ['#005cbf', '#A4A4A4']
+        value: ['#A4A4A4','#005cbf']
     },
     easing: 'easeInQuart',
     duration: 200
+    autoplay: false
 });
 
 let portePlacardFrigoBasFO = anime({
