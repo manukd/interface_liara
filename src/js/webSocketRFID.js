@@ -1,33 +1,3 @@
-/*
-"00000000001B2A4601001966" -> bol1
-
-"00000000001B2A4601001964"-> bol3
-
-"00000000001B2A4601001963"-> bol4
-
-"00000000001B2A4601001844" -> bol2
-
-"00000000001B2A4601001975" -> sAssiete4
-
-"00000000001B2A4601001970" -> sAssiete2
-
-"00000000001B2A4601001972" ->sAssiete3
-
-"00000000001B2A4601001976" -> sAssiete1
-
-"00000000001B2A4601001984" -> Assiete3
-
-"00000000001B2A4601001983" -> Assiete4
-
-"00000000001B2A4601001979" -> assiete2
-
-"00000000001B2A4601001981" -> assiete1
-
- */
-
-
-
-
 const socketRFID = new WebSocket('ws://172.24.24.2:6094');
 
 socketRFID.onmessage = function (event) {
@@ -116,9 +86,116 @@ socketRFID.onmessage = function (event) {
                     opacity: 1
                 });
                 break;
+            case "00000000001B2A4601001966" :
+                let animeBol1= anime({
+                    targets: '.bol1',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001844" :
+                let animeBol2= anime({
+                    targets: '.bol2',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001964" :
+                let animeBol3= anime({
+                    targets: '.bol3',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001963" :
+                let animeBol4= anime({
+                    targets: '.bol4',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001976" :
+                let animeSassiete1= anime({
+                    targets: '.sAssiete1',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001970" :
+                let animeSassiete2= anime({
+                    targets: '.sAssiete2',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001972" :
+                let animeSassiete3= anime({
+                    targets: '.sAssiete3',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001975" :
+                let animeSassiete4= anime({
+                    targets: '.sAssiete4',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001981" :
+                let animeAssiete1= anime({
+                    targets: '.assiete1',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001979" :
+                let animeAssiete2= anime({
+                    targets: '.assiete2',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001984" :
+                let animeAssiete3= anime({
+                    targets: '.assiete3',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
+            case "00000000001B2A4601001983" :
+                let animeAssiete4= anime({
+                    targets: '.assiete4',
+                    easing: 'linear',
+                    translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
+                    opacity: 1
+                });
+                break;
             default:
                 break;
         }
     }
- 
 };
