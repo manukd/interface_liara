@@ -149,21 +149,20 @@ socket.onmessage = function (event)
                 }
                 break;
 
-
-            case "" : // Robinet cuisine
+            case "b8478776-b479-4813-a968-a611756bf74f" : // Robinet cuisine eau froide /!!!!\ L'eau chaude n'est pas disponible donc n'est pas implémenté pour le moment
                 if (d[key].DigitalValue === true) {
-                    tiroirAnimeDroitO.restart();
+                    eauRobinetO.restart();
                 }
                 else {
-                    tiroirAnimeDroitF.restart();
+                    eauRobinetF.restart();
                 }
                 break;
             case "8b87f340-c92d-4ea9-bf1d-f41ba88dd2ac" : // Lit
-                if (d[key].DigitalValue === true) {
-                    tiroirAnimeDroitO.restart();
+                if (d[key].AnalogValue > 20) {
+                    edredonO.restart();
                 }
                 else {
-                    tiroirAnimeDroitF.restart();
+                    edredonF.restart();
                 }
                 break;
 
