@@ -1,1 +1,8 @@
 html, body { height: 100%; }
+
+#buttonPleineEcran {
+    margin-left: 47%;
+    margin-bottom: 3%;
+    width: 10%;
+    height: 5%;
+}

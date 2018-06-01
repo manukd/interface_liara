@@ -1,24 +1,5 @@
 let path_socket = "ws://172.24.24.3:6091";
 
-function setPath(path)
-{
-    path_socket = path;
-}
-// 'ws://172.24.24.3:6091'
-
-try {
-    const socket = new WebSocket(path_socket);
-}
-catch (e) {
-    alertify.error("Votre adresse de websocket est invalide");
-}
-
-function closeSocket()
-{
-    socket.close();
-    path_socket="";
-}
-
 const socket = new WebSocket(path_socket);
 socket.onmessage = function (event)
 {
@@ -168,22 +149,16 @@ socket.onmessage = function (event)
 
                 // ============================================================================= Température =================================================================
             case "82c86a3a-5e65-4fa3-bf12-d5abef156e32" : // Temperature cuisine
-                let temp1 = d[key].AnalogValue.toFixed(1);
-                let TabTemp1 = temp1.toString().split(".");
-                document.querySelector("#temp_manger .entier").innerHTML = TabTemp1[0];
-                document.querySelector("#temp_manger .decimal").innerHTML = TabTemp1[1];
+                let tmp =document.getElementById('cuisineTem');
+                tmp['innerText' in tmp ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1);
                 break;
             case "4c07e71a-0e4c-4629-968a-06d9c24b0b48" : // Temperature chambre
-                let temp2 = d[key].AnalogValue.toFixed(1);
-                let TabTemp2 = temp2.toString().split(".");
-                document.querySelector("#temp_chambre .entier").innerHTML = TabTemp2[0];
-                document.querySelector("#temp_chambre .decimal").innerHTML = TabTemp2[1];
+                let tmp2 =document.getElementById('chambreTem');
+                tmp2['innerText' in tmp2 ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1);
                 break;
             case "886a9863-eae4-4402-96f6-b15db25ef6ab" : // Temperature salle de bain
-                let temp3 = d[key].AnalogValue.toFixed(1);
-                let TabTemp3 = temp3.toString().split(".");
-                document.querySelector("#temp_sdb .entier").innerHTML = TabTemp3[0];
-                document.querySelector("#temp_sdb .decimal").innerHTML = TabTemp3[1];
+                let tmp3 =document.getElementById('sdbTem');
+                tmp3['innerText' in tmp3 ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1);
                 break;
         }
     }
