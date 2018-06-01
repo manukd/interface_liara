@@ -8,7 +8,6 @@ let frigoOverture = anime({
     autoplay: false
 });
 
-
 let frigoFermeture = anime({
     targets: '.porteFrigoAnime',
     rotate: {
@@ -35,7 +34,7 @@ let eauRobinetF = anime({
         value: ['#A4A4A4','#005cbf']
     },
     easing: 'easeInQuart',
-    duration: 200
+    duration: 200,
     autoplay: false
 });
 
@@ -49,7 +48,6 @@ let portePlacardFrigoBasFO = anime({
     autoplay: false
 });
 
-
 let portePlacardFrigoBasFF = anime({
     targets: '.portePlacardFrigoBas',
     rotate: {
@@ -58,7 +56,6 @@ let portePlacardFrigoBasFF = anime({
     easing: 'linear',
     duration: 750
 });
-
 
 let portePlacardFrigoHautGFO = anime({
     targets: '.portePlacardFrigoHautGauche',
@@ -69,7 +66,6 @@ let portePlacardFrigoHautGFO = anime({
     duration: 750,
     autoplay: false
 });
-
 
 let portePlacardFrigoHautGFF = anime({
     targets: '.portePlacardFrigoHautGauche',
@@ -90,7 +86,6 @@ let portePlacardFrigoHautDFO = anime({
     autoplay: false
 });
 
-
 let portePlacardFrigoHautDFF = anime({
     targets: '.portePlacardFrigoHautDroit',
     rotate: {
@@ -110,7 +105,6 @@ let portePlacardEvierGFO = anime({
     autoplay: false
 });
 
-
 let portePlacardEvierGFF = anime({
     targets: '.portePlacardEvierBasGauche',
     rotate: {
@@ -129,7 +123,6 @@ let portePlacardEvierDFO = anime({
     duration: 750,
     autoplay: false
 });
-
 
 let portePlacardEvierDFF = anime({
     targets: '.portePlacardEvierBasDroit',
@@ -170,7 +163,6 @@ let portePlacardEvierHGDFO = anime({
     autoplay: false
 });
 
-
 let portePlacardEvierHGDFF = anime({
     targets: '.portePlacardEvierHautGaucheDroit',
     rotate: {
@@ -189,7 +181,6 @@ let portePlacardEvierHDGFO = anime({
     duration: 750,
     autoplay: false
 });
-
 
 let portePlacardEvierHDGFF = anime({
     targets: '.portePlacardEvierHautDroitGauche',
@@ -210,7 +201,6 @@ let portePlacardEvierHDDFO = anime({
     autoplay: false
 });
 
-
 let portePlacardEvierHDDFF = anime({
     targets: '.portePlacardEvierHautDroitDroit',
     rotate: {
@@ -228,7 +218,6 @@ let tiroirAnimeDroitO = anime({
     autoplay: false
 });
 
-
 let tiroirAnimeDroitF = anime({
     targets: '.tiroirAnimeDroit',
     translateX: 0,
@@ -244,7 +233,6 @@ let tiroirAnimeGaucheO = anime({
     duration: 750,
     autoplay: false
 });
-
 
 let tiroirAnimeGaucheF = anime({
     targets: '.tiroirAnimeGauche',

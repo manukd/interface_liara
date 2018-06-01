@@ -2,7 +2,6 @@ const socketRFID = new WebSocket('ws://172.24.24.2:6094');
 
 socketRFID.onmessage = function (event) {
     let d = JSON.parse(event.data);
-    console.log(d);
     for (let i = 0; i < d.lst_RFIDPosition.length; i++) {
         switch (d.lst_RFIDPosition[i].ID) {
             case "00000000001B2A4601001838" :
@@ -163,8 +162,7 @@ socketRFID.onmessage = function (event) {
                     targets: '.assiete1',
                     easing: 'linear',
                     translateX: ((d.lst_RFIDPosition[i].Coord.X)*559)/1150,
-                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400),
-                    opacity: 1
+                    translateY: 267-(((d.lst_RFIDPosition[i].Coord.Y)*267)/400)
                 });
                 break;
             case "00000000001B2A4601001979" :

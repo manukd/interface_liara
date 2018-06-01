@@ -1,14 +1,11 @@
-let path_socket = "ws://172.24.24.3:6091";
+const socket = new WebSocket('ws://172.24.24.3:6091');
 
-const socket = new WebSocket(path_socket);
 socket.onmessage = function (event)
 {
-
-    //alertify.success("Connexion établie");
     let d = JSON.parse(event.data);
+    console.log(d);
     for (let key in d) {
         switch (d[key].ID) {
-            // ================================================================================= LES PORTES =====================================================================================
             case "230d93b2-1e3d-409b-84e9-c34bfbbb4f4d" : // Porte conférence
                 if (d[key].DigitalValue === true) {
                     porteSalleDeConfO.restart();
@@ -130,7 +127,7 @@ socket.onmessage = function (event)
                 }
                 break;
 
-            case "b8478776-b479-4813-a968-a611756bf74f" : // Robinet cuisine eau froide /!!!!\ L'eau chaude n'est pas disponible donc n'est pas implémenté pour le moment
+            case "b8478776-b479-4813-a968-a611756bf74f" : // Robinet cuisine eau froide (eau chaud non disponible)
                 if (d[key].DigitalValue === true) {
                     eauRobinetO.restart();
                 }
@@ -146,19 +143,17 @@ socket.onmessage = function (event)
                     edredonF.restart();
                 }
                 break;
-
-                // ============================================================================= Température =================================================================
             case "82c86a3a-5e65-4fa3-bf12-d5abef156e32" : // Temperature cuisine
                 let tmp =document.getElementById('cuisineTem');
-                tmp['innerText' in tmp ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1);
+                tmp['innerText' in tmp ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1).toString() + "°C";
                 break;
             case "4c07e71a-0e4c-4629-968a-06d9c24b0b48" : // Temperature chambre
                 let tmp2 =document.getElementById('chambreTem');
-                tmp2['innerText' in tmp2 ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1);
+                tmp2['innerText' in tmp2 ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1).toString() + "°C";
                 break;
             case "886a9863-eae4-4402-96f6-b15db25ef6ab" : // Temperature salle de bain
                 let tmp3 =document.getElementById('sdbTem');
-                tmp3['innerText' in tmp3 ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1);
+                tmp3['innerText' in tmp3 ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1).toString() + "°C";
                 break;
         }
     }
