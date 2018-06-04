@@ -1,6 +1,6 @@
 #plan{
     width: 97%;
-    height: 97%;
+    /*Test suppression : height: 97%; */
     display: block;
     margin-left: auto;
     margin-right: auto;
