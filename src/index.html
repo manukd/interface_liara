@@ -4,442 +4,493 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../bibliotheque/css/bootstrap/bootstrap.min.css" id="bootstrap-css">
     <link rel="stylesheet" href="../bibliotheque/css/font-awesome/4.2.0/font-awesome.min.css">
-
     <link rel="stylesheet" href="css/appartement/salonEtFondation.css">
     <link rel="stylesheet" href="css/appartement/cuisine.css">
     <link rel="stylesheet" href="css/appartement/chambre.css">
     <link rel="stylesheet" href="css/appartement/salleDebain.css">
     <link rel="stylesheet" href="css/interface.css">
     <link rel="stylesheet" href="css/interface_de_controle/boutonControleObjetRFID.css">
+    <link rel="stylesheet" href="css/interface_de_controle/temperature.css">
+    <link rel="stylesheet" href="css/interface_de_controle/bouton.css">
+    <link rel="stylesheet" href="css/interface_de_controle/bouton_run.css">
     <title>Interface LIARA</title>
 </head>
 <body>
-
-<svg id="plan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559 267" overflow="visible">
-
-    <title>SmartHome LIARA</title>
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- ------------------------------------- LES COULEUR & SPRITE  ----------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-    <!-- ------------------------------- IMAGE SOL ------------------------ -->
-    <defs>
-        <pattern id="patternSol" x="0" y="0" height="30" width="30" patternUnits="userSpaceOnUse">
-            <image height="30" width="30" x="0" y="0" preserveAspectRatio="none"
-                   xlink:href="../ressource/img/plancher.jpg"></image>
-        </pattern>
-
-    </defs>
-
-
-    <defs>
-        <pattern id="patternSolSalleDeBain" x="0" y="0" height="40" width="40" patternUnits="userSpaceOnUse">
-            <image height="40" width="40" x="0" y="0" preserveAspectRatio="none"
-                   xlink:href="../ressource/img/sdb1.jpg"></image>
-        </pattern>
-    </defs>
-
-    <!-- -----------------------------  IMAGE MUR -------------------------- -->
-
-    <defs>
-        <pattern id="patternMur" x="0" y="0" height="50" width="50" patternUnits="userSpaceOnUse">
-            <image x="0" y="0" height="50" width="50" preserveAspectRatio="none"
-                   xlink:href="../ressource/img/mur.jpg"></image>
-        </pattern>
-    </defs>
-
-    <!-- -----------------------------  IMAGE FRIGO ------------------------ -->
-
-    <defs>
-        <pattern id="patternFrigo" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none" xlink:href="../ressource/img/frigo.jpg"></image>
-        </pattern>
-    </defs>
-
-    <!-- -----------------------------  IMAGE LIT -------------------------- -->
-
-    <defs>
-        <pattern id="patternEdredon" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none" xlink:href="../ressource/img/edredon.png"></image>
-        </pattern>
-    </defs>
-
-    <!-- --------------------------  IMAGE CUISINE PLAN DE TRAVAIL --------- -->
-
-    <defs>
-        <pattern id="patternPlanCuisine" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none"
-                   xlink:href="../ressource/img/marbre_plan_cuisine.jpg"></image>
-        </pattern>
-    </defs>
-
-    <!-- --------------------------  IMAGE FAUTEUIL --------- -->
-
-    <defs>
-        <pattern id="patternFauteuilAssise" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none"
-                   xlink:href="../ressource/img/assise_fauteuil.jpg"></image>
-        </pattern>
-    </defs>
-
-    <defs>
-        <pattern id="patternFauteuilDossier" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none"
-                   xlink:href="../ressource/img/dossier_fauteuil.jpg"></image>
-        </pattern>
-    </defs>
-
-    <!-- --------------------------  IMAGE TABE --------- -->
-
-    <defs>
-        <pattern id="patternTable" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none" xlink:href="../ressource/img/table.jpg"></image>
-        </pattern>
-    </defs>
-
-    <!-- --------------------------  IMAGE MEUBLE --------- -->
-
-    <defs>
-        <pattern id="patternMeubleCuisine" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image height="1" width="1" preserveAspectRatio="none"
-                   xlink:href="../ressource/img/meuble_cuisine.jpg"></image>
-        </pattern>
-    </defs>
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- -------------------------------------------- SOL & ZONE --------------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-    <polygon class="Zone_morte"
-             points="489.5 7.5 489.5 0.5 558.5 0.5 558.5 90.5 466.5 90.333 466.678 7.5 489.5 7.5"
-             fill="#FFFFFF"></polygon>
-    <image xlink:href="../ressource/img/logo.png" x="470" y="30" width="90"></image>
-
-    <polygon class="zone_chambre"
-             points="263 125 263 8 458 8 458 90 388 90 388 238 270 238 270 125 263 125"
-             fill="url(#patternSol)"></polygon>
-    <polygon class="zone_cuisine"
-             points="145.5 174.5 140.5 169.5 65.5 244.5 5.5 184.5 5.5 69.456 5.5 44.5 42.5 7.5 467 7.5 467
-             202.5 225.5 238.5 154.5 238.5 118.5 202.5 118.153 201.847 145.5 174.5"
-             fill="url(#patternSol)"></polygon>
-    <polygon class="zone_sdb" points="397 99 397 238 492 238 492 192 498 192 498 238 550 238 550 99 397 99"
-             fill="url(#patternSolSalleDeBain)"></polygon>
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- -------------------------------------------- CHAMBRE ------------------------------------------------------ -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-    <rect class="bibliotequeChambre" x="368" y="110" width="17" height="51" fill="url(#patternTable)"></rect>
-    <rect class="lit" x="279" y="181" width="104" height="54" fill="#EFEFEF"></rect>
-    <path class="lit"
-          d="M379.337,185.606l-6.421.905a32.252,32.252,0,0,1-8.756.036l-7.092-.941-.8,13.047a145.444,145.444,
-          0,0,0,.02,18.06L357.068,229l7.221-.958a31.3,31.3,0,0,1,8.5.035l6.55.924c1.483-6.673,1.35-5.783
-          ,1.35-22.078C380.687,190.174,379.337,185.606,379.337,185.606Z" fill="#EFEFEF"></path>
-
-    <!-- ----------------- bonhomme ------------------- -->
-
-    <path class="bonhommeAnime corps"
-          d="M353.66,205.61l3.252-.65s-1.3-3.252,0-5.2,9.106-3.252,10.407-1.3-.65,3.9-.65,3.9,1.3.65,0,1.951-3.9
-          ,0-3.9.65,1.951,1.3,1.951,1.3,1.3.65,0,1.3a5.078,5.078,0,0,1-3.252,0l-1.951,2.6h-2.6l-1.3,1.3Z"></path>
-    <path class="bonhommeAnime corps"
-          d="M346.92,203.6s6.338,3.169,6.338,5.07-.634,2.535-1.9,3.8-10.14-3.8-10.14-3.8l-3.263-3.059,3.153-4.594Z">
-    </path>
-    <path class="bonhommeAnime chemise"
-          d="M353.01,204.309c-1.3-.65-4.925.2-4.925.2s4.8,2.371,4.864,4.011-1.89,4.241-1.89,4.241l-11.11-4.562s-5.59
-          ,12.257,1.134,12.962,15.179-9.376,15.179-9.376S354.311,204.96,353.01,204.309Z"></path>
-    <path class="bonhommeAnime corps"
-          d="M345.688,203.338l1.865.9h5.07l.7.8,1.2-3.339,2.535-3.169.634-1.268s.474-1.759,1.741-1.125a1.666,1.666,0
-          ,0,1,.794,2.023L364,197.78s-1.87-7.485-3.771-7.485a6.081,6.081,0,0,0-3.079.76C356.426,190.928,345.688,203.338
-          ,345.688,203.338Z"></path>
-    <path class="bonhommeAnime corps"
-          d="M369.27,212.765c.65,3.252,0,3.9-1.3,4.553s-2.6-1.3-2.6-1.3v-1.951s.136-.891-.582-.445-.719,1.1-1.369,1.1
-          ,0-1.951,0-1.951S368.62,209.513,369.27,212.765Z"></path>
-    <path class="bonhommeAnime" d="M357.905,198.925"></path>
-    <path class="bonhommeAnime" d="M359.5,200.5"></path>
-    <path class="cheveux bonhommeAnime" d="M363.5,199.5"></path>
-    <path class="bonhommeAnime bordureBonhomme" d="M365.5,197.5"></path>
-    <path class="bonhommeAnime cheveux"
-          d="M370.571,196.5A4.19,4.19,0,0,0,367,199.156a12.325,12.325,0,0,0-.986,3.2,14.275,14.275,0,0,0-1.55
-          ,1.442c-.4.509-1.7.509-2.353,1.16s3.1.81,2.523,2.031-3.824.571-3.824.571-1.3-.65-1.951,2.6,9.106
-          ,2.6,9.106,2.6a7.224,7.224,0,0,0,5.2-7.155A15.344,15.344,0,0,0,370.571,196.5Z"></path>
-
-    <!-- ----------------- edredon ------------------- -->
-
-    <path class="litStyle"
-          d="M278.6,181a5.8,5.8,0,0,0-5.6,5.977v42.046A5.8,5.8,0,0,0,278.6,235H354l-18-49,3-5"
-          fill="url(#patternEdredon)"></path>
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- -------------------------------------------- SALON -------------------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-
-    <!-- ---------------- BIBLIO ------------------------ -->
-
-    <rect class="bordureSalon" x="351" width="13" height="35"
-          transform="translate(340 375) rotate(-90)" fill="url(#patternTable)"></rect>
-
-    <!-- ---------------- TV ---------------------------- -->
-
-    <rect id="meuble_tv" class="bordureSalon" y="27" width="61" height="12" rx="4.581" ry="4.581"
-          transform="translate(-14.401 31.232) rotate(-45)" fill="url(#patternTable)"></rect>
-    <rect id="tv" x="5.398" y="30.525" width="50.205" height="4.95"
-          transform="translate(-14.401 31.232) rotate(-45)"></rect>
-    <path id="pied_tv"
-          d="M26,31V41a1,1,0,0,0,1,1h0a1,1,0,0,0,1-1V32a1,1,0,0,1,1-1h9a1,1,0,0,0,1-1h0a1,1,0,0,0-1-1H27a1
-          ,1,0,0,0-1,1Z"></path>
-
-    <!-- ---------------- Fauteuil ---------------------- -->
-
-
-    <path id="fauteuil3_1" class="bordureSalon"
-          d="M240.842,47.349V52.97a.725.725,0,0,1-.725.725H203.383a.725.725,0,0,1-.725-.725V15.53a.725.725
-          ,0,0,1,.725-.725h36.734a.725.725,0,0,1,.725.725v5.621a.725.725,0,0,1-.725.725h-30.37a.725.725,0,0
-          ,0-.725.725V45.9a.725.725,0,0,0,.725.725h30.37A.725.725,0,0,1,240.842,47.349Z"
-          fill="url(#patternFauteuilDossier)"></path>
-    <path id="fauteuil3_1-2" data-name="fauteuil3_1" class="bordureSalon"
-          d="M241.857,21.876H209.3a.28.28,0,0,0-.28.28V46.345a.28.28,0,0,0,.28.28h32.555a1.106,1.106,0,0,0
-          ,1.106-1.106V22.982A1.106,1.106,0,0,0,241.857,21.876Z" fill="url(#patternFauteuilAssise)"></path>
-
-    <path id="fauteuil2_1" class="bordureSalon"
-          d="M45.842,97.349v5.621a.725.725,0,0,1-.725.725H8.383a.725.725,0,0,1-.725-.725V65.53a.725.725,0,0
-          ,1,.725-.725H45.117a.725.725,0,0,1,.725.725v5.621a.725.725,0,0,1-.725.725H14.747a.725.725,0,0
-          ,0-.725.725V95.9a.725.725,0,0,0,.725.725h30.37A.725.725,0,0,1,45.842,97.349Z"
-          fill="url(#patternFauteuilDossier)"></path>
-    <path id="fauteuil2_1-2" data-name="fauteuil2_1" class="bordureSalon"
-          d="M46.857,71.876H14.3a.28.28,0,0,0-.28.28V96.345a.28.28,0,0,0,.28.28H46.857a1.106
-          ,1.106,0,0,0,1.106-1.106V72.982A1.106,1.106,0,0,0,46.857,71.876Z"
-          fill="url(#patternFauteuilAssise)"></path>
-
-    <path id="fauteuil1_2" class="bordureSalon"
-          d="M95.175,155.374l4.088-3.858a.725.725,0,0,1,1.025.03L125.5,178.263a.725.725,0,0,1-.03,
-          1.025l-27.231,25.7a.725.725,0,0,1-1.025-.03L72,178.237a.725.725,0,0,1,.03-1.025l4.088-3.858a.725.725,0,0,1,
-          1.025.03l20.843,22.088a.725.725,0,0,0,1.025.03l16.945-15.99a.725.725,0,0,0,.03-1.025L95.145,156.4A.725.725,
-          0,0,1,95.175,155.374Z" fill="url(#patternFauteuilDossier)"></path>
-    <path id="fauteuil1_1" class="bordureSalon"
-          d="M75.951,172.119,98.293,195.8a.28.28,0,0,0,.4.011l17.593-16.6a.28.28,0,0,0,.011-.4L93.951,155.133a1.106,
-          1.106,0,0,0-1.564-.045L76,170.555A1.106,1.106,0,0,0,75.951,172.119Z" fill="url(#patternFauteuilAssise)">
-    </path>
-
-    <!-- ---------------- TABLE ---------------------- -->
-
-    <path id="table" class="bordureSalon"
-          d="M295.472,10.4V62.281l-3.363.4a190.231,190.231,0,0,1-44.745,0l-3.363-.4V10.4l8.886-.79a190.345,
-          190.345,0,0,1,33.7,0Z" fill="url(#patternTable)"></path>
-
-    <!-- --------------------------------------- PORTE APPARTEMENT ------------------------------------------------ -->
-
-    <polyline class="porteSalleConf porte" points="0.5 116.5 6.5 116.5 6.5 166.5 0.5 166.5 0.5 116.5"></polyline>
-    <ellipse class="porteSalleConf poigne" cx="8" cy="161" rx="1.5" ry="2.5"></ellipse>
-    <polyline class="porteExterieur porte" points="425 0.5 425 8.167 381.144 8.167 381.144 0.5 425 0.5"></polyline>
-    <ellipse class="porteExterieur poigne" cx="385.968" cy="8.833" rx="2.193" ry="1.667"></ellipse>
-    <polyline class="porteSalleDeBain porte" points="406.144 99 406.144 90.183 450 90.183 450 99 406.144 99"></polyline>
-    <ellipse class="porteSalleDeBain poigne" cx="446.176" cy="88.917" rx="2.193" ry="1.417"></ellipse>
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- --------------------------------------- CUISINE ----------------------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-    <!-- ------------------ PLAQUE DE CUISSONS ----------------  -->
-
-    <polygon class="four" points="202 208 229.184 235 258 207.481 230.272 181 202 208"></polygon>
-    <ellipse class="plaqueDeCuisson" cx="218.138" cy="208.779" rx="8.731" ry="8.567"></ellipse>
-    <ellipse class="plaqueDeCuisson" cx="231.412" cy="196.184" rx="6.35" ry="6.231"></ellipse>
-    <ellipse class="plaqueDeCuisson" cx="243.281" cy="205.246" rx="5.291" ry="5.192"></ellipse>
-    <ellipse class="plaqueDeCuisson" cx="225.321" cy="222.87" rx="5.291" ry="5.192"></ellipse>
-    <ellipse class="plaqueDeCuisson" cx="234.301" cy="214.058" rx="5.291" ry="5.192"></ellipse>
-
-    <!-- ------------------ PLACARD ENTRE FRIGO ET PLAQUE DE CUISSONS ---------------- -->
-
-    <rect class="portePlacardFrigoBas poignePlacard" x="198" y="206" width="2" height="1" rx="0.5" ry="0.5"></rect>
-    <path class="portePlacardFrigoBas portePlacard"
-          d="M178.4,206.545H200.6c.772,0,1.4.855,1.4,1.909H177C177,207.4,177.626,206.545,178.4,206.545Z"></path>
-
-    <polygon class="planTravailCuisine" points="151 235 177 208 202 208 230 234 226 238 154 238 151 235"
-             fill="url(#patternPlanCuisine)"></polygon>
-
-    <rect class="portePlacardFrigoHautGauche poignePlacard" x="185" y="218" width="2" height="1" rx="0.5"
-          ry="0.5"></rect>
-    <path class="portePlacardFrigoHautGauche portePlacard"
-          d="M170.174,218.545h18.652c.648,0,1.174.855,1.174,1.909H169C169,219.4,169.526,218.545,
-          170.174,218.545Z"></path>
-
-    <rect class="portePlacardFrigoHautDroit poignePlacard" x="193" y="218" width="2" height="1" rx="0.5"
-          ry="0.5"></rect>
-    <path class="portePlacardFrigoHautDroit portePlacard"
-          d="M191.174,218.545h18.652c.648,0,1.174.855,1.174,1.909H190C190,219.4,190.526,218.545,191.174,
-          218.545Z"></path>
-
-    <rect x="169" y="219.704" width="42" height="18.296" fill="url(#patternMeubleCuisine)"></rect>
-
-    <!-- ------------------ PLACARD SOUS EVIER ---------------- -->
-
-    <rect class="portePlacardEvierBasGauche poignePlacard" x="223.5" y="139.5" width="2" height="1" rx="0.5" ry="0.5"
-          transform="translate(364.5 -84.5) rotate(90)"></rect>
-    <path class="portePlacardEvierBasGauche  portePlacard"
-          d="M225.061,142.3v-29.45c0-1.024,1.316-1.853,2.939-1.853h0v33.157h0C226.377,144.157,225.061,
-          143.327,225.061,142.3Z"></path>
-
-    <rect class="portePlacardEvierBasDroit poignePlacard" x="223.5" y="149.5" width="2" height="1" rx="0.5" ry="0.5"
-          transform="translate(374.5 -74.5) rotate(90)"></rect>
-    <path class="portePlacardEvierBasDroit portePlacard"
-          d="M225.061,177.1V146.9c0-1.05,1.316-1.9,2.939-1.9h0v34h0C226.377,179,225.061,178.149,225.061,177.1Z"></path>
-
-    <!-- ------------------ TIROIR SOUS EVIER ---------------- -->
-
-    <rect class="tiroirAnimeDroit fondTiroir" x="226.25" y="160" width="16.5" height="18" rx="0.593" ry="0.593"></rect>
-    <rect class="tiroirAnimeDroit faceTiroir" x="226.25" y="160" width="3" height="18"></rect>
-    <rect class="tiroirAnimeDroit poignePlacard" x="225" y="168.5" width="4" height="1" rx="0.5" ry="0.5" transform="rotate(90)"></rect>
-
-    <rect class="tiroirAnimeGauche fondTiroir" x="226.25" y="112" width="16.5" height="18" rx="0.593" ry="0.593"></rect>
-    <rect class="tiroirAnimeGauche faceTiroir" x="226.25" y="112" width="3" height="18"></rect>
-    <rect class="tiroirAnimeGauche poignePlacard" x="225" y="120.5" width="4" height="1" rx="0.5" ry="0.5"></rect>
-
-    <rect class="fondTiroir" x="226.25" y="130" width="16.5" height="30" rx="0.593" ry="0.593"></rect>
-    <rect class="faceTiroir" x="226.25" y="130" width="3" height="30"></rect>
-    <rect class="poignePlacard" x="223.667" y="144.5" width="6.667" height="1" rx="0.5" ry="0.5"
-          transform="translate(372 -82) rotate(90)"></rect>
-
-    <path class="planTravailCuisine"
-          d="M228.406,179.406l27.113,27.113a1.387,1.387,0,0,0,1.962,0l3.113-3.113a1.387,1.387,0,0,0,
-          .406-.981V111.387A1.387,1.387,0,0,0,259.613,110h-28.97A2.643,2.643,0,0,0,228,112.643v65.783A1.387,
-          1.387,0,0,0,228.406,179.406Z" fill="url(#patternPlanCuisine)"></path>
-
-    <!-- ------------------ EVIER ---------------- -->
-
-    <rect class="robinetBordure" x="233" y="130" width="24" height="21.517" rx="1.158" ry="1.158"></rect>
-    <path class="robinetBaque"
-          d="M234.655,132.448v16.622a.775.775,0,0,0,.757.793h15.866a.775.775,0,0,0,.757-.793V132.448a.775.775,
-          0,0,0-.757-.793H235.412A.775.775,0,0,0,234.655,132.448Z"></path>
-
-    <!-- ------------------ PLACARD SUR EVIER ---------------- -->
-
-    <rect x="244.63" y="126" width="16.37" height="68" fill="url(#patternMeubleCuisine)"></rect>
-
-    <rect class="portePlacardEvierHautGaucheGauche poignePlacard"
-          x="241.5" y="134.5" width="2" height="1" rx="0.5" ry="0.5"
-          transform="translate(377.5 -107.5) rotate(90)"></rect>
-    <path class="portePlacardEvierHautGaucheGauche portePlacard"
-          d="M243.061,137.329V126.671c0-.37.855-.671,1.909-.671h0v12h0C243.916,138,243.061,137.7,
-          243.061,137.329Z"></path>
-
-    <rect class="portePlacardEvierHautGaucheDroit poignePlacard"
-          x="241.5" y="140.5" width="2" height="1" rx="0.5" ry="0.5"
-          transform="translate(383.5 -101.5) rotate(90)"></rect>
-    <path class="portePlacardEvierHautGaucheDroit portePlacard"
-          d="M243.061,149.329V138.671c0-.37.855-.671,1.909-.671h0v12h0C243.916,
-          150,243.061,149.7,243.061,149.329Z"></path>
-
-    <rect class="portePlacardEvierHautDroitGauche poignePlacard"
-          x="241.5" y="166.5" width="2" height="1" rx="0.5" ry="0.5"
-          transform="translate(409.5 -75.5) rotate(90)"></rect>
-    <path class="portePlacardEvierHautDroitGauche portePlacard"
-          d="M243.061,169.826V151.174c0-.648.855-1.174,1.909-1.174h0v21h0C243.916,171,
-          243.061,170.474,243.061,169.826Z"></path>
-
-    <rect class="portePlacardEvierHautDroitDroit poignePlacard"
-          x="241.5" y="174.5" width="2" height="1" rx="0.5" ry="0.5"
-          transform="translate(417.5 -67.5) rotate(90)"></rect>
-    <path class="portePlacardEvierHautDroitDroit portePlacard"
-          d="M243.061,192.714V172.286c0-.71.855-1.286,1.909-1.286h0v23h0C243.916,194,
-          243.061,193.424,243.061,192.714Z"></path>
-
-    <!-- ---------------- FRIGIDAIRE ---------- -->
-
-    <rect class="frigo" fill="url(#patternFrigo)" x="130.95" y="181.519" width="38.93" height="43.134"
-          transform="translate(-99.548 165.842) rotate(-45)"></rect>
-    <rect class="arriereFrigo" x="135.688" y="199.354" width="1.054" height="35.609"
-          transform="translate(-113.658 159.923) rotate(-45)"></rect>
-    <rect class="porteFrigoAnime porteFrigo" x="150" y="173.5" width="2.623" height="43.134"
-          transform="rotate(-45)"></rect>
-    <rect class="porteFrigoAnime poigneFrigo" x="152" y="205" width="1.141" height="5.87"
-          transform="rotate(-45)"></rect>
-    <rect class="porteFrigoAnime poigneFrigo" x="150" y="173.5" width="0.58" height="43.134"
-          transform="rotate(-45)"></rect>
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- ---------------------------------------------- LES MURS --------------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-    <polygon class="murBordure" points="0.5 0.5 0.5 116.5 5.5 116.5 5.5 44.5 42.5 7.5 380.5 7.5 380.5 0.5 0.5 0.5"
-             fill="url(#patternMur)"></polygon>
-    <polygon class="murBordure"
-             points="0.5 166.5 0.5 257.5 385.5 256.5 385.5 238.5 269.5 238.5 269.5 125.5 261.5 125.5 261.5 202.5
-             225.5 238.5 154.5 238.5 118 202 145.5 174.5 140.5 169.5 65.5 244.5 5.5 184.5 5.5 166.5 0.5 166.5"
-             fill="url(#patternMur)"></polygon>
-    <rect class="murBordure" x="385.5" y="238.5" width="25" height="28" fill="url(#patternMur)"></rect>
-    <polygon class="murBordure"
-             points="387.86 238.5 387.86 90.5 405.5 90.5 405.5 98.5 396.5 98.5 396.5 238.5 387.86 238.5"
-             fill="url(#patternMur)"></polygon>
-    <polygon class="murBordure"
-             points="425.5 0.5 489.5 0.5 489.5 7.5 466.5 7.5 466.5 90.5 558.5 90.5 558.5 256.5 501.5 256.5 501.5 266.5
-             490.5 266.5 490.5 256.5 410.5 256.5 410.5 238.5 492.5 238.5 492.5 192.5 497.5 192.5 497.5 238.5 550.5
-             238.5 550.5 98.5 450.5 98.5 450.5 90.5 458.5 90.5 458.5 7.5 425.5 7.5 425.5 0.5"
-             fill="url(#patternMur)"></polygon>
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- ------------------------------------------- TEMPERATURE --------------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-    <image xlink:href="../ressource/img-controle/thermometre.svg" x="100" y="230" width="07" ></image>
-    <text id="cuisineTem" x="110" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
-
-    <image xlink:href="../ressource/img-controle/thermometre.svg" x="260" y="230" width="07" ></image>
-    <text id="chambreTem" x="270" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
-
-    <image xlink:href="../ressource/img-controle/thermometre.svg" x="550" y="230" width="07" ></image>
-    <text id="sdbTem" x="530" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- ----------------------------------------- SALLE DE BAIN --------------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-    <!-- ---------------- BAIGNOIRE ---------- -->
-
-    <rect class="baignoireBordureExterieur" x="398.375" y="193.381" width="92.625" height="42.619" rx="1.226" ry="1.226"
-          transform="translate(889.375 429.381) rotate(180)"></rect>
-    <path class="baignoireBordureInterieur"
-          d="M486.094,207.523v13.822c0,6.911-4.807,9.276-6.2,9.215s-38.238,3.456-70.276,
-          0c-8.268-2.3-8.117-30.061-1.033-32.252,33.071-2.3,70.77-.192,72.343,0S485.5,200.5,486.094,207.523Z"></path>
-    <path class="baignoirefond"
-          d="M480.508,207.339v13.822c0,6.911-3.1,6.911-4.134,6.911s-31,2.3-63.042-1.152c-3.1-1.152-8.268-17.278,
-          0-25.341a505.623,505.623,0,0,1,64.075,0S479.474,201.58,480.508,207.339Z"></path>
-    <ellipse class="baignoireEvacuation" cx="474.687" cy="214.69" rx="1.55" ry="1.728"></ellipse>
-
-    <!-- ---------------- WC ---------- -->
-
-    <path class="reservoirEauWC"
-          d="M529.577,103.56v5.345c0,3.207-2,3.207-2,3.207h-19a3.007,3.007,0,0,1-3-3.207V103.56s0-2.138,
-          2-2.138h20C529.577,101.423,529.577,103.56,529.577,103.56Z"></path>
-    <polygon class="boutonEvacuationWC"
-             points="518.577 107.836 518.577 108.905 518.077 108.905 517.577 108.371 518.077 107.836 518.577 107.836">
-    </polygon>
-    <path class="couvercleReservoirEauWC" d="M528.577,106.767c.5-2.672-8-2.138-8-2.138h-6s-7.5-.534-7,2.138"></path>
-    <path class="lunnetteWC"
-          d="M524.5,112.112s7.206,19.24-2.059,25.654c-1.942,1.734-6.176,2.138-9.265,
-          0-10.294-6.413-2.059-25.654-2.059-25.654Z"></path>
-    <rect class="visWC" x="513.577" y="114.25" width="1" height="1.069"></rect>
-    <rect class="visWC" x="521.577" y="114.25" width="1" height="1.069"></rect>
-    <ellipse class="trouWC" cx="517.577" cy="127.077" rx="7" ry="9.62"></ellipse>
-    <path class="evacuationWC"
-          d="M516.538,121.939h.69a2.488,2.488,0,0,1,2.488,2.488v1.025a2.488,2.488,0,0,1-2.488,2.488h-.69a1.1,1.1,0,0,
-          1-1.1-1.1v-3.8A1.1,1.1,0,0,1,516.538,121.939Z" transform="translate(642.516 -392.639) rotate(90)"></path>
-
-    <!-- ---------------- LAVABO ---------- -->
-
-    <path class="lavaboBordure"
-          d="M513,233c0-2,1-17,1-18a2.151,2.151,0,0,1,2-2c10,2,19,2,26,0,1,0,2,0,2,2s2,18,2,18a1.959,1.959,0,0,1-2,
-          2H515A1.959,1.959,0,0,1,513,233Z"></path>
-    <path class="lavaboBaque"
-          d="M516,230.545c0-1.455.818-12.364.818-13.091A1.671,1.671,0,0,1,518.455,216c8.182,1.455,15.545,1.455,21.273,
-          0,.818,0,1.636,0,1.636,1.455S543,230.545,543,230.545A1.488,1.488,0,0,1,541.364,232H517.636S516,232,
-          516,230.545Z"></path>
-    <rect class="lavaboRobinet" x="529" y="228" width="2" height="6"></rect>
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- ---------------------------------------------- OBJET RFID ------------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
+<div id="container_plan">
+    <div class="container-master">
+        <div class="text_thermo"><p>Salon et salle à manger</p></div>
+        <div class="container">
+            <div class="de">
+                <div class="den">
+                    <div class="dene">
+                        <div class="denem">
+                            <div class="deneme" id="temp_manger">
+                                <span class="entier">23</span><span class="decimal">9</span><strong>&deg;</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-master">
+        <div class="text_thermo"><p>Chambre</p></div>
+        <div class="container">
+            <div class="de">
+                <div class="den">
+                    <div class="dene">
+                        <div class="denem">
+                            <div class="deneme" id="temp_chambre">
+                                <span class="entier">23</span><span class="decimal">9</span><strong>&deg;</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-master">
+        <div class="text_thermo"><p>Salle de bain</p></div>
+        <div class="container">
+            <div class="de">
+                <div class="den">
+                    <div class="dene">
+                        <div class="denem">
+                            <div class="deneme" id="temp_sdb">
+                                <span class="entier">23</span><span class="decimal">9</span><strong>&deg;</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <svg id="plan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559 267" overflow="visible">
+
+        <title>SmartHome LIARA</title>
+
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- ------------------------------------- LES COULEUR & SPRITE  ----------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------- IMAGE SOL ------------------------ -->
+        <defs>
+            <pattern id="patternSol" x="0" y="0" height="30" width="30" patternUnits="userSpaceOnUse">
+                <image height="30" width="30" x="0" y="0" preserveAspectRatio="none"
+                       xlink:href="../ressource/img/plancher.jpg"></image>
+            </pattern>
+
+        </defs>
+
+
+        <defs>
+            <pattern id="patternSolSalleDeBain" x="0" y="0" height="40" width="40" patternUnits="userSpaceOnUse">
+                <image height="40" width="40" x="0" y="0" preserveAspectRatio="none"
+                       xlink:href="../ressource/img/sdb1.jpg"></image>
+            </pattern>
+        </defs>
+
+        <!-- -----------------------------  IMAGE MUR -------------------------- -->
+
+        <defs>
+            <pattern id="patternMur" x="0" y="0" height="50" width="50" patternUnits="userSpaceOnUse">
+                <image x="0" y="0" height="50" width="50" preserveAspectRatio="none"
+                       xlink:href="../ressource/img/mur.jpg"></image>
+            </pattern>
+        </defs>
+
+        <!-- -----------------------------  IMAGE FRIGO ------------------------ -->
+
+        <defs>
+            <pattern id="patternFrigo" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                <image height="1" width="1" preserveAspectRatio="none" xlink:href="../ressource/img/frigo.jpg"></image>
+            </pattern>
+        </defs>
+
+        <!-- -----------------------------  IMAGE LIT -------------------------- -->
+
+        <defs>
+            <pattern id="patternEdredon" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                <image height="1" width="1" preserveAspectRatio="none" xlink:href="../ressource/img/edredon.png"></image>
+            </pattern>
+        </defs>
+
+        <!-- --------------------------  IMAGE CUISINE PLAN DE TRAVAIL --------- -->
+
+        <defs>
+            <pattern id="patternPlanCuisine" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                <image height="1" width="1" preserveAspectRatio="none"
+                       xlink:href="../ressource/img/marbre_plan_cuisine.jpg"></image>
+            </pattern>
+        </defs>
+
+        <!-- --------------------------  IMAGE FAUTEUIL --------- -->
+
+        <defs>
+            <pattern id="patternFauteuilAssise" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                <image height="1" width="1" preserveAspectRatio="none"
+                       xlink:href="../ressource/img/assise_fauteuil.jpg"></image>
+            </pattern>
+        </defs>
+
+        <defs>
+            <pattern id="patternFauteuilDossier" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                <image height="1" width="1" preserveAspectRatio="none"
+                       xlink:href="../ressource/img/dossier_fauteuil.jpg"></image>
+            </pattern>
+        </defs>
+
+        <!-- --------------------------  IMAGE TABE --------- -->
+
+        <defs>
+            <pattern id="patternTable" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                <image height="1" width="1" preserveAspectRatio="none" xlink:href="../ressource/img/table.jpg"></image>
+            </pattern>
+        </defs>
+
+        <!-- --------------------------  IMAGE MEUBLE --------- -->
+
+        <defs>
+            <pattern id="patternMeubleCuisine" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                <image height="1" width="1" preserveAspectRatio="none"
+                       xlink:href="../ressource/img/meuble_cuisine.jpg"></image>
+            </pattern>
+        </defs>
+
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------- SOL & ZONE --------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+        <polygon class="Zone_morte"
+                 points="489.5 7.5 489.5 0.5 558.5 0.5 558.5 90.5 466.5 90.333 466.678 7.5 489.5 7.5"
+                 fill="#FFFFFF"></polygon>
+        <image xlink:href="../ressource/img/logo.png" x="470" y="30" width="90"></image>
+
+        <polygon class="zone_chambre"
+                 points="263 125 263 8 458 8 458 90 388 90 388 238 270 238 270 125 263 125"
+                 fill="url(#patternSol)"></polygon>
+        <polygon class="zone_cuisine"
+                 points="145.5 174.5 140.5 169.5 65.5 244.5 5.5 184.5 5.5 69.456 5.5 44.5 42.5 7.5 467 7.5 467
+                 202.5 225.5 238.5 154.5 238.5 118.5 202.5 118.153 201.847 145.5 174.5"
+                 fill="url(#patternSol)"></polygon>
+        <polygon class="zone_sdb" points="397 99 397 238 492 238 492 192 498 192 498 238 550 238 550 99 397 99"
+                 fill="url(#patternSolSalleDeBain)"></polygon>
+
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------- CHAMBRE ------------------------------------------------------ -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+        <rect class="bibliotequeChambre" x="368" y="110" width="17" height="51" fill="url(#patternTable)"></rect>
+        <rect class="lit" x="279" y="181" width="104" height="54" fill="#EFEFEF"></rect>
+        <path class="lit"
+              d="M379.337,185.606l-6.421.905a32.252,32.252,0,0,1-8.756.036l-7.092-.941-.8,13.047a145.444,145.444,
+              0,0,0,.02,18.06L357.068,229l7.221-.958a31.3,31.3,0,0,1,8.5.035l6.55.924c1.483-6.673,1.35-5.783
+              ,1.35-22.078C380.687,190.174,379.337,185.606,379.337,185.606Z" fill="#EFEFEF"></path>
+
+        <!-- ----------------- bonhomme ------------------- -->
+
+        <path class="bonhommeAnime corps"
+              d="M353.66,205.61l3.252-.65s-1.3-3.252,0-5.2,9.106-3.252,10.407-1.3-.65,3.9-.65,3.9,1.3.65,0,1.951-3.9
+              ,0-3.9.65,1.951,1.3,1.951,1.3,1.3.65,0,1.3a5.078,5.078,0,0,1-3.252,0l-1.951,2.6h-2.6l-1.3,1.3Z"></path>
+        <path class="bonhommeAnime corps"
+              d="M346.92,203.6s6.338,3.169,6.338,5.07-.634,2.535-1.9,3.8-10.14-3.8-10.14-3.8l-3.263-3.059,3.153-4.594Z">
+        </path>
+        <path class="bonhommeAnime chemise"
+              d="M353.01,204.309c-1.3-.65-4.925.2-4.925.2s4.8,2.371,4.864,4.011-1.89,4.241-1.89,4.241l-11.11-4.562s-5.59
+              ,12.257,1.134,12.962,15.179-9.376,15.179-9.376S354.311,204.96,353.01,204.309Z"></path>
+        <path class="bonhommeAnime corps"
+              d="M345.688,203.338l1.865.9h5.07l.7.8,1.2-3.339,2.535-3.169.634-1.268s.474-1.759,1.741-1.125a1.666,1.666,0
+              ,0,1,.794,2.023L364,197.78s-1.87-7.485-3.771-7.485a6.081,6.081,0,0,0-3.079.76C356.426,190.928,345.688,203.338
+              ,345.688,203.338Z"></path>
+        <path class="bonhommeAnime corps"
+              d="M369.27,212.765c.65,3.252,0,3.9-1.3,4.553s-2.6-1.3-2.6-1.3v-1.951s.136-.891-.582-.445-.719,1.1-1.369,1.1
+              ,0-1.951,0-1.951S368.62,209.513,369.27,212.765Z"></path>
+        <path class="bonhommeAnime" d="M357.905,198.925"></path>
+        <path class="bonhommeAnime" d="M359.5,200.5"></path>
+        <path class="cheveux bonhommeAnime" d="M363.5,199.5"></path>
+        <path class="bonhommeAnime bordureBonhomme" d="M365.5,197.5"></path>
+        <path class="bonhommeAnime cheveux"
+              d="M370.571,196.5A4.19,4.19,0,0,0,367,199.156a12.325,12.325,0,0,0-.986,3.2,14.275,14.275,0,0,0-1.55
+              ,1.442c-.4.509-1.7.509-2.353,1.16s3.1.81,2.523,2.031-3.824.571-3.824.571-1.3-.65-1.951,2.6,9.106
+              ,2.6,9.106,2.6a7.224,7.224,0,0,0,5.2-7.155A15.344,15.344,0,0,0,370.571,196.5Z"></path>
+
+        <!-- ----------------- edredon ------------------- -->
+
+        <path class="litStyle"
+              d="M278.6,181a5.8,5.8,0,0,0-5.6,5.977v42.046A5.8,5.8,0,0,0,278.6,235H354l-18-49,3-5"
+              fill="url(#patternEdredon)"></path>
+
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------- SALON -------------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+
+        <!-- ---------------- BIBLIO ------------------------ -->
+
+        <rect class="bordureSalon" x="351" width="13" height="35"
+              transform="translate(340 375) rotate(-90)" fill="url(#patternTable)"></rect>
+
+        <!-- ---------------- TV ---------------------------- -->
+
+        <rect id="meuble_tv" class="bordureSalon" y="27" width="61" height="12" rx="4.581" ry="4.581"
+              transform="translate(-14.401 31.232) rotate(-45)" fill="url(#patternTable)"></rect>
+        <rect id="tv" x="5.398" y="30.525" width="50.205" height="4.95"
+              transform="translate(-14.401 31.232) rotate(-45)"></rect>
+        <path id="pied_tv"
+              d="M26,31V41a1,1,0,0,0,1,1h0a1,1,0,0,0,1-1V32a1,1,0,0,1,1-1h9a1,1,0,0,0,1-1h0a1,1,0,0,0-1-1H27a1
+              ,1,0,0,0-1,1Z"></path>
+
+        <!-- ---------------- Fauteuil ---------------------- -->
+
+
+        <path id="fauteuil3_1" class="bordureSalon"
+              d="M240.842,47.349V52.97a.725.725,0,0,1-.725.725H203.383a.725.725,0,0,1-.725-.725V15.53a.725.725
+              ,0,0,1,.725-.725h36.734a.725.725,0,0,1,.725.725v5.621a.725.725,0,0,1-.725.725h-30.37a.725.725,0,0
+              ,0-.725.725V45.9a.725.725,0,0,0,.725.725h30.37A.725.725,0,0,1,240.842,47.349Z"
+              fill="url(#patternFauteuilDossier)"></path>
+        <path id="fauteuil3_1-2" data-name="fauteuil3_1" class="bordureSalon"
+              d="M241.857,21.876H209.3a.28.28,0,0,0-.28.28V46.345a.28.28,0,0,0,.28.28h32.555a1.106,1.106,0,0,0
+              ,1.106-1.106V22.982A1.106,1.106,0,0,0,241.857,21.876Z" fill="url(#patternFauteuilAssise)"></path>
+
+        <path id="fauteuil2_1" class="bordureSalon"
+              d="M45.842,97.349v5.621a.725.725,0,0,1-.725.725H8.383a.725.725,0,0,1-.725-.725V65.53a.725.725,0,0
+              ,1,.725-.725H45.117a.725.725,0,0,1,.725.725v5.621a.725.725,0,0,1-.725.725H14.747a.725.725,0,0
+              ,0-.725.725V95.9a.725.725,0,0,0,.725.725h30.37A.725.725,0,0,1,45.842,97.349Z"
+              fill="url(#patternFauteuilDossier)"></path>
+        <path id="fauteuil2_1-2" data-name="fauteuil2_1" class="bordureSalon"
+              d="M46.857,71.876H14.3a.28.28,0,0,0-.28.28V96.345a.28.28,0,0,0,.28.28H46.857a1.106
+              ,1.106,0,0,0,1.106-1.106V72.982A1.106,1.106,0,0,0,46.857,71.876Z"
+              fill="url(#patternFauteuilAssise)"></path>
+
+        <path id="fauteuil1_2" class="bordureSalon"
+              d="M95.175,155.374l4.088-3.858a.725.725,0,0,1,1.025.03L125.5,178.263a.725.725,0,0,1-.03,
+              1.025l-27.231,25.7a.725.725,0,0,1-1.025-.03L72,178.237a.725.725,0,0,1,.03-1.025l4.088-3.858a.725.725,0,0,1,
+              1.025.03l20.843,22.088a.725.725,0,0,0,1.025.03l16.945-15.99a.725.725,0,0,0,.03-1.025L95.145,156.4A.725.725,
+              0,0,1,95.175,155.374Z" fill="url(#patternFauteuilDossier)"></path>
+        <path id="fauteuil1_1" class="bordureSalon"
+              d="M75.951,172.119,98.293,195.8a.28.28,0,0,0,.4.011l17.593-16.6a.28.28,0,0,0,.011-.4L93.951,155.133a1.106,
+              1.106,0,0,0-1.564-.045L76,170.555A1.106,1.106,0,0,0,75.951,172.119Z" fill="url(#patternFauteuilAssise)">
+        </path>
+
+        <!-- ---------------- TABLE ---------------------- -->
+
+        <path id="table" class="bordureSalon"
+              d="M295.472,10.4V62.281l-3.363.4a190.231,190.231,0,0,1-44.745,0l-3.363-.4V10.4l8.886-.79a190.345,
+              190.345,0,0,1,33.7,0Z" fill="url(#patternTable)"></path>
+
+        <!-- --------------------------------------- PORTE APPARTEMENT ------------------------------------------------ -->
+
+        <polyline class="porteSalleConf porte" points="0.5 116.5 6.5 116.5 6.5 166.5 0.5 166.5 0.5 116.5"></polyline>
+        <ellipse class="porteSalleConf poigne" cx="8" cy="161" rx="1.5" ry="2.5"></ellipse>
+        <polyline class="porteExterieur porte" points="425 0.5 425 8.167 381.144 8.167 381.144 0.5 425 0.5"></polyline>
+        <ellipse class="porteExterieur poigne" cx="385.968" cy="8.833" rx="2.193" ry="1.667"></ellipse>
+        <polyline class="porteSalleDeBain porte" points="406.144 99 406.144 90.183 450 90.183 450 99 406.144 99"></polyline>
+        <ellipse class="porteSalleDeBain poigne" cx="446.176" cy="88.917" rx="2.193" ry="1.417"></ellipse>
+
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- --------------------------------------- CUISINE ----------------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+        <!-- ------------------ PLAQUE DE CUISSONS ----------------  -->
+
+        <polygon class="four" points="202 208 229.184 235 258 207.481 230.272 181 202 208"></polygon>
+        <ellipse class="plaqueDeCuisson" cx="218.138" cy="208.779" rx="8.731" ry="8.567"></ellipse>
+        <ellipse class="plaqueDeCuisson" cx="231.412" cy="196.184" rx="6.35" ry="6.231"></ellipse>
+        <ellipse class="plaqueDeCuisson" cx="243.281" cy="205.246" rx="5.291" ry="5.192"></ellipse>
+        <ellipse class="plaqueDeCuisson" cx="225.321" cy="222.87" rx="5.291" ry="5.192"></ellipse>
+        <ellipse class="plaqueDeCuisson" cx="234.301" cy="214.058" rx="5.291" ry="5.192"></ellipse>
+
+        <!-- ------------------ PLACARD ENTRE FRIGO ET PLAQUE DE CUISSONS ---------------- -->
+
+        <rect class="portePlacardFrigoBas poignePlacard" x="198" y="206" width="2" height="1" rx="0.5" ry="0.5"></rect>
+        <path class="portePlacardFrigoBas portePlacard"
+              d="M178.4,206.545H200.6c.772,0,1.4.855,1.4,1.909H177C177,207.4,177.626,206.545,178.4,206.545Z"></path>
+
+        <polygon class="planTravailCuisine" points="151 235 177 208 202 208 230 234 226 238 154 238 151 235"
+                 fill="url(#patternPlanCuisine)"></polygon>
+
+        <rect class="portePlacardFrigoHautGauche poignePlacard" x="185" y="218" width="2" height="1" rx="0.5"
+              ry="0.5"></rect>
+        <path class="portePlacardFrigoHautGauche portePlacard"
+              d="M170.174,218.545h18.652c.648,0,1.174.855,1.174,1.909H169C169,219.4,169.526,218.545,
+              170.174,218.545Z"></path>
+
+        <rect class="portePlacardFrigoHautDroit poignePlacard" x="193" y="218" width="2" height="1" rx="0.5"
+              ry="0.5"></rect>
+        <path class="portePlacardFrigoHautDroit portePlacard"
+              d="M191.174,218.545h18.652c.648,0,1.174.855,1.174,1.909H190C190,219.4,190.526,218.545,191.174,
+              218.545Z"></path>
+
+        <rect x="169" y="219.704" width="42" height="18.296" fill="url(#patternMeubleCuisine)"></rect>
+
+        <!-- ------------------ PLACARD SOUS EVIER ---------------- -->
+
+        <rect class="portePlacardEvierBasGauche poignePlacard" x="223.5" y="139.5" width="2" height="1" rx="0.5" ry="0.5"
+              transform="translate(364.5 -84.5) rotate(90)"></rect>
+        <path class="portePlacardEvierBasGauche  portePlacard"
+              d="M225.061,142.3v-29.45c0-1.024,1.316-1.853,2.939-1.853h0v33.157h0C226.377,144.157,225.061,
+              143.327,225.061,142.3Z"></path>
+
+        <rect class="portePlacardEvierBasDroit poignePlacard" x="223.5" y="149.5" width="2" height="1" rx="0.5" ry="0.5"
+              transform="translate(374.5 -74.5) rotate(90)"></rect>
+        <path class="portePlacardEvierBasDroit portePlacard"
+              d="M225.061,177.1V146.9c0-1.05,1.316-1.9,2.939-1.9h0v34h0C226.377,179,225.061,178.149,225.061,177.1Z"></path>
+
+        <!-- ------------------ TIROIR SOUS EVIER ---------------- -->
+
+        <rect class="tiroirAnimeDroit fondTiroir" x="226.25" y="160" width="16.5" height="18" rx="0.593" ry="0.593"></rect>
+        <rect class="tiroirAnimeDroit faceTiroir" x="226.25" y="160" width="3" height="18"></rect>
+        <rect class="tiroirAnimeDroit poignePlacard" x="225" y="168.5" width="4" height="1" rx="0.5" ry="0.5" transform="rotate(90)"></rect>
+
+        <rect class="tiroirAnimeGauche fondTiroir" x="226.25" y="112" width="16.5" height="18" rx="0.593" ry="0.593"></rect>
+        <rect class="tiroirAnimeGauche faceTiroir" x="226.25" y="112" width="3" height="18"></rect>
+        <rect class="tiroirAnimeGauche poignePlacard" x="225" y="120.5" width="4" height="1" rx="0.5" ry="0.5"></rect>
+
+        <rect class="fondTiroir" x="226.25" y="130" width="16.5" height="30" rx="0.593" ry="0.593"></rect>
+        <rect class="faceTiroir" x="226.25" y="130" width="3" height="30"></rect>
+        <rect class="poignePlacard" x="223.667" y="144.5" width="6.667" height="1" rx="0.5" ry="0.5"
+              transform="translate(372 -82) rotate(90)"></rect>
+
+        <path class="planTravailCuisine"
+              d="M228.406,179.406l27.113,27.113a1.387,1.387,0,0,0,1.962,0l3.113-3.113a1.387,1.387,0,0,0,
+              .406-.981V111.387A1.387,1.387,0,0,0,259.613,110h-28.97A2.643,2.643,0,0,0,228,112.643v65.783A1.387,
+              1.387,0,0,0,228.406,179.406Z" fill="url(#patternPlanCuisine)"></path>
+
+        <!-- ------------------ EVIER ---------------- -->
+
+        <rect class="robinetBordure" x="233" y="130" width="24" height="21.517" rx="1.158" ry="1.158"></rect>
+        <path class="robinetBaque"
+              d="M234.655,132.448v16.622a.775.775,0,0,0,.757.793h15.866a.775.775,0,0,0,.757-.793V132.448a.775.775,
+              0,0,0-.757-.793H235.412A.775.775,0,0,0,234.655,132.448Z"></path>
+
+        <!-- ------------------ PLACARD SUR EVIER ---------------- -->
+
+        <rect x="244.63" y="126" width="16.37" height="68" fill="url(#patternMeubleCuisine)"></rect>
+
+        <rect class="portePlacardEvierHautGaucheGauche poignePlacard"
+              x="241.5" y="134.5" width="2" height="1" rx="0.5" ry="0.5"
+              transform="translate(377.5 -107.5) rotate(90)"></rect>
+        <path class="portePlacardEvierHautGaucheGauche portePlacard"
+              d="M243.061,137.329V126.671c0-.37.855-.671,1.909-.671h0v12h0C243.916,138,243.061,137.7,
+              243.061,137.329Z"></path>
+
+        <rect class="portePlacardEvierHautGaucheDroit poignePlacard"
+              x="241.5" y="140.5" width="2" height="1" rx="0.5" ry="0.5"
+              transform="translate(383.5 -101.5) rotate(90)"></rect>
+        <path class="portePlacardEvierHautGaucheDroit portePlacard"
+              d="M243.061,149.329V138.671c0-.37.855-.671,1.909-.671h0v12h0C243.916,
+              150,243.061,149.7,243.061,149.329Z"></path>
+
+        <rect class="portePlacardEvierHautDroitGauche poignePlacard"
+              x="241.5" y="166.5" width="2" height="1" rx="0.5" ry="0.5"
+              transform="translate(409.5 -75.5) rotate(90)"></rect>
+        <path class="portePlacardEvierHautDroitGauche portePlacard"
+              d="M243.061,169.826V151.174c0-.648.855-1.174,1.909-1.174h0v21h0C243.916,171,
+              243.061,170.474,243.061,169.826Z"></path>
+
+        <rect class="portePlacardEvierHautDroitDroit poignePlacard"
+              x="241.5" y="174.5" width="2" height="1" rx="0.5" ry="0.5"
+              transform="translate(417.5 -67.5) rotate(90)"></rect>
+        <path class="portePlacardEvierHautDroitDroit portePlacard"
+              d="M243.061,192.714V172.286c0-.71.855-1.286,1.909-1.286h0v23h0C243.916,194,
+              243.061,193.424,243.061,192.714Z"></path>
+
+        <!-- ---------------- FRIGIDAIRE ---------- -->
+
+        <rect class="frigo" fill="url(#patternFrigo)" x="130.95" y="181.519" width="38.93" height="43.134"
+              transform="translate(-99.548 165.842) rotate(-45)"></rect>
+        <rect class="arriereFrigo" x="135.688" y="199.354" width="1.054" height="35.609"
+              transform="translate(-113.658 159.923) rotate(-45)"></rect>
+        <rect class="porteFrigoAnime porteFrigo" x="150" y="173.5" width="2.623" height="43.134"
+              transform="rotate(-45)"></rect>
+        <rect class="porteFrigoAnime poigneFrigo" x="152" y="205" width="1.141" height="5.87"
+              transform="rotate(-45)"></rect>
+        <rect class="porteFrigoAnime poigneFrigo" x="150" y="173.5" width="0.58" height="43.134"
+              transform="rotate(-45)"></rect>
+
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------- LES MURS --------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+        <polygon class="murBordure" points="0.5 0.5 0.5 116.5 5.5 116.5 5.5 44.5 42.5 7.5 380.5 7.5 380.5 0.5 0.5 0.5"
+                 fill="url(#patternMur)"></polygon>
+        <polygon class="murBordure"
+                 points="0.5 166.5 0.5 257.5 385.5 256.5 385.5 238.5 269.5 238.5 269.5 125.5 261.5 125.5 261.5 202.5
+                 225.5 238.5 154.5 238.5 118 202 145.5 174.5 140.5 169.5 65.5 244.5 5.5 184.5 5.5 166.5 0.5 166.5"
+                 fill="url(#patternMur)"></polygon>
+        <rect class="murBordure" x="385.5" y="238.5" width="25" height="28" fill="url(#patternMur)"></rect>
+        <polygon class="murBordure"
+                 points="387.86 238.5 387.86 90.5 405.5 90.5 405.5 98.5 396.5 98.5 396.5 238.5 387.86 238.5"
+                 fill="url(#patternMur)"></polygon>
+        <polygon class="murBordure"
+                 points="425.5 0.5 489.5 0.5 489.5 7.5 466.5 7.5 466.5 90.5 558.5 90.5 558.5 256.5 501.5 256.5 501.5 266.5
+                 490.5 266.5 490.5 256.5 410.5 256.5 410.5 238.5 492.5 238.5 492.5 192.5 497.5 192.5 497.5 238.5 550.5
+                 238.5 550.5 98.5 450.5 98.5 450.5 90.5 458.5 90.5 458.5 7.5 425.5 7.5 425.5 0.5"
+                 fill="url(#patternMur)"></polygon>
+
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- ------------------------------------------- TEMPERATURE --------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+        <image xlink:href="../ressource/img-controle/thermometre.svg" x="100" y="230" width="07" ></image>
+        <text id="cuisineTem" x="110" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
+
+        <image xlink:href="../ressource/img-controle/thermometre.svg" x="260" y="230" width="07" ></image>
+        <text id="chambreTem" x="270" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
+
+        <image xlink:href="../ressource/img-controle/thermometre.svg" x="550" y="230" width="07" ></image>
+        <text id="sdbTem" x="530" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
+
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- ----------------------------------------- SALLE DE BAIN --------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+        <!-- ---------------- BAIGNOIRE ---------- -->
+
+        <rect class="baignoireBordureExterieur" x="398.375" y="193.381" width="92.625" height="42.619" rx="1.226" ry="1.226"
+              transform="translate(889.375 429.381) rotate(180)"></rect>
+        <path class="baignoireBordureInterieur"
+              d="M486.094,207.523v13.822c0,6.911-4.807,9.276-6.2,9.215s-38.238,3.456-70.276,
+              0c-8.268-2.3-8.117-30.061-1.033-32.252,33.071-2.3,70.77-.192,72.343,0S485.5,200.5,486.094,207.523Z"></path>
+        <path class="baignoirefond"
+              d="M480.508,207.339v13.822c0,6.911-3.1,6.911-4.134,6.911s-31,2.3-63.042-1.152c-3.1-1.152-8.268-17.278,
+              0-25.341a505.623,505.623,0,0,1,64.075,0S479.474,201.58,480.508,207.339Z"></path>
+        <ellipse class="baignoireEvacuation" cx="474.687" cy="214.69" rx="1.55" ry="1.728"></ellipse>
+
+        <!-- ---------------- WC ---------- -->
+
+        <path class="reservoirEauWC"
+              d="M529.577,103.56v5.345c0,3.207-2,3.207-2,3.207h-19a3.007,3.007,0,0,1-3-3.207V103.56s0-2.138,
+              2-2.138h20C529.577,101.423,529.577,103.56,529.577,103.56Z"></path>
+        <polygon class="boutonEvacuationWC"
+                 points="518.577 107.836 518.577 108.905 518.077 108.905 517.577 108.371 518.077 107.836 518.577 107.836">
+        </polygon>
+        <path class="couvercleReservoirEauWC" d="M528.577,106.767c.5-2.672-8-2.138-8-2.138h-6s-7.5-.534-7,2.138"></path>
+        <path class="lunnetteWC"
+              d="M524.5,112.112s7.206,19.24-2.059,25.654c-1.942,1.734-6.176,2.138-9.265,
+              0-10.294-6.413-2.059-25.654-2.059-25.654Z"></path>
+        <rect class="visWC" x="513.577" y="114.25" width="1" height="1.069"></rect>
+        <rect class="visWC" x="521.577" y="114.25" width="1" height="1.069"></rect>
+        <ellipse class="trouWC" cx="517.577" cy="127.077" rx="7" ry="9.62"></ellipse>
+        <path class="evacuationWC"
+              d="M516.538,121.939h.69a2.488,2.488,0,0,1,2.488,2.488v1.025a2.488,2.488,0,0,1-2.488,2.488h-.69a1.1,1.1,0,0,
+              1-1.1-1.1v-3.8A1.1,1.1,0,0,1,516.538,121.939Z" transform="translate(642.516 -392.639) rotate(90)"></path>
+
+        <!-- ---------------- LAVABO ---------- -->
+
+        <path class="lavaboBordure"
+              d="M513,233c0-2,1-17,1-18a2.151,2.151,0,0,1,2-2c10,2,19,2,26,0,1,0,2,0,2,2s2,18,2,18a1.959,1.959,0,0,1-2,
+              2H515A1.959,1.959,0,0,1,513,233Z"></path>
+        <path class="lavaboBaque"
+              d="M516,230.545c0-1.455.818-12.364.818-13.091A1.671,1.671,0,0,1,518.455,216c8.182,1.455,15.545,1.455,21.273,
+              0,.818,0,1.636,0,1.636,1.455S543,230.545,543,230.545A1.488,1.488,0,0,1,541.364,232H517.636S516,232,
+              516,230.545Z"></path>
+        <rect class="lavaboRobinet" x="529" y="228" width="2" height="6"></rect>
+
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------- OBJET RFID ------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
 
     <text id="Tasse1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 1</text>
     <text id="Tasse2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 2</text>
@@ -475,13 +526,58 @@
     <text id="Poelon" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">POELON</text>
 
 
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- ----------------------------------------- LA FIN DE TOUTES CHOSES ----------------------------------------- -->
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+        <!-- ----------------------------------------- LA FIN DE TOUTES CHOSES ----------------------------------------- -->
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
 
-</svg>
+    </svg>
+</div>
 
-<button id="buttonPleineEcran" onclick="twPleinEcran(document.getElementById('plan'))"> Pleine écran</button>
+<button id="buttonPleineEcran" onclick="twPleinEcran(document.getElementById('container_plan'))"> Pleine écran</button>
+
+<div id="bouton_run">
+    <a href="#" class="btn" id="run">
+        <span class="btn-content">Run</span>
+        <span class="icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    <a href="#" class="btn btn-remove btn-alt-color" id="stop">
+        <span class="btn-content">Stop</span>
+        <span class="icon"><i class="fa fa-times" aria-hidden="true"></i></span>
+    </a>
+</div>
+
+<div class="boutons_web">
+    <div class="boutons_websocket">
+        <div class="button blue" id="bouton_web_portes">
+            <strong class="title">Websocket des portes</strong>
+            <span class="details">
+              Adresse <i class="icon-time"></i> ws://
+                <strong id="adresse_portes">172.24.24.3:6091</strong>
+            </span>
+            <span class="price"><strong>&rsaquo;</strong></span>
+        </div>
+    </div>
+    <div class="boutons_websocket">
+        <div class="button red" id="bouton_web_objets">
+            <strong class="title">Websocket des objets</strong>
+            <span class="details">
+              Adresse <i class="icon-time"></i> ws://
+                <strong id="adresse_objets">172.24.24.2:6094</strong>
+            </span>
+            <span class="price"><strong>&rsaquo;</strong></span>
+        </div>
+    </div>
+    <div class="boutons_websocket">
+        <div class="button green">
+            <strong class="title">Websocket non attribué</strong>
+            <span class="details">
+              Adresse <i class="icon-time"></i> ws://
+                <strong>127.0.0.1:6000</strong>
+            </span>
+            <span class="price"><strong>&rsaquo;</strong></span>
+        </div>
+    </div>
+</div>
 
 <div class="containerRFID">
     <h2>Activation des objets RFID</h2>
@@ -665,7 +761,6 @@
 <script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
 <script src="../bibliotheque/js/animeJS/anime.min.js"></script>
 <script src="../bibliotheque/js/bootstrap/bootstrap.min.js"></script>
-
 <script src="js/initialisation.js"></script>
 <script src="js/animation/animationCuisine.js"></script>
 <script src="js/animation/animationPlan.js"></script>
@@ -673,5 +768,6 @@
 <script src="js/websocket.js"></script>
 <script src="js/webSocketRFID.js"></script>
 <script src="js/objetDisplayRFID.js"></script>
+<script src="js/GestionInterface.js"></script>
 </body>
 </html>
