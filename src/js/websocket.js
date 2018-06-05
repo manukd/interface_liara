@@ -1,7 +1,6 @@
 const socket = new WebSocket('ws://172.24.24.3:6091');
 
-socket.onmessage = function (event)
-{
+socket.onmessage = function (event) {
     let d = JSON.parse(event.data);
     console.log(d);
     for (let key in d) {
@@ -136,7 +135,8 @@ socket.onmessage = function (event)
                 }
                 break;
             case "8b87f340-c92d-4ea9-bf1d-f41ba88dd2ac" : // Lit
-                if (d[key].AnalogValue > 8) {
+                console.log(d[key].AnalogValue);
+                if (d[key].AnalogValue > 4.2) {
                     edredonO.restart();
                 }
                 else {
@@ -144,15 +144,15 @@ socket.onmessage = function (event)
                 }
                 break;
             case "82c86a3a-5e65-4fa3-bf12-d5abef156e32" : // Temperature cuisine
-                let tmp =document.getElementById('cuisineTem');
+                let tmp = document.getElementById('cuisineTem');
                 tmp['innerText' in tmp ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1).toString() + "°C";
                 break;
             case "4c07e71a-0e4c-4629-968a-06d9c24b0b48" : // Temperature chambre
-                let tmp2 =document.getElementById('chambreTem');
+                let tmp2 = document.getElementById('chambreTem');
                 tmp2['innerText' in tmp2 ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1).toString() + "°C";
                 break;
             case "886a9863-eae4-4402-96f6-b15db25ef6ab" : // Temperature salle de bain
-                let tmp3 =document.getElementById('sdbTem');
+                let tmp3 = document.getElementById('sdbTem');
                 tmp3['innerText' in tmp3 ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1).toString() + "°C";
                 break;
         }
