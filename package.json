@@ -1,0 +1,26 @@
+{
+  "name": "interface_liara2",
+  "version": "1.0.0",
+  "description": "Création d'une interface pour une pièce domotique/connectée",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manukd/interface_liara.git"
+  },
+  "author": "Pierre Wenzel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manukd/interface_liara/issues"
+  },
+  "homepage": "https://github.com/manukd/interface_liara#readme",
+  "dependencies": {
+    "alertify": "^0.3.0",
+    "animejs": "^2.2.0",
+    "bootstrap": "^4.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1"
+  }
+}
