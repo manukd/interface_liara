@@ -604,6 +604,7 @@
     </div>
 </div>
 
+<!--
 <div class="containerRFID">
     <h2>Activation des objets RFID</h2>
     <div class="menuRFIDAssiette">
@@ -781,10 +782,31 @@
     </div>
 </div>
 
+-->
+
+<h2>Activation des objets RFID</h2>
+<table>
+    <tr>
+        <td>Tasse</td>
+        <td>Petite assiette</td>
+        <td>Assiette</td>
+        <td>Bol</td>
+        <td>Autre</td>
+    </tr>
+    <script>
+        $.getJSON("config.json", function (data) {
+            for(let i =0; i<data.RFID.length; i++) {
+                console.log(data.RFID[i].id_laboratory);
+            }
+        });
+    </script>
+</table>
+
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../node_modules/animejs/anime.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../node_modules/alertifyjs/build/alertify.min.js"></script>
+
 <script src="js/initialisation.js"></script>
 <script src="js/pleineEcranAppartement.js"></script>
 <script src="js/animation/animationCuisine.js"></script>

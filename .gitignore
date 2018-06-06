@@ -53,3 +53,4 @@ fabric.properties
 .idea/httpRequests
 
 .DS_Store
+node_modules
