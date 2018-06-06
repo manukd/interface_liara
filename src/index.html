@@ -2,8 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../bibliotheque/css/bootstrap/bootstrap.min.css" id="bootstrap-css">
-    <link rel="stylesheet" href="../bibliotheque/css/font-awesome/4.2.0/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" id="bootstrap-css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/appartement/salonEtFondation.css">
     <link rel="stylesheet" href="css/appartement/cuisine.css">
     <link rel="stylesheet" href="css/appartement/chambre.css">
@@ -112,7 +114,8 @@
 
         <defs>
             <pattern id="patternEdredon" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-                <image height="1" width="1" preserveAspectRatio="none" xlink:href="../ressource/img/edredon.png"></image>
+                <image height="1" width="1" preserveAspectRatio="none"
+                       xlink:href="../ressource/img/edredon.png"></image>
             </pattern>
         </defs>
 
@@ -285,7 +288,8 @@
         <ellipse class="porteSalleConf poigne" cx="8" cy="161" rx="1.5" ry="2.5"></ellipse>
         <polyline class="porteExterieur porte" points="425 0.5 425 8.167 381.144 8.167 381.144 0.5 425 0.5"></polyline>
         <ellipse class="porteExterieur poigne" cx="385.968" cy="8.833" rx="2.193" ry="1.667"></ellipse>
-        <polyline class="porteSalleDeBain porte" points="406.144 99 406.144 90.183 450 90.183 450 99 406.144 99"></polyline>
+        <polyline class="porteSalleDeBain porte"
+                  points="406.144 99 406.144 90.183 450 90.183 450 99 406.144 99"></polyline>
         <ellipse class="porteSalleDeBain poigne" cx="446.176" cy="88.917" rx="2.193" ry="1.417"></ellipse>
 
         <!-- ----------------------------------------------------------------------------------------------------------- -->
@@ -326,7 +330,8 @@
 
         <!-- ------------------ PLACARD SOUS EVIER ---------------- -->
 
-        <rect class="portePlacardEvierBasGauche poignePlacard" x="223.5" y="139.5" width="2" height="1" rx="0.5" ry="0.5"
+        <rect class="portePlacardEvierBasGauche poignePlacard" x="223.5" y="139.5" width="2" height="1" rx="0.5"
+              ry="0.5"
               transform="translate(364.5 -84.5) rotate(90)"></rect>
         <path class="portePlacardEvierBasGauche  portePlacard"
               d="M225.061,142.3v-29.45c0-1.024,1.316-1.853,2.939-1.853h0v33.157h0C226.377,144.157,225.061,
@@ -339,11 +344,14 @@
 
         <!-- ------------------ TIROIR SOUS EVIER ---------------- -->
 
-        <rect class="tiroirAnimeDroit fondTiroir" x="226.25" y="160" width="16.5" height="18" rx="0.593" ry="0.593"></rect>
+        <rect class="tiroirAnimeDroit fondTiroir" x="226.25" y="160" width="16.5" height="18" rx="0.593"
+              ry="0.593"></rect>
         <rect class="tiroirAnimeDroit faceTiroir" x="226.25" y="160" width="3" height="18"></rect>
-        <rect class="tiroirAnimeDroit poignePlacard" x="225" y="168.5" width="4" height="1" rx="0.5" ry="0.5" transform="rotate(90)"></rect>
+        <rect class="tiroirAnimeDroit poignePlacard" x="225" y="168.5" width="4" height="1" rx="0.5" ry="0.5"
+              transform="rotate(90)"></rect>
 
-        <rect class="tiroirAnimeGauche fondTiroir" x="226.25" y="112" width="16.5" height="18" rx="0.593" ry="0.593"></rect>
+        <rect class="tiroirAnimeGauche fondTiroir" x="226.25" y="112" width="16.5" height="18" rx="0.593"
+              ry="0.593"></rect>
         <rect class="tiroirAnimeGauche faceTiroir" x="226.25" y="112" width="3" height="18"></rect>
         <rect class="tiroirAnimeGauche poignePlacard" x="225" y="120.5" width="4" height="1" rx="0.5" ry="0.5"></rect>
 
@@ -433,13 +441,13 @@
         <!-- ------------------------------------------- TEMPERATURE --------------------------------------------------- -->
         <!-- ----------------------------------------------------------------------------------------------------------- -->
 
-        <image xlink:href="../ressource/img-controle/thermometre.svg" x="100" y="230" width="07" ></image>
+        <image xlink:href="../ressource/img-controle/thermometre.svg" x="100" y="230" width="07"></image>
         <text id="cuisineTem" x="110" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
 
-        <image xlink:href="../ressource/img-controle/thermometre.svg" x="260" y="230" width="07" ></image>
+        <image xlink:href="../ressource/img-controle/thermometre.svg" x="260" y="230" width="07"></image>
         <text id="chambreTem" x="270" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
 
-        <image xlink:href="../ressource/img-controle/thermometre.svg" x="550" y="230" width="07" ></image>
+        <image xlink:href="../ressource/img-controle/thermometre.svg" x="550" y="230" width="07"></image>
         <text id="sdbTem" x="530" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
 
         <!-- ----------------------------------------------------------------------------------------------------------- -->
@@ -448,7 +456,8 @@
 
         <!-- ---------------- BAIGNOIRE ---------- -->
 
-        <rect class="baignoireBordureExterieur" x="398.375" y="193.381" width="92.625" height="42.619" rx="1.226" ry="1.226"
+        <rect class="baignoireBordureExterieur" x="398.375" y="193.381" width="92.625" height="42.619" rx="1.226"
+              ry="1.226"
               transform="translate(889.375 429.381) rotate(180)"></rect>
         <path class="baignoireBordureInterieur"
               d="M486.094,207.523v13.822c0,6.911-4.807,9.276-6.2,9.215s-38.238,3.456-70.276,
@@ -492,38 +501,51 @@
         <!-- ---------------------------------------------- OBJET RFID ------------------------------------------------- -->
         <!-- ----------------------------------------------------------------------------------------------------------- -->
 
-    <text id="Tasse1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 1</text>
-    <text id="Tasse2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 2</text>
-    <text id="Tasse3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 3</text>
-    <text id="Tasse4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 4</text>
+        <text id="Tasse1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 1</text>
+        <text id="Tasse2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 2</text>
+        <text id="Tasse3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 3</text>
+        <text id="Tasse4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 4</text>
 
-    <text id="sAssiette1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE ASSIETE 1</text>
-    <text id="sAssiette2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE ASSIETE 2</text>
-    <text id="sAssiette3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE ASSIETE 3</text>
-    <text id="sAssiette4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE ASSIETE 4</text>
+        <text id="sAssiette1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE
+            ASSIETE 1
+        </text>
+        <text id="sAssiette2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE
+            ASSIETE 2
+        </text>
+        <text id="sAssiette3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE
+            ASSIETE 3
+        </text>
+        <text id="sAssiette4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE
+            ASSIETE 4
+        </text>
 
-    <text id="Assiette1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 1</text>
-    <text id="Assiette2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 2</text>
-    <text id="Assiette3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 3</text>
-    <text id="Assiette4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 4</text>
+        <text id="Assiette1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 1
+        </text>
+        <text id="Assiette2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 2
+        </text>
+        <text id="Assiette3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 3
+        </text>
+        <text id="Assiette4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 4
+        </text>
 
-    <text id="Bol1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 1</text>
-    <text id="Bol2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 2</text>
-    <text id="Bol3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 3</text>
-    <text id="Bol4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 4</text>
+        <text id="Bol1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 1</text>
+        <text id="Bol2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 2</text>
+        <text id="Bol3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 3</text>
+        <text id="Bol4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 4</text>
 
-    <text id="Sucre" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">SUCRE</text>
+        <text id="Sucre" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">SUCRE</text>
 
-    <text id="Lait" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">LAIT</text>
+        <text id="Lait" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">LAIT</text>
 
-    <text id="Chaudron" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">CHAUDRON</text>
+        <text id="Chaudron" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">CHAUDRON</text>
 
-    <text id="Bouilloir" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOUILLOIR</text>
+        <text id="Bouilloir" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOUILLOIR
+        </text>
 
-    <text id="Sel" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">SEL</text>
-    <text id="Poivre" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">POIVRE</text>
+        <text id="Sel" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">SEL</text>
+        <text id="Poivre" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">POIVRE</text>
 
-    <text id="Poelon" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">POELON</text>
+        <text id="Poelon" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">POELON</text>
 
 
         <!-- ----------------------------------------------------------------------------------------------------------- -->
@@ -756,12 +778,13 @@
     </div>
 </div>
 
-<script src="js/pleineEcranAppartement.js"></script>
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<!--<script src="../bibliotheque/js/alertifyJS/dist/js/alertify.js"></script>-->
-<script src="../bibliotheque/js/animeJS/anime.min.js"></script>
-<script src="../bibliotheque/js/bootstrap/bootstrap.min.js"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/animejs/anime.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/alertify/lib/alertify.min.js"></script>
+
 <script src="js/initialisation.js"></script>
+<script src="js/pleineEcranAppartement.js"></script>
 <script src="js/animation/animationCuisine.js"></script>
 <script src="js/animation/animationPlan.js"></script>
 <script src="js/animation/animationChambre.js"></script>
