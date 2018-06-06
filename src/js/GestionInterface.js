@@ -1,12 +1,10 @@
+
 document.querySelector('#bouton_web_portes').addEventListener('click', function (ev) {
     changerWebsocketPortes();
 });
 
 document.querySelector('#bouton_web_objets').addEventListener('click', function (ev) {
     changerWebsocketObjets();
-});
-alertify.alert("Oui", function () {
-   alertify.message('OK');
 });
 
 document.querySelector('#run').addEventListener('click', function (ev) {

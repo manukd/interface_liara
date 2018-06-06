@@ -1,22 +1,13 @@
 let path_socket_objets = "";
 
 function changerWebsocketObjets() {
-    alertify
-        .defaultValue("")
-        .prompt("Entrer l'adresse du websocket qui envoie la position des objets",
-            function (val, ev) {
-
-                // The click event is in the event variable, so you can use it here.
-                ev.preventDefault();
+    alertify.prompt("Websocket RFID","Entrer l'adresse du websocket qui envoie la position des objets","",
+            function (ev, val) {
                 document.querySelector('#adresse_objets').innerHTML = val;
-                // The value entered is availble in the val variable.
                 alertify.success("Adresse validée");
 
             }, function (ev) {
-
-                // The click event is in the event variable, so you can use it here.
-                ev.preventDefault();
-                alertify.error("Adresse annulée");
+         alertify.error("Adresse annulée");
             });
 }
 

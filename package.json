@@ -17,10 +17,11 @@
   },
   "homepage": "https://github.com/manukd/interface_liara#readme",
   "dependencies": {
-    "alertify": "^0.3.0",
+    "alertifyjs": "^1.11.1",
     "animejs": "^2.2.0",
     "bootstrap": "^4.1.1",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
   }
 }

@@ -1,21 +1,13 @@
 let path_socket_portes = "";
 function changerWebsocketPortes()
 {
-    alertify
-        .defaultValue("")
-        .prompt("Entrer l'adresse du websocket des portes et de la tampérature",
-            function (val, ev) {
-
-                // The click event is in the event variable, so you can use it here.
-                ev.preventDefault();
+    alertify.prompt("Websocket porte et température","Entrer l'adresse du websocket des portes et de la tampérature","",
+            function (ev, val) {
                 document.querySelector('#adresse_portes').innerHTML=val;
                 // The value entered is availble in the val variable.
                 alertify.success("Vérifier la disposition réel des portes par rapport au plan");
 
             }, function(ev) {
-
-                // The click event is in the event variable, so you can use it here.
-                ev.preventDefault();
                 alertify.error("Vérifier la disposition réel des portes par rapport au plan");
             });
 }
