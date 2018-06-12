@@ -1,5 +1,40 @@
 {
-  "_comment": "le btnSoftwareID est obligatoire, sert à la construction du tableau de checkBox pour les objets RFID",
+  "sensor": [
+    {
+      "id_laboratory": "Capteur magn\u00E9tique porte salle de conf\u00E9rence",
+      "className": "porteSalleConf",
+      "rotateOrigine": 0,
+      "rotateFinal": -90,
+      "translateX": null,
+      "colorOrigine": null,
+      "colorFinal": null,
+      "easing": "linear",
+      "duration" : 500
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique porte d'entr\u00E9e",
+      "className": "porteExterieur",
+      "rotateOrigine": 0,
+      "rotateFinal": -90,
+      "translateX": null,
+      "colorOrigine": null,
+      "colorFinal": null,
+      "easing": "linear",
+      "duration" : 500
+    },
+    {
+      "id_laboratory": "Capteur mag\u00E9tique CB6",
+      "className": "porteSalleDeBain",
+      "rotateOrigine": 0,
+      "rotateFinal": -90,
+      "translateX": null,
+      "colorOrigine": null,
+      "colorFinal": null,
+      "easing": "linear",
+      "duration" : 500
+    }
+  ],
+
   "RFID": [
     {
       "id_laboratory": "Tasse1",

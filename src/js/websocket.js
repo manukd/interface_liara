@@ -24,8 +24,30 @@ function websocketPortesTurnOn()
         alertify.success("Websocket portes et température connecté");
         socket.onmessage = function (event)
         {
+            console.log(tabSensor);
             let d = JSON.parse(event.data);
             for (let key in d) {
+                for (let i = 0; tabSensor.length; i++) {
+                    console.log(tabSensor[i]);
+                    if (d[key]['SensorName'] === tabSensor[i]["id_laboratory"]) {
+                        if (d[key]['DigitalValue'] === true) {
+                            anime({
+                                targets: '.' + tabSensor[i]['className'],
+                                easing: tabSensor[i]['easing'],
+                                rotate: {
+                                    value:[tabSensor[i]['rotateOrigine'],tabSensor[i]['rotateFinal']]
+                                },
+                                duration: tabSensor[i]['duration'],
+                                fill: {
+                                    value: [tabSensor[i]['colorOrigine'], tabSensor[i]['colorFinal']]
+
+                                },
+                                translateX: tabSensor[i]['translateX']
+                            });
+                        }
+                    }
+                }
+                /*
                 switch (d[key].ID) {
                     case "230d93b2-1e3d-409b-84e9-c34bfbbb4f4d" : // Porte conférence
                         if (d[key].DigitalValue === true) {
@@ -188,7 +210,7 @@ function websocketPortesTurnOn()
                         document.querySelector("#temp_sdb .entier").innerHTML = TabTemp3[0];
                         document.querySelector("#temp_sdb .decimal").innerHTML = TabTemp3[1];
                         break;
-                }
+                }*/
             }
         };
     }

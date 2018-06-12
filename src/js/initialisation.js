@@ -2,6 +2,15 @@
 
 let tabObjetRFID = [];
 
+let tabSensor = [];
+
+$.getJSON("config.json", function (data) {
+    for (let i = 0; i<data['sensor'].length; i++) {
+        tabSensor[i] = data['sensor'][i];
+    }
+});
+
+
 Array.prototype.unset = function (element) {
     let index = this.indexOf(element);
     if(index > -1) {
