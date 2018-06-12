@@ -15,16 +15,8 @@ function setPathPortes(path)
 {
     path_socket_portes = path;
 }
-//Vérification des websockets
-if(path_socket_portes == '')
-{
 
-}
-function closeSocket()
-{
-    socket.close();
-    path_socket_portes="";
-}
+
 function websocketPortesTurnOn()
 {
     try {
@@ -33,7 +25,6 @@ function websocketPortesTurnOn()
         socket.onmessage = function (event)
         {
             let d = JSON.parse(event.data);
-            console.log(d);
             for (let key in d) {
                 switch (d[key].ID) {
                     case "230d93b2-1e3d-409b-84e9-c34bfbbb4f4d" : // Porte conférence
