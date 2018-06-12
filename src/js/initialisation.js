@@ -5,9 +5,7 @@ let tabObjetRFID = [];
 let tabSensor = [];
 
 $.getJSON("config.json", function (data) {
-    for (let i = 0; i<data['sensor'].length; i++) {
-        tabSensor[i] = data['sensor'][i];
-    }
+    tabSensor = data['sensor'];
 });
 
 

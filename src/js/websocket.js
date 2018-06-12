@@ -24,26 +24,44 @@ function websocketPortesTurnOn()
         alertify.success("Websocket portes et température connecté");
         socket.onmessage = function (event)
         {
-            console.log(tabSensor);
             let d = JSON.parse(event.data);
-            for (let key in d) {
-                for (let i = 0; tabSensor.length; i++) {
-                    console.log(tabSensor[i]);
-                    if (d[key]['SensorName'] === tabSensor[i]["id_laboratory"]) {
-                        if (d[key]['DigitalValue'] === true) {
-                            anime({
-                                targets: '.' + tabSensor[i]['className'],
-                                easing: tabSensor[i]['easing'],
-                                rotate: {
-                                    value:[tabSensor[i]['rotateOrigine'],tabSensor[i]['rotateFinal']]
-                                },
-                                duration: tabSensor[i]['duration'],
-                                fill: {
-                                    value: [tabSensor[i]['colorOrigine'], tabSensor[i]['colorFinal']]
+            for (let i=0;i<d.length;i++) {
+                let item_websocket = d[i];
 
-                                },
-                                translateX: tabSensor[i]['translateX']
-                            });
+                for (let j = 0; j< tabSensor.length; j++) {
+                    let item_sensor = tabSensor[j];
+
+                    if (item_websocket['SensorName'] === item_sensor["id_laboratory"]) {
+                        if (item_websocket['DigitalValue'] === true) {
+                            let obj = {
+                                targets: '.' + item_sensor['className'],
+                                easing: item_sensor['easing'],
+                                duration: item_sensor['duration']
+                            };
+
+                            console.log(item_sensor);
+                            if(item_sensor["rotateOrigine"] !== undefined){
+                                obj["rotate"] = {
+                                    value:[item_sensor['rotateOrigine'],item_sensor['rotateFinal']]
+                                }
+                            }
+
+                            anime(obj);
+                            // anime({
+                            //     targets: '.' + item_sensor['className'],
+                            //     easing: item_sensor['easing'],
+                            //     rotate: {
+                            //         value:[item_sensor['rotateOrigine'],item_sensor['rotateFinal']]
+                            //     },
+                            //     duration: item_sensor['duration'],
+                            //     fill: {
+                            //         value: [item_sensor['colorOrigine'], item_sensor['colorFinal']]
+                            //
+                            //     },
+                            //     translateX: item_sensor['translateX']
+                            // });
+
+                            // anime()
                         }
                     }
                 }
@@ -209,7 +227,15 @@ function websocketPortesTurnOn()
                         let TabTemp3 = temp3.toString().split(".");
                         document.querySelector("#temp_sdb .entier").innerHTML = TabTemp3[0];
                         document.querySelector("#temp_sdb .decimal").innerHTML = TabTemp3[1];
-                        break;
+        {
+                                autoplay: false,
+                                targets: '.porteSalleConf',
+                                rotate: {
+                                    value:[0,-90]
+                                },
+                                easing: 'linear',
+                                duration: 750
+                            }                break;
                 }*/
             }
         };
