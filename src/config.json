@@ -33,6 +33,14 @@
       "duration": 1000
     },
     {
+      "id_laboratory": "Robinet eau froide salle de bain",
+      "className": "lavaboBaque",
+      "colorOrigine": "#005cbf",
+      "colorFinal": "#ffffff",
+      "easing": "easeInBack",
+      "duration": 1000
+    },
+    {
       "id_laboratory": "Porte du refrigerateur",
       "className": "porteFrigoAnime",
       "rotateOrigine": -45,

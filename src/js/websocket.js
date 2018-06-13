@@ -16,7 +16,6 @@ function setPathPortes(path) {
     path_socket_portes = path;
 }
 
-
 function websocketPortesTurnOn() {
     try {
         let socket = new WebSocket('ws://' + path_socket_portes);
@@ -36,19 +35,16 @@ function websocketPortesTurnOn() {
                         } else {
                             edredonF.restart();
                         }
+                        continue;
                     }
-                   else if (item_websocket['SensorName'] === "Temperature salle a manger" && item_sensor["id_laboratory"] ===  "Temperature salle a manger"||
-                       item_websocket['SensorName'] === "Temperature chambre" && item_sensor["id_laboratory"] ===  "Temperature chambre" ||
-                       item_websocket['SensorName'] === "Temperature salle de bain" && item_sensor["id_laboratory"] ===  "Temperature salle de bain" ) {
+                    if (item_websocket['SensorName'].indexOf("Temperature") !== -1 && item_sensor["id_laboratory"] === item_websocket['SensorName']){
                         let temp = item_websocket['AnalogValue'].toFixed(1);
                         let TabTemp = temp.toString().split(".");
                         $(item_sensor["id"] + " .entier").html(TabTemp[0]);
                         $(item_sensor["id"] + " .decimal").html(TabTemp[1]);
-                        console.log(item_sensor);
-                        console.log(item_websocket['SensorName'] + "    "+ TabTemp +"         " +item_sensor["id"]);
-
-                   }
-                    else if (item_websocket['SensorName'] === item_sensor["id_laboratory"]) {
+                        continue;
+                    }
+                    if (item_websocket['SensorName'] === item_sensor["id_laboratory"]) {
                         let obj = {
                             targets: '.' + item_sensor['className'],
                             easing: item_sensor['easing'],
