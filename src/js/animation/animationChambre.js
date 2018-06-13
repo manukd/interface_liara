@@ -3,7 +3,6 @@ let edredonO = anime.timeline({
     easing: "linear"
 });
 
-
 edredonO.add({
     targets: '.litStyle',
     d: "M278.6,181a5.8,5.8,0,0,0-5.6,5.977v42.046A5.8,5.8,0,0,0,278.6,235H354l-2-49,0-5"
@@ -12,12 +11,10 @@ edredonO.add({
     opacity: 1
 });
 
-
 let edredonF = anime.timeline({
     duration: 2000,
     easing: "linear"
 });
-
 
 edredonF.add({
     targets: '.litStyle',

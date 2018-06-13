@@ -1,242 +1,96 @@
 let path_socket_portes = "";
-function changerWebsocketPortes()
-{
-    alertify.prompt("Websocket porte et température","Entrer l'adresse du websocket des portes et de la tampérature","",
-            function (ev, val) {
-                document.querySelector('#adresse_portes').innerHTML=val;
-                // The value entered is availble in the val variable.
-                alertify.success("Vérifier la disposition réel des portes par rapport au plan");
 
-            }, function(ev) {
-                alertify.error("Vérifier la disposition réel des portes par rapport au plan");
-            });
+function changerWebsocketPortes() {
+    alertify.prompt("Websocket porte et température", "Entrer l'adresse du websocket des portes et de la tampérature", "",
+        function (ev, val) {
+            document.querySelector('#adresse_portes').innerHTML = val;
+            // The value entered is availble in the val variable.
+            alertify.success("Vérifier la disposition réel des portes par rapport au plan");
+
+        }, function (ev) {
+            alertify.error("Vérifier la disposition réel des portes par rapport au plan");
+        });
 }
-function setPathPortes(path)
-{
+
+function setPathPortes(path) {
     path_socket_portes = path;
 }
 
 
-function websocketPortesTurnOn()
-{
+function websocketPortesTurnOn() {
     try {
-        let socket = new WebSocket('ws://'+path_socket_portes);
+        let socket = new WebSocket('ws://' + path_socket_portes);
         alertify.success("Websocket portes et température connecté");
-        socket.onmessage = function (event)
-        {
+        socket.onmessage = function (event) {
             let d = JSON.parse(event.data);
-            for (let i=0;i<d.length;i++) {
+            for (let i = 0; i < d.length; i++) {
+
                 let item_websocket = d[i];
 
-                for (let j = 0; j< tabSensor.length; j++) {
+                for (let j = 0; j < tabSensor.length; j++) {
+
                     let item_sensor = tabSensor[j];
+                    if (item_websocket['SensorName'] === "Pression Lit") {
+                        if (item_websocket['AnalogValue'] > 8){
+                            edredonO.restart();
+                        } else {
+                            edredonF.restart();
+                        }
+                    }
+                   else if (item_websocket['SensorName'] === "Temperature salle a manger" && item_sensor["id_laboratory"] ===  "Temperature salle a manger"||
+                       item_websocket['SensorName'] === "Temperature chambre" && item_sensor["id_laboratory"] ===  "Temperature chambre" ||
+                       item_websocket['SensorName'] === "Temperature salle de bain" && item_sensor["id_laboratory"] ===  "Temperature salle de bain" ) {
+                        let temp = item_websocket['AnalogValue'].toFixed(1);
+                        let TabTemp = temp.toString().split(".");
+                        $(item_sensor["id"] + " .entier").html(TabTemp[0]);
+                        $(item_sensor["id"] + " .decimal").html(TabTemp[1]);
+                        console.log(item_sensor);
+                        console.log(item_websocket['SensorName'] + "    "+ TabTemp +"         " +item_sensor["id"]);
 
-                    if (item_websocket['SensorName'] === item_sensor["id_laboratory"]) {
+                   }
+                    else if (item_websocket['SensorName'] === item_sensor["id_laboratory"]) {
+                        let obj = {
+                            targets: '.' + item_sensor['className'],
+                            easing: item_sensor['easing'],
+                            duration: item_sensor['duration']
+                        };
                         if (item_websocket['DigitalValue'] === true) {
-                            let obj = {
-                                targets: '.' + item_sensor['className'],
-                                easing: item_sensor['easing'],
-                                duration: item_sensor['duration']
-                            };
-
-                            console.log(item_sensor);
-                            if(item_sensor["rotateOrigine"] !== undefined){
+                            if (item_sensor["rotateOrigine"] !== undefined) {
                                 obj["rotate"] = {
-                                    value:[item_sensor['rotateOrigine'],item_sensor['rotateFinal']]
+                                    value: [item_sensor['rotateOrigine'], item_sensor['rotateFinal']]
                                 }
                             }
-
+                            if (item_sensor["colorOrigine"] !== undefined) {
+                                obj["fill"] = {
+                                    value: [item_sensor['colorOrigine'], item_sensor['colorFinal']]
+                                }
+                            }
+                            if (item_sensor["translateOrigineX"] !== undefined) {
+                                obj["translateX"] = {
+                                    value: [item_sensor['translateOrigineX'], item_sensor['translateFinalX']]
+                                }
+                            }
                             anime(obj);
-                            // anime({
-                            //     targets: '.' + item_sensor['className'],
-                            //     easing: item_sensor['easing'],
-                            //     rotate: {
-                            //         value:[item_sensor['rotateOrigine'],item_sensor['rotateFinal']]
-                            //     },
-                            //     duration: item_sensor['duration'],
-                            //     fill: {
-                            //         value: [item_sensor['colorOrigine'], item_sensor['colorFinal']]
-                            //
-                            //     },
-                            //     translateX: item_sensor['translateX']
-                            // });
-
-                            // anime()
+                        } else {
+                            if (item_sensor["rotateOrigine"] !== undefined) {
+                                obj["rotate"] = {
+                                    value: [item_sensor['rotateFinal'], item_sensor['rotateOrigine']]
+                                }
+                            }
+                            if (item_sensor["colorOrigine"] !== undefined) {
+                                obj["fill"] = {
+                                    value: [item_sensor['colorFinal'], item_sensor['colorOrigine']]
+                                }
+                            }
+                            if (item_sensor["translateOrigineX"] !== undefined) {
+                                obj["translateX"] = {
+                                    value: [item_sensor['translateFinalX'],item_sensor['translateOrigineX']]
+                                }
+                            }
+                            anime(obj);
                         }
                     }
                 }
-                /*
-                switch (d[key].ID) {
-                    case "230d93b2-1e3d-409b-84e9-c34bfbbb4f4d" : // Porte conférence
-                        if (d[key].DigitalValue === true) {
-                            porteSalleDeConfO.restart();
-                        }
-                        else {
-                            porteSalleDeConfF.restart();
-                        }
-                        break;
-                    case "0d491077-bd42-40ee-aaad-bb83432a71ae" : // Porte d'entrée
-                        if (d[key].DigitalValue === true) {
-                            porteSalleExterieurO.restart();
-                        }
-                        else {
-                            porteSalleExterieurF.restart();
-                        }
-                        break;
-                    case "df4b18c1-867b-4955-894b-e5d5333ea568" : // Porte salle de bain
-                        if (d[key].DigitalValue === true) {
-                            porteSalleDeBainO.restart();
-                        }
-                        else {
-                            porteSalleDeBainF.restart();
-                        }
-                        break;
-                    case "4b00ae68-e1b1-4a57-9f77-ae03c2fe24ef" : // Porte frigo
-                        if (d[key].DigitalValue === true) {
-                            frigoOverture.restart();
-                        }
-                        else {
-                            frigoFermeture.restart();
-                        }
-                        break;
-                    case "6d011a3a-2862-4710-be29-a6a41481de39" : // Porte Haut 1
-                        if (d[key].DigitalValue === true) {
-                            portePlacardEvierHGGFO.restart();
-                        }
-                        else {
-                            portePlacardEvierHGGFF.restart();
-                        }
-                        break;
-                    case "5a57b2fd-9ee0-4cc9-aa08-d79f1922df86" : // Porte Haut 2
-                        if (d[key].DigitalValue === true) {
-                            portePlacardEvierHGDFO.restart();
-                        }
-                        else {
-                            portePlacardEvierHGDFF.restart();
-                        }
-                        break;
-                    case "5579bd76-fc6a-42c8-b786-c4182ba163a6" : // Porte Haut 3
-                        if (d[key].DigitalValue === true) {
-                            portePlacardEvierHDGFO.restart();
-                        }
-                        else {
-                            portePlacardEvierHDGFF.restart();
-                        }
-                        break;
-                    case "901b2d65-f012-49b3-bfd1-e063d7e490c6" : // Porte Haut 4
-                        if (d[key].DigitalValue === true) {
-                            portePlacardEvierHDDFO.restart();
-                        }
-                        else {
-                            portePlacardEvierHDDFF.restart();
-                        }
-                        break;
-                    case "93f23fde-ace1-4fbb-9d0c-18fa9d29881e" : // Porte Haut 5
-                        if (d[key].DigitalValue === true) {
-                            portePlacardFrigoHautGFO.restart();
-                        }
-                        else {
-                            portePlacardFrigoHautGFF.restart();
-                        }
-                        break;
-                    case "db0338ca-46fb-4372-9c04-1377d7626cd3" : // Porte Haut 6
-                        if (d[key].DigitalValue === true) {
-                            portePlacardFrigoHautDFO.restart();
-                        }
-                        else {
-                            portePlacardFrigoHautDFF.restart();
-                        }
-                        break;
-                    case "ba6c5f50-9188-457f-8db3-e032b0254a08" : // La porte du milieu
-                        if (d[key].DigitalValue === true) {
-                            portePlacardFrigoBasFO.restart();
-                        }
-                        else {
-                            portePlacardFrigoBasFF.restart();
-                        }
-                        break;
-                    case "ddfec4f4-a5a2-4360-b085-f23b329d9b4e" : // Porte evier 1
-                        if (d[key].DigitalValue === true) {
-                            portePlacardEvierGFO.restart();
-                        }
-                        else {
-                            portePlacardEvierGFF.restart();
-                        }
-                        break;
-                    case "b2bb7103-8b44-464c-8b66-f8ca5215ada8" : // Porte evier 2
-                        if (d[key].DigitalValue === true) {
-                            portePlacardEvierDFO.restart();
-                        }
-                        else {
-                            portePlacardEvierDFF.restart();
-                        }
-                        break;
-                    case "e23832e1-2d34-4894-a92a-137a47430cce" : // Tiroir 1
-                        if (d[key].DigitalValue === true) {
-                            tiroirAnimeGaucheO.restart();
-                        }
-                        else {
-                            tiroirAnimeGaucheF.restart();
-                        }
-                        break;
-                    case "7fa342b1-6b29-456b-b357-cefc377643fd" : // Tiroir 2
-                        if (d[key].DigitalValue === true) {
-                            tiroirAnimeDroitO.restart();
-                        }
-                        else {
-                            tiroirAnimeDroitF.restart();
-                        }
-                        break;
-
-                    case "b8478776-b479-4813-a968-a611756bf74f" : // Robinet cuisine eau froide (eau chaud non disponible)
-                        if (d[key].DigitalValue === true) {
-                            eauRobinetO.restart();
-                        }
-                        else {
-                            eauRobinetF.restart();
-                        }
-                        break;
-                    case "8b87f340-c92d-4ea9-bf1d-f41ba88dd2ac" : // Lit
-                        if (d[key].AnalogValue > 8) {
-                            edredonO.restart();
-                        }
-                        else {
-                            edredonF.restart();
-                        }
-                        break;
-                    case "82c86a3a-5e65-4fa3-bf12-d5abef156e32" : // Temperature cuisine
-                        // let tmp =document.getElementById('cuisineTem');
-                        // tmp['innerText' in tmp ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1).toString() + "°C";
-                        let temp1 = d[key].AnalogValue.toFixed(1);
-                        let TabTemp1 = temp1.toString().split(".");
-                        document.querySelector("#temp_manger .entier").innerHTML = TabTemp1[0];
-                        document.querySelector("#temp_manger .decimal").innerHTML = TabTemp1[1];
-                        break;
-                    case "4c07e71a-0e4c-4629-968a-06d9c24b0b48" : // Temperature chambre
-                        // let tmp2 =document.getElementById('chambreTem');
-                        // tmp2['innerText' in tmp2 ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1).toString() + "°C";
-                        let temp2 = d[key].AnalogValue.toFixed(1);
-                        let TabTemp2 = temp2.toString().split(".");
-                        document.querySelector("#temp_chambre .entier").innerHTML = TabTemp2[0];
-                        document.querySelector("#temp_chambre .decimal").innerHTML = TabTemp2[1];
-                        break;
-                    case "886a9863-eae4-4402-96f6-b15db25ef6ab" : // Temperature salle de bain
-                        // let tmp3 =document.getElementById('sdbTem');
-                        // tmp3['innerText' in tmp3 ? "innerText" : "textContent"] = d[key].AnalogValue.toFixed(1).toString() + "°C";
-                        let temp3 = d[key].AnalogValue.toFixed(1);
-                        let TabTemp3 = temp3.toString().split(".");
-                        document.querySelector("#temp_sdb .entier").innerHTML = TabTemp3[0];
-                        document.querySelector("#temp_sdb .decimal").innerHTML = TabTemp3[1];
-        {
-                                autoplay: false,
-                                targets: '.porteSalleConf',
-                                rotate: {
-                                    value:[0,-90]
-                                },
-                                easing: 'linear',
-                                duration: 750
-                            }                break;
-                }*/
             }
         };
     }

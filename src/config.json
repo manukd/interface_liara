@@ -6,7 +6,7 @@
       "rotateOrigine": 0,
       "rotateFinal": -90,
       "easing": "linear",
-      "duration" : 500
+      "duration" : 750
     },
     {
       "id_laboratory": "Capteur magn\u00E9tique porte d'entr\u00E9e",
@@ -14,23 +14,131 @@
       "rotateOrigine": 0,
       "rotateFinal": -90,
       "easing": "linear",
-      "duration" : 500
+      "duration" : 750
     },
     {
-      "id_laboratory": "Capteur mag\u00E9tique CB6",
+      "id_laboratory": "Porte de la salle de bain",
       "className": "porteSalleDeBain",
       "rotateOrigine": 0,
       "rotateFinal": -90,
       "easing": "linear",
-      "duration" : 500
+      "duration" : 750
     },
     {
       "id_laboratory": "Robinet eau froide cuisine",
-      "className": ".robinetBaque",
+      "className": "robinetBaque",
       "colorOrigine": "#005cbf",
       "colorFinal": "#A4A4A4",
       "easing": "easeInBack",
       "duration": 1000
+    },
+    {
+      "id_laboratory": "Porte du refrigerateur",
+      "className": "porteFrigoAnime",
+      "rotateOrigine": -45,
+      "rotateFinal": -135,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 1 Haut",
+      "className": "portePlacardEvierHautGaucheGauche",
+      "rotateOrigine": 0,
+      "rotateFinal": 45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 2 Haut",
+      "className": "portePlacardEvierHautGaucheDroit",
+      "rotateOrigine": 0,
+      "rotateFinal": -45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 3 Haut",
+      "className": "portePlacardEvierHautDroitGauche",
+      "rotateOrigine": 0,
+      "rotateFinal": 45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 4 Haut",
+      "className": "portePlacardEvierHautDroitDroit",
+      "rotateOrigine": 0,
+      "rotateFinal": -45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 5 Haut",
+      "className": "portePlacardFrigoHautDroit",
+      "rotateOrigine": 0,
+      "rotateFinal": 45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 6 Haut",
+      "className": "portePlacardFrigoHautGauche",
+      "rotateOrigine": 0,
+      "rotateFinal": -45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur mag\u00E9tique CB6",
+      "className": "portePlacardFrigoBas",
+      "rotateOrigine": 0,
+      "rotateFinal": -45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique cuisine Porte 1 Bas",
+      "className": "portePlacardEvierBasGauche",
+      "rotateOrigine": 0,
+      "rotateFinal": 45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique cuisine Porte 2  Bas",
+      "className": "portePlacardEvierBasDroit",
+      "rotateOrigine": 0,
+      "rotateFinal": -45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Premier tiroir du comptoir",
+      "className": "tiroirAnimeGauche",
+      "translateOrigineX": 0,
+      "translateFinalX": -10,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Deuxieme tiroir du comptoir",
+      "className": "tiroirAnimeDroit",
+      "translateOrigineX": 0,
+      "translateFinalX": -10,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Temperature salle a manger",
+      "id": "#temp_manger"
+    },
+    {
+      "id_laboratory": "Temperature chambre",
+      "id": "#temp_chambre"
+    },
+    {
+      "id_laboratory": "Temperature salle de bain",
+      "id": "#temp_sdb"
     }
   ],
 
