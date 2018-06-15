@@ -197,6 +197,9 @@ function websocketPortesTurnOn()
                         document.querySelector("#temp_sdb .entier").innerHTML = TabTemp3[0];
                         document.querySelector("#temp_sdb .decimal").innerHTML = TabTemp3[1];
                         break;
+                    // case "":
+                    //     document.querySelector(".capteur_c1, .capteur_c2").style.fill = "#FF0001";
+                    //     break;
                 }
             }
         };

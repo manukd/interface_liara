@@ -99,3 +99,9 @@
 .portePlacardEvierHautDroitDroit {
     transform-origin: 243px 192px;
 }
+
+.text {
+    animation: inherit;
+}
+
+

@@ -1,4 +1,6 @@
-html, body { height: 100%; }
+html, body {
+    height: 100%;
+}
 
 #buttonPleineEcran {
     margin-left: 47%;
@@ -7,8 +9,47 @@ html, body { height: 100%; }
     height: 5%;
 }
 
-#container_plan:-webkit-full-screen
-{
+#container_plan:-webkit-full-screen {
     width: 100%;
     height: 100%;
+}
+
+.cls-1 {
+    fill: none;
+}
+
+.cls-2, .cls-3 {
+    fill: #fff;
+}
+
+.cls-2 {
+    stroke: #000;
+}
+
+.cls-2, .cls-3, .cls-4 {
+    stroke-miterlimit: 10;
+}
+
+.cls-3, .cls-4 {
+    stroke: #333;
+}
+
+.cls-4 {
+    fill: #900;
+    stroke-width: 0.5px;
+}
+#capteur_chambre{
+    visibility: hidden;
+}
+#capteur_sallon{
+    visibility: hidden;
+}
+#capteur_couloir{
+    visibility: hidden;
+}
+#capteur_cuisine{
+    visibility: hidden;
+}
+#capteur_sdb{
+    visibility: hidden;
 }
