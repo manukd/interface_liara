@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="../node_modules/alertifyjs/build/css/alertify.min.css" />
     <!-- include a theme -->
     <link rel="stylesheet" href="../node_modules/alertifyjs/build/css/themes/default.min.css" />
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/animejs/anime.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/alertifyjs/build/alertify.min.js"></script>
+
+    <script src="js/initialisation.js"></script>
+
     <title>Interface LIARA</title>
 </head>
 <body>
@@ -171,16 +179,16 @@
         <polygon class="Zone_morte"
                  points="489.5 7.5 489.5 0.5 558.5 0.5 558.5 90.5 466.5 90.333 466.678 7.5 489.5 7.5"
                  fill="#FFFFFF"></polygon>
-        <image xlink:href="../ressource/img/logo.png" x="470" y="30" width="90"></image>
+        <image xlink:href="../ressource/img-controle/logo.png" x="470" y="30" width="90"></image>
 
-        <polygon class="sol_chambre"
+        <polygon class="zone_chambre"
                  points="263 125 263 8 458 8 458 90 388 90 388 238 270 238 270 125 263 125"
                  fill="url(#patternSol)"></polygon>
-        <polygon class="sol"
+        <polygon class="zone_cuisine"
                  points="145.5 174.5 140.5 169.5 65.5 244.5 5.5 184.5 5.5 69.456 5.5 44.5 42.5 7.5 467 7.5 467
                  202.5 225.5 238.5 154.5 238.5 118.5 202.5 118.153 201.847 145.5 174.5"
                  fill="url(#patternSol)"></polygon>
-        <polygon class="sol_sdb" points="397 99 397 238 492 238 492 192 498 192 498 238 550 238 550 99 397 99"
+        <polygon class="zone_sdb" points="397 99 397 238 492 238 492 192 498 192 498 238 550 238 550 99 397 99"
                  fill="url(#patternSolSalleDeBain)"></polygon>
 
         <!-- ----------------------------------------------------------------------------------------------------------- -->
@@ -440,19 +448,6 @@
                  fill="url(#patternMur)"></polygon>
 
         <!-- ----------------------------------------------------------------------------------------------------------- -->
-        <!-- ------------------------------------------- TEMPERATURE --------------------------------------------------- -->
-        <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-        <image xlink:href="../ressource/img-controle/thermometre.svg" x="100" y="230" width="07"></image>
-        <text id="cuisineTem" x="110" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
-
-        <image xlink:href="../ressource/img-controle/thermometre.svg" x="260" y="230" width="07"></image>
-        <text id="chambreTem" x="270" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
-
-        <image xlink:href="../ressource/img-controle/thermometre.svg" x="550" y="230" width="07"></image>
-        <text id="sdbTem" x="530" y="250" fill="black" font-family="Comic Sans MS" font-size="5">--</text>
-
-        <!-- ----------------------------------------------------------------------------------------------------------- -->
         <!-- ----------------------------------------- SALLE DE BAIN --------------------------------------------------- -->
         <!-- ----------------------------------------------------------------------------------------------------------- -->
 
@@ -502,58 +497,6 @@
         <!-- ----------------------------------------------------------------------------------------------------------- -->
         <!-- ---------------------------------------------- OBJET RFID ------------------------------------------------- -->
         <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-        <text id="Tasse1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 1</text>
-        <text id="Tasse2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 2</text>
-        <text id="Tasse3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 3</text>
-        <text id="Tasse4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">TASSE 4</text>
-
-        <text id="sAssiette1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE
-            ASSIETE 1
-        </text>
-        <text id="sAssiette2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE
-            ASSIETE 2
-        </text>
-        <text id="sAssiette3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE
-            ASSIETE 3
-        </text>
-        <text id="sAssiette4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">PETITE
-            ASSIETE 4
-        </text>
-
-        <text id="Assiette1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 1
-        </text>
-        <text id="Assiette2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 2
-        </text>
-        <text id="Assiette3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 3
-        </text>
-        <text id="Assiette4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">ASSIETE 4
-        </text>
-
-        <text id="Bol1" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 1</text>
-        <text id="Bol2" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 2</text>
-        <text id="Bol3" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 3</text>
-        <text id="Bol4" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOL 4</text>
-
-        <text id="Sucre" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">SUCRE</text>
-
-        <text id="Lait" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">LAIT</text>
-
-        <text id="Chaudron" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">CHAUDRON</text>
-
-        <text id="Bouilloir" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">BOUILLOIR
-        </text>
-
-        <text id="Sel" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">SEL</text>
-        <text id="Poivre" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">POIVRE</text>
-
-        <text id="Poelon" x="0" y="0" fill="red" font-family="Comic Sans MS" font-size="7" opacity="0">POELON</text>
-
-
-        <!-- ----------------------------------------------------------------------------------------------------------- -->
-        <!-- ----------------------------------------- LA FIN DE TOUTES CHOSES ----------------------------------------- -->
-        <!-- ----------------------------------------------------------------------------------------------------------- -->
-
     </svg>
 </div>
 
@@ -700,210 +643,13 @@
           d="M532.272,114.223v-2.382a16.869,16.869,0,0,1,2.565,2.382c.18.693.073,1.177-.55,1.283a.787.787,0,0,1-.55,0Z"/>
 </g>
 
-<!--
-<div class="containerRFID">
+<div class="container-fluid">
     <h2>Activation des objets RFID</h2>
-    <div class="menuRFIDAssiette">
-        <fieldset>
-            <legend>
-                Assiette
-            </legend>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonAssiette1" type="checkbox" onclick="printObjectRFID(this, 'Assiette1')">
-                <label for="buttonAssiette1">
-                    Assiette 1
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonAssiette2" type="checkbox" onclick="printObjectRFID(this, 'Assiette2')">
-                <label for="buttonAssiette2">
-                    Assiette 2
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonAssiette3" type="checkbox" onclick="printObjectRFID(this, 'Assiette3')">
-                <label for="buttonAssiette3">
-                    Assiette 3
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonAssiette4" type="checkbox" onclick="printObjectRFID(this, 'Assiette4')">
-                <label for="buttonAssiette4">
-                    Assiette 4
-                </label>
-            </div>
-        </fieldset>
-    </div>
-    <div class="menuRFIDPA">
-        <fieldset>
-            <legend>
-                Petite assiette
-            </legend>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonSassiette1" type="checkbox" onclick="printObjectRFID(this, 'sAssiette1')">
-                <label for="buttonSassiette1">
-                    Petite assiette 1
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonSassiette2" type="checkbox" onclick="printObjectRFID(this, 'sAssiette2')">
-                <label for="buttonSassiette2">
-                    Petite assiette 2
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonSassiette3" type="checkbox" onclick="printObjectRFID(this, 'sAssiette3')">
-                <label for="buttonSassiette3">
-                    Petite assiette 3
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonSassiette4" type="checkbox" onclick="printObjectRFID(this, 'sAssiette4')">
-                <label for="buttonSassiette4">
-                    Petite assiette 4
-                </label>
-            </div>
-        </fieldset>
-    </div>
-    <div class="menuRFIDTasse">
-        <fieldset>
-            <legend>
-                Tasse
-            </legend>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonTasse1" type="checkbox" onclick="printObjectRFID(this, 'Tasse1')">
-                <label for="buttonTasse1">
-                    Tasse 1
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonTasse2" type="checkbox" onclick="printObjectRFID(this, 'Tasse2')">
-                <label for="buttonTasse2">
-                    Tasse 2
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonTasse3" type="checkbox" onclick="printObjectRFID(this, 'Tasse3')">
-                <label for="buttonTasse3">
-                    Tasse 3
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonTasse4" type="checkbox" onclick="printObjectRFID(this, 'Tasse4')">
-                <label for="buttonTasse4">
-                    Tasse 4
-                </label>
-            </div>
-        </fieldset>
-    </div>
-    <div class="menuRFIDBol">
-        <fieldset>
-            <legend>
-                Bol
-            </legend>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonBol1" type="checkbox" onclick="printObjectRFID(this, 'Bol1')">
-                <label for="buttonBol1">
-                    Bol 1
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonBol2" type="checkbox" onclick="printObjectRFID(this, 'Bol2')">
-                <label for="buttonBol2">
-                    Bol 2
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonBol3" type="checkbox" onclick="printObjectRFID(this, 'Bol3')">
-                <label for="buttonBol3">
-                    Bol 3
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="buttonBol4" type="checkbox" onclick="printObjectRFID(this, 'Bol4')">
-                <label for="buttonBol4">
-                    Bol 4
-                </label>
-            </div>
-        </fieldset>
-    </div>
-    <div class="menuRFIDAutre">
-        <fieldset>
-            <legend>
-                Autre
-            </legend>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="sucreButton" type="checkbox" onclick="printObjectRFID(this, 'Sucre')">
-                <label for="sucreButton">
-                    Sucre
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="laitButton" type="checkbox" onclick="printObjectRFID(this, 'Lait')">
-                <label for="laitButton">
-                    Lait
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="chaudronButton" type="checkbox" onclick="printObjectRFID(this, 'Chaudron')">
-                <label for="chaudronButton">
-                    Chaudron
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="bouilloirButton" type="checkbox" onclick="printObjectRFID(this, 'Bouilloir')">
-                <label for="bouilloirButton">
-                    Bouilloir
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="poelonButton" type="checkbox" onclick="printObjectRFID(this, 'Poelon')">
-                <label for="poelonButton">
-                    Poelon
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="selButton" type="checkbox" onclick="printObjectRFID(this, 'Sel')">
-                <label for="selButton">
-                    Sel
-                </label>
-            </div>
-            <div class="checkbox checkbox-success checkbox-inline">
-                <input id="poivreButton" type="checkbox" onclick="printObjectRFID(this, 'Poivre')">
-                <label for="poivreButton">
-                    Poivre
-                </label>
-            </div>
-        </fieldset>
+    <div role="form">
+        <div class="row" id="tableCheckbox"></div>
     </div>
 </div>
 
--->
-
-<h2>Activation des objets RFID</h2>
-<table>
-    <tr>
-        <td>Tasse</td>
-        <td>Petite assiette</td>
-        <td>Assiette</td>
-        <td>Bol</td>
-        <td>Autre</td>
-    </tr>
-    <script>
-        $.getJSON("config.json", function (data) {
-            for(let i =0; i<data.RFID.length; i++) {
-                console.log(data.RFID[i].id_laboratory);
-            }
-        });
-    </script>
-</table>
-
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../node_modules/animejs/anime.min.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../node_modules/alertifyjs/build/alertify.min.js"></script>
-
-<script src="js/initialisation.js"></script>
 <script src="js/pleineEcranAppartement.js"></script>
 <script src="js/animation/animationCuisine.js"></script>
 <script src="js/animation/animationPlan.js"></script>
@@ -912,5 +658,6 @@
 <script src="js/webSocketRFID.js"></script>
 <script src="js/objetDisplayRFID.js"></script>
 <script src="js/GestionInterface.js"></script>
+
 </body>
 </html>

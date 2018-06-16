@@ -1,5 +1,6 @@
 function printObjectRFID(cb, idElement) {
     if (cb.checked) {
+        console.log(typeof idElement);
         tabObjetRFID.push(idElement);
         console.log(tabObjetRFID);
     } else {

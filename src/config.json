@@ -1,120 +1,293 @@
 {
-  "_comment": "le btnSoftwareID est obligatoire, sert à la construction du tableau de checkBox pour les objets RFID",
+  "sensor": [
+    {
+      "id_laboratory": "Capteur magn\u00E9tique porte salle de conf\u00E9rence",
+      "className": "porteSalleConf",
+      "rotateOrigine": 0,
+      "rotateFinal": -90,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique porte d'entr\u00E9e",
+      "className": "porteExterieur",
+      "rotateOrigine": 0,
+      "rotateFinal": -90,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Porte de la salle de bain",
+      "className": "porteSalleDeBain",
+      "rotateOrigine": 0,
+      "rotateFinal": -90,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Robinet eau froide cuisine",
+      "className": "robinetBaque",
+      "colorOrigine": "#005cbf",
+      "colorFinal": "#A4A4A4",
+      "easing": "easeInBack",
+      "duration": 1000
+    },
+    {
+      "id_laboratory": "Robinet eau froide salle de bain",
+      "className": "lavaboBaque",
+      "colorOrigine": "#005cbf",
+      "colorFinal": "#ffffff",
+      "easing": "easeInBack",
+      "duration": 1000
+    },
+    {
+      "id_laboratory": "Porte du refrigerateur",
+      "className": "porteFrigoAnime",
+      "rotateOrigine": -45,
+      "rotateFinal": -135,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 1 Haut",
+      "className": "portePlacardEvierHautGaucheGauche",
+      "rotateOrigine": 0,
+      "rotateFinal": 45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 2 Haut",
+      "className": "portePlacardEvierHautGaucheDroit",
+      "rotateOrigine": 0,
+      "rotateFinal": -45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 3 Haut",
+      "className": "portePlacardEvierHautDroitGauche",
+      "rotateOrigine": 0,
+      "rotateFinal": 45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 4 Haut",
+      "className": "portePlacardEvierHautDroitDroit",
+      "rotateOrigine": 0,
+      "rotateFinal": -45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 5 Haut",
+      "className": "portePlacardFrigoHautDroit",
+      "rotateOrigine": 0,
+      "rotateFinal": 45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique de cuisine Porte 6 Haut",
+      "className": "portePlacardFrigoHautGauche",
+      "rotateOrigine": 0,
+      "rotateFinal": -45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur mag\u00E9tique CB6",
+      "className": "portePlacardFrigoBas",
+      "rotateOrigine": 0,
+      "rotateFinal": -45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique cuisine Porte 1 Bas",
+      "className": "portePlacardEvierBasGauche",
+      "rotateOrigine": 0,
+      "rotateFinal": 45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Capteur magn\u00E9tique cuisine Porte 2  Bas",
+      "className": "portePlacardEvierBasDroit",
+      "rotateOrigine": 0,
+      "rotateFinal": -45,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Premier tiroir du comptoir",
+      "className": "tiroirAnimeGauche",
+      "translateOrigineX": 0,
+      "translateFinalX": -10,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Deuxieme tiroir du comptoir",
+      "className": "tiroirAnimeDroit",
+      "translateOrigineX": 0,
+      "translateFinalX": -10,
+      "easing": "linear",
+      "duration" : 750
+    },
+    {
+      "id_laboratory": "Temperature salle a manger",
+      "id": "#temp_manger"
+    },
+    {
+      "id_laboratory": "Temperature chambre",
+      "id": "#temp_chambre"
+    },
+    {
+      "id_laboratory": "Temperature salle de bain",
+      "id": "#temp_sdb"
+    }
+  ],
+
   "RFID": [
     {
       "id_laboratory": "Tasse1",
       "id_software": "Tasse 1",
-      "btnSoftwareID":"btnTasse1"
+      "btnSoftwareID":"btnTasse1",
+      "classAffiche":"Tasse"
     },
     {
       "id_laboratory": "Tasse2",
       "id_software": "Tasse 2",
-      "btnSoftwareID":"btnTasse2"
+      "btnSoftwareID":"btnTasse2",
+      "classAffiche":"Tasse"
     },
     {
       "id_laboratory": "Tasse3",
       "id_software": "Tasse 3",
-      "btnSoftwareID":"btnTasse3"
+      "btnSoftwareID":"btnTasse3",
+      "classAffiche":"Tasse"
     },
     {
       "id_laboratory": "Tasse4",
       "id_software": "Tasse 4",
-      "btnSoftwareID":"btnTasse4"
+      "btnSoftwareID":"btnTasse4",
+      "classAffiche":"Tasse"
     },
     {
       "id_laboratory": "sAssiette1",
       "id_software": "Petite Assiette 1",
-      "btnSoftwareID":"btnSassitte1"
+      "btnSoftwareID":"btnSassiette1",
+      "classAffiche":"Petite Assiette"
     },
     {
       "id_laboratory": "sAssiette2",
       "id_software": "Petite Assiette 2",
-      "btnSoftwareID":"btnSassitte2"
+      "btnSoftwareID":"btnSassiette2",
+      "classAffiche":"Petite Assiette"
     },
     {
       "id_laboratory": "sAssiette3",
       "id_software": "Petite Assiette 3",
-      "btnSoftwareID":"btnSassitte3"
+      "btnSoftwareID":"btnSassiette3",
+      "classAffiche":"Petite Assiette"
     },
     {
       "id_laboratory": "sAssiette4",
       "id_software": "Petite Assiette 4",
-      "btnSoftwareID":"btnSassitte4"
+      "btnSoftwareID":"btnSassiette4",
+      "classAffiche":"Petite Assiette"
     },
     {
       "id_laboratory": "Assiette1",
       "id_software": "Assiette 1",
-      "btnSoftwareID":"btnAssitte1"
+      "btnSoftwareID":"btnAssiette1",
+      "classAffiche":"Assiette"
     },
     {
       "id_laboratory": "Assiette2",
       "id_software": "Assiette 2",
-      "btnSoftwareID":"btnAssitte2"
+      "btnSoftwareID":"btnAssiette2",
+      "classAffiche":"Assiette"
     },
     {
       "id_laboratory": "Assiette3",
       "id_software": "Assiette 3",
-      "btnSoftwareID":"btnAssitte3"
+      "btnSoftwareID":"btnAssiette3",
+      "classAffiche":"Assiette"
     },
     {
       "id_laboratory": "Assiette4",
       "id_software": "Assiette 4",
-      "btnSoftwareID":"btnAssitte4"
+      "btnSoftwareID":"btnAssiette4",
+      "classAffiche":"Assiette"
     },
     {
       "id_laboratory": "Bol1",
       "id_software": "Bol 1",
-      "btnSoftwareID":"btnBol1"
+      "btnSoftwareID":"btnBol1",
+      "classAffiche":"Bol"
     },
     {
       "id_laboratory": "Bol2",
       "id_software": "Bol 2",
-      "btnSoftwareID":"btnBol2"
+      "btnSoftwareID":"btnBol2",
+      "classAffiche":"Bol"
     },
     {
       "id_laboratory": "Bol3",
       "id_software": "Bol 3",
-      "btnSoftwareID":"btnBol3"
+      "btnSoftwareID":"btnBol3",
+      "classAffiche":"Bol"
     },
     {
       "id_laboratory": "Bol4",
       "id_software": "Bol 4",
-      "btnSoftwareID":"btnBol4"
+      "btnSoftwareID":"btnBol4",
+      "classAffiche":"Bol"
     },
     {
       "id_laboratory": "Sucre",
       "id_software": "Sucre",
-      "btnSoftwareID":"btnSucre"
+      "btnSoftwareID":"btnSucre",
+      "classAffiche":"Autre"
     },
     {
       "id_laboratory": "Lait",
       "id_software": "Lait",
-      "btnSoftwareID":"btnLait"
+      "btnSoftwareID":"btnLait",
+      "classAffiche":"Autre"
     },
     {
       "id_laboratory": "Chaudron",
       "id_software": "Chaudron",
-      "btnSoftwareID":"btnChaudron"
+      "btnSoftwareID":"btnChaudron",
+      "classAffiche":"Autre"
     },
     {
       "id_laboratory": "Bouilloir",
       "id_software": "Bouilloir",
-      "btnSoftwareID":"btnBouilloir"
+      "btnSoftwareID":"btnBouilloir",
+      "classAffiche":"Autre"
     },
     {
       "id_laboratory": "Sel",
       "id_software": "Sel",
-      "btnSoftwareID":"btnSel"
+      "btnSoftwareID":"btnSel",
+      "classAffiche":"Autre"
     },
     {
       "id_laboratory": "Poivre",
       "id_software": "Poivre",
-      "btnSoftwareID":"btnPoivre"
+      "btnSoftwareID":"btnPoivre",
+      "classAffiche":"Autre"
     },
     {
       "id_laboratory": "Poelon",
       "id_software": "Poelon",
-      "btnSoftwareID":"btnPoelon"
+      "btnSoftwareID":"btnPoelon",
+      "classAffiche":"Autre"
     }
   ]
 }
