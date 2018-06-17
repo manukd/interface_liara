@@ -38,18 +38,31 @@ html, body {
     fill: #900;
     stroke-width: 0.5px;
 }
-#capteur_chambre{
+
+.cls-5 {
+    fill: #333;
+}
+
+.cls-6 {
+    fill: #ccc;
+}
+
+#capteur_chambre {
     visibility: hidden;
 }
-#capteur_sallon{
+
+#capteur_salon {
     visibility: hidden;
 }
-#capteur_couloir{
+
+#capteur_couloir {
     visibility: hidden;
 }
-#capteur_cuisine{
+
+#capteur_cuisine {
     visibility: hidden;
 }
-#capteur_sdb{
+
+#capteur_sdb {
     visibility: hidden;
 }

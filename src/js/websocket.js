@@ -16,6 +16,10 @@ function setPathPortes(path) {
     path_socket_portes = path;
 }
 
+function websocketPortesTurnOff() {
+    self.location.reload();
+}
+
 function websocketPortesTurnOn() {
     try {
         let socket = new WebSocket('ws://' + path_socket_portes);
@@ -29,7 +33,7 @@ function websocketPortesTurnOn() {
                 for (let j = 0; j < tabSensor.length; j++) {
 
                     let item_sensor = tabSensor[j];
-                    if (item_websocket['SensorName'] === "Pression Lit") {
+                    if (item_websocket['SensorName'] === "Pression Lit") { // Pression du lit
                         if (item_websocket['AnalogValue'] > 8){
                             edredonO.restart();
                         } else {
@@ -37,6 +41,7 @@ function websocketPortesTurnOn() {
                         }
                         continue;
                     }
+                    //Température des pièces
                     if (item_websocket['SensorName'].indexOf("Temperature") !== -1 && item_sensor["id_laboratory"] === item_websocket['SensorName']){
                         let temp = item_websocket['AnalogValue'].toFixed(1);
                         let TabTemp = temp.toString().split(".");
@@ -44,6 +49,32 @@ function websocketPortesTurnOn() {
                         $(item_sensor["id"] + " .decimal").html(TabTemp[1]);
                         continue;
                     }
+                    //Capteur de mouvement
+                    if ((item_websocket['SensorName'].indexOf("Capteur de mouvement") !== -1 || item_websocket['SensorName'].indexOf("172.24.25.14 - Adam5051 - 0 - 0") !== -1) && item_sensor["id_laboratory"] === item_websocket['SensorName'])
+                    {
+                        console.log($(item_websocket['DigitalValue']));
+                        if(item_websocket['DigitalValue'] == true)
+                        {
+                            $(item_sensor["id"]).css("visibility", "visible");
+                        }
+                        else
+                        {
+                            $(item_sensor["id"]).css("visibility", "hidden");
+                        }
+                    }
+                    //Plaque de pression
+                    if (item_websocket['SensorName'].indexOf("Plaque de pression") !== -1 && item_sensor["id_laboratory"] === item_websocket['SensorName'])
+                    {
+                        if(item_websocket['DigitalValue'] == false)
+                        {
+                            $(item_sensor["id"]+" .cls-6").css("fill", "#990507");
+                        }
+                        else
+                        {
+                            $(item_sensor["id"]+" .cls-6").css("fill", "#ccc");
+                        }
+                    }
+                    //Animation des objets
                     if (item_websocket['SensorName'] === item_sensor["id_laboratory"]) {
                         let obj = {
                             targets: '.' + item_sensor['className'],

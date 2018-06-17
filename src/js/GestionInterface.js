@@ -18,3 +18,7 @@ document.querySelector('#run').addEventListener('click', function () {
         // user clicked "cancel"
     });
 });
+
+document.querySelector('#stop').addEventListener('click', function () {
+    websocketPortesTurnOff();
+});

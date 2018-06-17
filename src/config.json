@@ -147,9 +147,36 @@
     {
       "id_laboratory": "Temperature salle de bain",
       "id": "#temp_sdb"
+    },
+    {
+      "id_laboratory": "Capteur de mouvement chambre",
+      "id": "#capteur_chambre"
+    },
+    {
+      "id_laboratory": "Capteur de mouvement salle a manger",
+      "id": "#capteur_cuisine"
+    },
+    {
+      "id_laboratory": "172.24.25.14 - Adam5051 - 0 - 0",
+      "id": "#capteur_salon"
+    },
+    {
+      "id_laboratory": "Capteur de mouvement entr\u00E9e",
+      "id": "#capteur_couloir"
+    },
+    {
+      "id_laboratory": "Capteur de mouvement salle de bain",
+      "id": "#capteur_sdb"
+    },
+    {
+      "id_laboratory": "Plaque de pression chambre a coucher",
+      "id": "#plaque_pression_chambre"
+    },
+    {
+      "id_laboratory": "Plaque de pression salle de bain",
+      "id": "#plaque_pression_sdb"
     }
   ],
-
   "RFID": [
     {
       "id_laboratory": "Tasse1",
