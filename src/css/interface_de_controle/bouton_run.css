@@ -73,3 +73,7 @@ div#bouton_run
     text-align: center;
     margin-bottom: 80px;
 }
+#stop
+{
+    visibility: hidden;
+}
