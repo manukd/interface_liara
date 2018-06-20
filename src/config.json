@@ -198,139 +198,139 @@
       "id_laboratory": "Tasse1",
       "id_software": "Tasse 1",
       "btnSoftwareID":"btnTasse1",
-      "classAffiche":"Tasse"
+      "classAffiche":"Tasses"
     },
     {
       "id_laboratory": "Tasse2",
       "id_software": "Tasse 2",
       "btnSoftwareID":"btnTasse2",
-      "classAffiche":"Tasse"
+      "classAffiche":"Tasses"
     },
     {
       "id_laboratory": "Tasse3",
       "id_software": "Tasse 3",
       "btnSoftwareID":"btnTasse3",
-      "classAffiche":"Tasse"
+      "classAffiche":"Tasses"
     },
     {
       "id_laboratory": "Tasse4",
       "id_software": "Tasse 4",
       "btnSoftwareID":"btnTasse4",
-      "classAffiche":"Tasse"
+      "classAffiche":"Tasses"
     },
     {
       "id_laboratory": "sAssiette1",
       "id_software": "Petite Assiette 1",
       "btnSoftwareID":"btnSassiette1",
-      "classAffiche":"Petite Assiette"
+      "classAffiche":"Petites Assiettes"
     },
     {
       "id_laboratory": "sAssiette2",
       "id_software": "Petite Assiette 2",
       "btnSoftwareID":"btnSassiette2",
-      "classAffiche":"Petite Assiette"
+      "classAffiche":"Petites Assiettes"
     },
     {
       "id_laboratory": "sAssiette3",
       "id_software": "Petite Assiette 3",
       "btnSoftwareID":"btnSassiette3",
-      "classAffiche":"Petite Assiette"
+      "classAffiche":"Petites Assiettes"
     },
     {
       "id_laboratory": "sAssiette4",
       "id_software": "Petite Assiette 4",
       "btnSoftwareID":"btnSassiette4",
-      "classAffiche":"Petite Assiette"
+      "classAffiche":"Petites Assiettes"
     },
     {
       "id_laboratory": "Assiette1",
       "id_software": "Assiette 1",
       "btnSoftwareID":"btnAssiette1",
-      "classAffiche":"Assiette"
+      "classAffiche":"Assiettes"
     },
     {
       "id_laboratory": "Assiette2",
       "id_software": "Assiette 2",
       "btnSoftwareID":"btnAssiette2",
-      "classAffiche":"Assiette"
+      "classAffiche":"Assiettes"
     },
     {
       "id_laboratory": "Assiette3",
       "id_software": "Assiette 3",
       "btnSoftwareID":"btnAssiette3",
-      "classAffiche":"Assiette"
+      "classAffiche":"Assiettes"
     },
     {
       "id_laboratory": "Assiette4",
       "id_software": "Assiette 4",
       "btnSoftwareID":"btnAssiette4",
-      "classAffiche":"Assiette"
+      "classAffiche":"Assiettes"
     },
     {
       "id_laboratory": "Bol1",
       "id_software": "Bol 1",
       "btnSoftwareID":"btnBol1",
-      "classAffiche":"Bol"
+      "classAffiche":"Bols"
     },
     {
       "id_laboratory": "Bol2",
       "id_software": "Bol 2",
       "btnSoftwareID":"btnBol2",
-      "classAffiche":"Bol"
+      "classAffiche":"Bols"
     },
     {
       "id_laboratory": "Bol3",
       "id_software": "Bol 3",
       "btnSoftwareID":"btnBol3",
-      "classAffiche":"Bol"
+      "classAffiche":"Bols"
     },
     {
       "id_laboratory": "Bol4",
       "id_software": "Bol 4",
       "btnSoftwareID":"btnBol4",
-      "classAffiche":"Bol"
+      "classAffiche":"Bols"
     },
     {
       "id_laboratory": "Sucre",
       "id_software": "Sucre",
       "btnSoftwareID":"btnSucre",
-      "classAffiche":"Autre"
+      "classAffiche":"Autres"
     },
     {
       "id_laboratory": "Lait",
       "id_software": "Lait",
       "btnSoftwareID":"btnLait",
-      "classAffiche":"Autre"
+      "classAffiche":"Autres"
     },
     {
       "id_laboratory": "Chaudron",
       "id_software": "Chaudron",
       "btnSoftwareID":"btnChaudron",
-      "classAffiche":"Autre"
+      "classAffiche":"Autres"
     },
     {
       "id_laboratory": "Bouilloir",
       "id_software": "Bouilloir",
       "btnSoftwareID":"btnBouilloir",
-      "classAffiche":"Autre"
+      "classAffiche":"Autres"
     },
     {
       "id_laboratory": "Sel",
       "id_software": "Sel",
       "btnSoftwareID":"btnSel",
-      "classAffiche":"Autre"
+      "classAffiche":"Autres"
     },
     {
       "id_laboratory": "Poivre",
       "id_software": "Poivre",
       "btnSoftwareID":"btnPoivre",
-      "classAffiche":"Autre"
+      "classAffiche":"Autres"
     },
     {
       "id_laboratory": "Poelon",
       "id_software": "Poelon",
       "btnSoftwareID":"btnPoelon",
-      "classAffiche":"Autre"
+      "classAffiche":"Autres"
     }
   ]
 }
