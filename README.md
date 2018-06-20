@@ -1,4 +1,5 @@
-# interface_liara
-Création d'une interface pour une pièce domotique/connectée
+# Interface LIARA
 
-Coucou
+##Description
+Création d'une interface pour le laboratoire LIARA qui met en avant 
+

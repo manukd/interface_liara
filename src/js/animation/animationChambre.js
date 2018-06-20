@@ -1,5 +1,5 @@
 let edredonO = anime.timeline({
-    duration: 750,
+    duration: 500,
     easing: "linear"
 });
 
@@ -12,7 +12,7 @@ edredonO.add({
 });
 
 let edredonF = anime.timeline({
-    duration: 750,
+    duration: 500,
     easing: "linear"
 });
 
