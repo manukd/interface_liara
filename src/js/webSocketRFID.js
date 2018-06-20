@@ -29,7 +29,7 @@ function websocketObjetsTurnOff() {
 }
 
 function websocketObjetsTurnOn() {
-    websocketObjetsTurnOff()
+    websocketObjetsTurnOff();
     socketRFID = new WebSocket('ws://' + document.querySelector('#adresse_objets').textContent);
     socketRFID.onopen = function (event) {
         alertify.success("Websocket objet connecté");

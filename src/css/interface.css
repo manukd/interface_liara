@@ -39,14 +39,6 @@ html, body {
     stroke-width: 0.5px;
 }
 
-.cls-5 {
-    fill: #333;
-}
-
-.cls-6 {
-    fill: #ccc;
-}
-
 #capteur_chambre {
     visibility: hidden;
 }

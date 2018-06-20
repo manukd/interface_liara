@@ -43,4 +43,15 @@
     stroke-width: 0.5px;
 }
 
+.contourPlaque {
+    fill: #333;
+}
+
+.plaqueDePressionChambre {
+    fill: #ccc;
+}
+
+.plaqueDePressionSDB {
+    fill: #ccc;
+}
 

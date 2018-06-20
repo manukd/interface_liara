@@ -137,6 +137,14 @@
       "duration" : 750
     },
     {
+      "id_laboratory":"",
+      "className": "lavaboBaque",
+      "colorOrigine": "#fff",
+      "colorFinal": "#A4A4A4",
+      "easing": "easeInBack",
+      "duration": 1000
+    },
+    {
       "id_laboratory": "Temperature salle a manger",
       "id": "#temp_manger"
     },
@@ -170,11 +178,19 @@
     },
     {
       "id_laboratory": "Plaque de pression chambre a coucher",
-      "id": "#plaque_pression_chambre"
+      "className": "plaqueDePressionChambre",
+      "colorOrigine": "#990507",
+      "colorFinal": "#cccccc",
+      "easing": "linear",
+      "duration" : 750
     },
     {
       "id_laboratory": "Plaque de pression salle de bain",
-      "id": "#plaque_pression_sdb"
+      "className": "plaqueDePressionSDB",
+      "colorOrigine": "#990507",
+      "colorFinal": "#cccccc",
+      "easing": "linear",
+      "duration" : 750
     }
   ],
   "RFID": [
