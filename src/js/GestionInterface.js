@@ -23,18 +23,6 @@ document.querySelector('#stop').addEventListener('click', function () {
     $("#stop").css("visibility","hidden");
 });
 
-$("#selectAll").bind("click",function() {
-    let items = document.getElementsByClassName('checkbox_rfid');
-    for (let i = 0; i < items.length; i++) {
-        if (items[i].type == 'checkbox')
-            items[i].checked = true;
-    }
-});
-
-$("#deselectAll").bind("click",function() {
-    let items = document.getElementsByClassName('checkbox_rfid');
-    for (let i = 0; i < items.length; i++) {
-        if (items[i].type == 'checkbox')
-            items[i].checked = false;
-    }
+$("#select_all").change(function(){  //"select all" change
+    $(".checkbox_rfid").prop('checked', $(this).prop("checked")).change(); //change all ".checkbox" checked status
 });

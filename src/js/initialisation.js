@@ -28,7 +28,7 @@ $.getJSON("config.json", function (data) {
             html += '<div class="col-md-2"><fieldset><legend>'+ data['RFID'][i]['classAffiche'] + '</legend>';
             tmp = data['RFID'][i]['classAffiche'];
         }
-        html += '<div class="checkbox checkbox-success checkbox-inline"><input id="'+data['RFID'][i]['btnSoftwareID']+'" class="checkbox_rfid" type="checkbox" onclick="printObjectRFID(this,'+"'"+data['RFID'][i]['id_laboratory']+"'"+')"><label for="'+data['RFID'][i]['btnSoftwareID']+'">'+data['RFID'][i]['id_software']+'</label></div>';
+        html += '<div class="checkbox checkbox-success checkbox-inline"><input id="'+data['RFID'][i]['btnSoftwareID']+'" class="checkbox_rfid" type="checkbox" onchange="printObjectRFID(this,'+"'"+data['RFID'][i]['id_laboratory']+"'"+')"><label for="'+data['RFID'][i]['btnSoftwareID']+'">'+data['RFID'][i]['id_software']+'</label></div>';
     }
     html += '</fieldset></div>';
     $('#tableCheckbox').html(html);

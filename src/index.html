@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
 
@@ -657,11 +657,12 @@
     </div>
 </div>
 
-
 <div class="container-fluid">
     <h2>Activation des objets RFID</h2>
-    <button id="selectAll">Sélectionner tout</button>
-    <button id="deselectAll">Désélectionner tout</button>
+    <div class="checkbox checkbox-success checkbox-inline">
+        <input type="checkbox" id="select_all">
+        <label for="select_all">Tout les objets</label>
+    </div>
     <div role="form">
         <div class="row" id="tableCheckbox"></div>
     </div>
