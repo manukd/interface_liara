@@ -1,4 +1,4 @@
-let socketRFID = new WebSocket('ws://0.0.0.0:0000');
+let socketRFID;
 
 function changerWebsocketObjets() {
     alertify.prompt("Websocket objets RFID", "Entrer l'adresse du websocket des objets", "",
@@ -22,9 +22,11 @@ function changerWebsocketObjets() {
 }
 
 function websocketObjetsTurnOff() {
-    socketRFID.close();
-    socketRFID.onclose = function (event) {
-        alertify.success("Websocket correctement arrêté")
+    if (socketRFID !== undefined)  {
+        socketRFID.close();
+        socketRFID.onclose = function (event) {
+            alertify.success("Websocket correctement arrêté")
+        }
     }
 }
 
