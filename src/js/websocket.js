@@ -3,7 +3,7 @@ let socket = new WebSocket('ws://0.0.0.0:0000');
 function changerWebsocketPortes() {
     alertify.prompt("Websocket porte et température", "Entrer l'adresse du websocket des portes et de la tampérature", "",
         function (ev, val) {
-        if(val>20 || val<12 || val == '')
+        if(val>20 || val<12 || val === '')
         {
             alertify.error("Adresse non valide");
         }
@@ -28,6 +28,7 @@ function websocketPortesTurnOff() {
     }
 }
 
+
 function websocketPortesTurnOn() {
     websocketPortesTurnOff();
     socket = new WebSocket('ws://' + document.querySelector('#adresse_portes').textContent);
@@ -35,6 +36,7 @@ function websocketPortesTurnOn() {
             alertify.success("Websocket portes et température connecté");
             socket.onmessage = function (event) {
                 let d = JSON.parse(event.data);
+                console.log(d);
                 for (let i = 0; i < d.length; i++) {
 
                     let item_websocket = d[i];
@@ -62,25 +64,13 @@ function websocketPortesTurnOn() {
                         if ((item_websocket['SensorName'].indexOf("Capteur de mouvement") !== -1 || item_websocket['SensorName'].indexOf("172.24.25.14 - Adam5051 - 0 - 0") !== -1) && item_sensor["id_laboratory"] === item_websocket['SensorName'])
                         {
                             console.log($(item_websocket['DigitalValue']));
-                            if(item_websocket['DigitalValue'] == true)
+                            if(item_websocket['DigitalValue'] === true)
                             {
                                 $(item_sensor["id"]).css("visibility", "visible");
                             }
                             else
                             {
                                 $(item_sensor["id"]).css("visibility", "hidden");
-                            }
-                        }
-                        //Plaque de pression
-                        if (item_websocket['SensorName'].indexOf("Plaque de pression") !== -1 && item_sensor["id_laboratory"] === item_websocket['SensorName'])
-                        {
-                            if(item_websocket['DigitalValue'] == false)
-                            {
-                                $(item_sensor["id"]+" .cls-6").css("fill", "#990507");
-                            }
-                            else
-                            {
-                                $(item_sensor["id"]+" .cls-6").css("fill", "#ccc");
                             }
                         }
                         //Animation des objets
