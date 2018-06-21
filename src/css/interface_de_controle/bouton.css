@@ -173,3 +173,10 @@
     float: left;
     width: 33.33%;
 }
+@media screen
+and (max-device-width : 1300px) {
+    .boutons_websocket {
+        float: left;
+        width: 100%;
+    }
+}
