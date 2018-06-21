@@ -63,8 +63,6 @@ function WS_getName(url){
     return null;
 }
 
-WS_init(websockets);
-
 WS_auto_reconnect = setInterval(function(){
     for(let i=0;i<WS_list.length;i++){
         let ws = WS_list[i];

@@ -38,6 +38,8 @@ $.getJSON("config.json", function (data) {
     }
     html += '</fieldset></div>';
     $('#tableCheckbox').html(html);
+
+    WS_init(websockets);
 });
 
 
