@@ -3,7 +3,7 @@ let socketRFID;
 function changerWebsocketObjets() {
     alertify.prompt("Websocket objets RFID", "Entrer l'adresse du websocket des objets", "",
         function (ev, val) {
-            if(val>20 || val<12 || val == '')
+            if(val>20 || val<12 || val === '')
             {
                 alertify.error("Adresse non valide");
             }

@@ -44,7 +44,7 @@ function websocketPortesTurnOn() {
 
                     let item_sensor = tabSensor[j];
                     if (item_websocket['SensorName'] === "Pression Lit") { // Pression du lit
-                        if (item_websocket['AnalogValue'] > 4) {
+                        if (item_websocket['AnalogValue'] > 4.5) {
                             edredonO.restart();
                         } else {
                             edredonF.restart();
