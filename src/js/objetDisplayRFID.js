@@ -5,7 +5,9 @@ function printObjectRFID(cb, idElement) {
             $("#select_all").prop('checked', true);
         }
     } else if(!cb.checked && tabObjetRFID.indexOf(idElement) !== -1) {
-        tabObjetRFID.unset(idElement);
+
+        tabObjetRFID.splice(tabObjetRFID.indexOf(idElement));
+
         document.getElementById(idElement).style.opacity = '0';
         $("#select_all").prop('checked', false);
     }

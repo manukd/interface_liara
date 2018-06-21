@@ -1,21 +1,14 @@
 // Initialisation à faire au début de programmme.
 
+let websockets = [];
 let tabObjetRFID = [];
-
 let tabSensor = [];
-
-Array.prototype.unset = function (element) {
-    let index = this.indexOf(element);
-    if(index > -1) {
-        this.splice(index, 1);
-    }
-    
-};
 
 $.getJSON("config.json", function (data) {
     let tmp = "";
     let html= '';
     let svg;
+    websockets = data["websockets"];
     tabSensor = data['sensor'];
     for(let i = 0; i<data['RFID'].length; i++) {
 

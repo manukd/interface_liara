@@ -1,4 +1,8 @@
 {
+  "websockets":[
+    {"url":"ws://172.24.24.2:6094/","name":"RFID"},
+    {"url":"ws://172.24.24.3:6091/","name":"Objets"}
+  ],
   "sensor": [
     {
       "id_laboratory": "Capteur magn\u00E9tique porte salle de conf\u00E9rence",
