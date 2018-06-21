@@ -80,3 +80,27 @@ div.text_thermo p
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
 }
+
+
+@media screen
+and (max-device-width : 1800px){
+    div.text_thermo{;
+        width: 45%;
+    }
+}
+@media screen
+and (max-device-width : 1160px){
+    div.text_thermo{;
+        width: 35%;
+    }
+}
+@media screen
+and (max-device-width : 640px){
+    div.text_thermo{;
+        width: 35%;
+    }
+    .boutons_websocket {
+        float: left;
+        width: 100%;
+    }
+}
