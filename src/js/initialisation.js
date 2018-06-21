@@ -23,12 +23,15 @@ $.getJSON("config.json", function (data) {
         svg.textContent = data['RFID'][i]['id_software'];
         $('#plan').append(svg);
 
-
         if (tmp !== data['RFID'][i]['classAffiche'] ) {
             if (tmp !== "") {
                 html += '</fieldset></div>';
             }
-            html += '<div class="col-md-2"><fieldset><legend>'+ data['RFID'][i]['classAffiche'] + '</legend>';
+            if (data['RFID'][i]['classAffiche'] === "Petites Assiettes") {
+                html += '<div class="col-md-3"><fieldset><legend>'+ data['RFID'][i]['classAffiche'] + '</legend>';
+            } else {
+                html += '<div class="col-md-2"><fieldset><legend>'+ data['RFID'][i]['classAffiche'] + '</legend>';
+            }
             tmp = data['RFID'][i]['classAffiche'];
         }
         html += '<div class="checkbox checkbox-success checkbox-inline"><input id="'+data['RFID'][i]['btnSoftwareID']+'" class="checkbox_rfid" type="checkbox" onchange="printObjectRFID(this,'+"'"+data['RFID'][i]['id_laboratory']+"'"+')"><label for="'+data['RFID'][i]['btnSoftwareID']+'">'+data['RFID'][i]['id_software']+'</label></div>';

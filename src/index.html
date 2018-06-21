@@ -5,21 +5,19 @@
 
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" id="bootstrap-css">
     <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/appartement/salonEtFondation.css">
     <link rel="stylesheet" href="css/appartement/cuisine.css">
     <link rel="stylesheet" href="css/appartement/chambre.css">
     <link rel="stylesheet" href="css/appartement/salleDebain.css">
+
     <link rel="stylesheet" href="css/interface.css">
     <link rel="stylesheet" href="css/interface_de_controle/boutonControleObjetRFID.css">
     <link rel="stylesheet" href="css/interface_de_controle/temperature.css">
-    <link rel="stylesheet" href="css/interface_de_controle/bouton.css">
-    <link rel="stylesheet" href="css/interface_de_controle/bouton_run.css">
     <!-- include the style -->
     <link rel="stylesheet" href="../node_modules/alertifyjs/build/css/alertify.min.css" />
     <!-- include a theme -->
-    <link rel="stylesheet" href="../node_modules/alertifyjs/build/css/themes/default.min.css" />
     <link rel="icon" href="../ressource/img-controle/logo_icon.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/animejs/anime.min.js"></script>
@@ -606,51 +604,7 @@
     </svg>
 </div>
 
-<button id="buttonPleineEcran" onclick="twPleinEcran(document.getElementById('container_plan'))">Plein écran</button>
-
-<div id="bouton_run">
-    <a href="#" class="btn" id="run">
-        <span class="btn-content">Run</span>
-        <span class="icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
-    </a>
-    <a href="#" class="btn btn-remove btn-alt-color" id="stop">
-        <span class="btn-content">Stop</span>
-        <span class="icon"><i class="fa fa-times" aria-hidden="true"></i></span>
-    </a>
-</div>
-
-<div class="boutons_web" id="boutons_websockets">
-    <div class="boutons_websocket">
-        <div class="button blue" id="bouton_web_portes">
-            <strong class="title">Websocket des portes</strong>
-            <span class="details">
-              Adresse <i class="icon-time"></i> ws://
-                <strong id="adresse_portes">172.24.24.3:6091</strong>
-            </span>
-            <span class="price"><strong>&rsaquo;</strong></span>
-        </div>
-    </div>
-    <div class="boutons_websocket">
-        <div class="button red" id="bouton_web_objets">
-            <strong class="title">Websocket des objets</strong>
-            <span class="details">
-              Adresse <i class="icon-time"></i> ws://
-                <strong id="adresse_objets">172.24.24.2:6094</strong>
-            </span>
-            <span class="price"><strong>&rsaquo;</strong></span>
-        </div>
-    </div>
-    <div class="boutons_websocket">
-        <div class="button green">
-            <strong class="title">Websocket non attribué</strong>
-            <span class="details">
-              Adresse <i class="icon-time"></i> ws://
-                <strong>127.0.0.1:6000</strong>
-            </span>
-            <span class="price"><strong>&rsaquo;</strong></span>
-        </div>
-    </div>
-</div>
+<button id="buttonPleineEcran" class="btn btn-outline-info btn-lg btn-block" onclick="twPleinEcran(document.getElementById('container_plan'))">Plein écran</button>
 
 <div class="container-fluid">
     <h2>Activation des objets RFID</h2>
@@ -665,10 +619,7 @@
 
 <script src="js/WebsocketFunctions.js"></script>
 <script src="js/WebsocketManager.js"></script>
-
 <script src="js/animationChambre.js"></script>
-<script src="js/websocket.js"></script>
-<script src="js/webSocketRFID.js"></script>
 <script src="js/objetDisplayRFID.js"></script>
 <script src="js/GestionInterface.js"></script>
 
