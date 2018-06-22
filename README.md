@@ -137,8 +137,10 @@ Ici rien de plus facile, vous devrez déclarer votre objets de la manière suiva
 ## Auteur
 
 Kevin Chapron --_Superviseur_
+
 Pierre Wenzel --_Développeur_
-manukd --_Développeur_
+
+@manukd --_Développeur_
 
 ## Licence
 
