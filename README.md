@@ -18,7 +18,7 @@ Afin de faire fonctionner l'interface du LIARA il faut l'installer de la façon 
 L'application démarre dès lors qu'elle est sur votre navigateur et va chercher à se connecter au websockets déclarés dans **`config.json["websockets"]`**.
 Si elle se connecte correctement à un websocket, vous en serez notifié par le log ci-dessous.
 
-`[IMAGE DE LA NOTIFICATION SUCCES]`
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/succes.PNG "Connexion effectué")
 
 Dans le cas contraire un message de log vous le signelera de la même manière.
 
