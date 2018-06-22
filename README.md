@@ -109,7 +109,6 @@ Ainsi le fichier **WebsocketManager.js** gérera automatiquement votre websocket
     },
  ```
   Ici nous déclarons une porte mais comme vous pourrez le remarqué il est possible de changer la couleur avec **colorOrigine** et **colorFinal** ou encore déplacé des objets avec **translateOrigineX** et **translateFinalX**.
-  
   * Élément sans animation animeJS
   
   Il est aussi possible d'ajouter des animations ou des changements d'état sans animeJS, cependant il est nécessaire de minimifier
