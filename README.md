@@ -19,7 +19,7 @@ Il est nessesaire d'avoir comme logiciel installé :
 * npm (Node package Manager) 
 
 Il est imérartif que l'application tourne sur un serveur WEB car il y a presence de requete ajax.
-Une fois que le serveur de votre choix est installé il ne rest qu'a installé l'application.
+Une fois que le serveur de votre choix est installé il ne reste qu'à installer l'application.
 
 Afin de faire fonctionner l'interface du LIARA il faut l'installer de la façon suivante :
 ```bash 
