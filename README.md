@@ -109,7 +109,7 @@ Ainsi le fichier **WebsocketManager.js** gérera automatiquement votre websocket
       "duration" : [La durée de votre animation]
     },
  ```
- > Certaine ligne son optionnelle
+ > Certaines lignes sont optionnelles
  
   Ici nous déclarons une porte mais comme vous pourrez le remarqué il est possible de changer la couleur avec **colorOrigine** et **colorFinal** ou encore déplacé des objets avec **translateOrigineX** et **translateFinalX**.
    ##### Élément sans animation animeJS
