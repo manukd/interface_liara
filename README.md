@@ -13,7 +13,7 @@ Afin de faire fonctionner l'interface du LIARA il faut l'installer de la façon 
 
 ### Démarrer l'application
 
-**/!\ IMPORTANT : Veuillez disposer la pièce LIARA comme présenté sur la maquêtte de l'applicaton avant le démarrage de l'application /!\**
+**IMPORTANT : Veuillez disposer la pièce LIARA comme présenté sur la maquêtte de l'applicaton avant le démarrage de l'application**
 
 L'application démarre dès lors qu'elle est sur votre navigateur et va chercher à se connecter au websockets déclarés dans **`config.json["websockets"]`**.
 Si elle se connecte correctement à un websocket, vous en serez notifié par le log ci-dessous.
