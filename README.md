@@ -136,11 +136,11 @@ Ici rien de plus facile, vous devrez déclarer votre objets de la manière suiva
 
 ## Auteur
 
-@#3kevinchapron --_Superviseur_
+@kevinchapron --_Superviseur_
 @PierreWenzel --_Developpeur_
 @manukd --_Developpeur_
 
-##Licence
+## Licence
 
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
