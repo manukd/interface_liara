@@ -140,7 +140,7 @@ Kevin Chapron --_Superviseur_
 
 Pierre Wenzel --_Développeur_
 
-@manukd --_Développeur_
+manukd --_Développeur_
 
 ## Licence
 
