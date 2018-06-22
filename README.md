@@ -7,7 +7,7 @@ Création d'une interface pour le laboratoire LIARA qui met en avant les difére
 ##Installation
 
 Les differents frameworks utilisé sont :
-* Bootstarp
+* Bootstrap
 * AnimeJS
 * font-awesome
 * jquery
@@ -18,11 +18,17 @@ Il est nessesaire d'avoir comme logiciel installé :
 * git
 * npm (Node package Manager) 
 
+Il est imérartif que l'application tourne sur un serveur WEB car il y a presence de requete ajax.
+Une fois que le serveur de votre choix est installé il ne rest qu'a installé l'application.
+
 Afin de faire fonctionner l'interface du LIARA il faut l'installer de la façon suivante :
- * git clone ... sur un serveur (apache par exemple) car présence de requetes Ajax
- * Puis dans le dossier cloné realiser un npm install afin d'installé les différents framework
- * Enfin lancer index.html
- 
+```bash 
+ > git clone ...
+ > cd interface_liara
+ > npm install
+```
+
+Une fois c'est commende effectuée vous n'avez plus qu'a lancer le fincher index.html present dans le dossier src depuis votre serveur WEB.
 
 ##Utilisation
 
