@@ -1,10 +1,10 @@
 # Interface LIARA
 
-##Description
+## Description
 
 Création d'une interface pour le laboratoire LIARA qui met en avant les diférents capteurs du laboratoire. 
 
-##Installation
+## Installation
 
 Les differents frameworks utilisé sont :
 * Bootstrap
@@ -160,7 +160,7 @@ Interface réalisé lors d'un stage de DUT informatique (diplôme français) au 
 * Site du laboratoire : **[LIARA](http://liara.uqac.ca/)**
 * Site de l'Université du Québec À Chicoutimi: **[UQAC](http://www.uqac.ca/)**
 
-##Auteur
+## Auteur
 
 Kevin Chapron --_Superviseur_
 
