@@ -136,9 +136,7 @@ Ici rien de plus facile, vous devrez déclarer votre objets de la manière suiva
 
 ## Auteur
 
-@kevinchapron --_Superviseur_
-@PierreWenzel --_Developpeur_
-@manukd --_Developpeur_
+@kevinchapron
 
 ## Licence
 
