@@ -52,7 +52,7 @@ Cinq capteurs de mouvement sont présent dans la pièce, ces derniers s'afficher
 
 L'état de toutes les portes du mobilié de la cuisine vous seront affiché sur l'application à l'été ouvert ou fermé.
 
-![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/porte frigo ouverte.PNG "Porte ouverte du réfrigérateur")
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/porte_frigo_ouverte.PNG "Porte ouverte du réfrigérateur")
 
 * Plaque de préssion
 
@@ -60,7 +60,7 @@ Deux plaques de pression sont présente dans l'appartement, une devant le lit da
 devant le lavabo, ces dernières vous indiquerement si une pression est exercé sur ces dernières par une personne ou un objet,
 de la manière suivante.
 
-![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/plque de pression.PNG "Plaque de pression activée")
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/plque_de_pression.PNG "Plaque de pression activée")
 
 * Le lit
 
