@@ -22,7 +22,7 @@ Si elle se connecte correctement à un websocket, vous en serez notifié par le 
 
 Dans le cas contraire un message de log vous le signelera de la même manière.
 
-`[IMAGE DE LA NOTIFICATION ERROR]`
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/closed.PNG "Erreur lors de la connexion")
 
 A noté que les websockets sont totalement indépendants, il est donc tout à fait possible qu'un websocket n'arrive pas à se connecter 
 sans impacter le fonctionnement des autres websockets ni même de l'application.
@@ -38,17 +38,21 @@ Comme nous vous l'avons déjà dit, l'application va essayer de se connecter aux
 
 Chaque ouverture de porte vous sera indiqué par une animation.
 
-`[Gif ? de la porte qui s'ouvre]`
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/porte_ouverte.PNG "Porte ouverte")
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/porte_fermé.PNG "Porte ouverte")
+
 
 * Capteur de mouvement
 
 Cinq capteurs de mouvement sont présent dans la pièce, ces derniers s'afficheront dès lors qu'un mouvement aura été repéré dans la piècee.
 
-`[Image des capteurs non visible puis visible]`
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/capteur_visible.PNG "Capteurs activés")
 
 * Portes mobilié
 
 L'état de toutes les portes du mobilié de la cuisine vous seront affiché sur l'application à l'été ouvert ou fermé.
+
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/porte frigo ouverte.PNG "Porte ouverte du réfrigérateur")
 
 * Plaque de préssion
 
@@ -56,22 +60,24 @@ Deux plaques de pression sont présente dans l'appartement, une devant le lit da
 devant le lavabo, ces dernières vous indiquerement si une pression est exercé sur ces dernières par une personne ou un objet,
 de la manière suivante.
 
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/plque de pression.PNG "Plaque de pression activée")
+
 * Le lit
 
 Un lit est présent dans la chambre, quand une personne se couche sur ce dernier, une animation se déclanche et vous êtes
 donc notifié qu'une personne est couchée.
+
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/lit.PNG "Une personne couché dans le lit")
 
 * Les objets RFID
 
 Il y a beaucoup d'objets RFID c'est pourquoi il est possible de les activer/désactiver individuellement grâce à l'interface
 suivante présente en dessous de la maquête.
 
-`[IMAGE DE L'INTERFACE DES OBJETS RFID]`
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/rfid.PNG "Objet RFID poivre présent dans la pièce")
 
 Ils sont tout simplement représenté par le nom sur l'interface et ils se déplaceront en temps réel sur cette dernière. Malheuresement
 les antênnes RFID ne permettent pour le moment pas de sortir de la cuisine.
-
-`[Peut être une délimitation de la cuisine]`
 
 ###Ajouter des devices
 
