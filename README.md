@@ -15,7 +15,7 @@ Afin de faire fonctionner l'interface du LIARA il faut l'installer de la façon 
 
 /!\ IMPORTANT : Veuillez disposer la pièce LIARA comme présenté sur la maquêtte de l'applicaton avant le démarrage de l'application /!\
 
-L'application démarre dès lors qu'elle est sur votre navigateur et va chercher à se connecter au websockets déclarés dans `config.json["websockets"]`.
+L'application démarre dès lors qu'elle est sur votre navigateur et va chercher à se connecter au websockets déclarés dans **`config.json["websockets"]`**.
 Si elle se connecte correctement à un websocket, vous en serez notifié par le log ci-dessous.
 
 `[IMAGE DE LA NOTIFICATION SUCCES]`
@@ -80,7 +80,7 @@ les antênnes RFID ne permettent pour le moment pas de sortir de la cuisine.
 Comme nous vous l'avons indiqué précédement, les websockets sont dans le fichier **config.json** à la clé `["websockets"]`
 Si vous voulez en ajouter un il vous suffit des déclarer votre web socket dans ce fichier en respectant la forme suivante.
 
-`{"url":"[L'URL de votre websocket]","name":"[Le nom du votre websocket]"},`
+`{"url":"`**`[L'URL de votre websocket]`**`","name":"`**`[Le nom du votre websocket]`**`"},`
 
 En suite il vous faudra déclarer le fonctionnement dans le fichier **WebsocketFunctions.js** en créant une fonction avec comme nom
 le nom du votre websocket.
