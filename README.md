@@ -1,17 +1,17 @@
 # Interface LIARA
 
-##Description
+## Description
 Création d'une interface pour le laboratoire LIARA qui met en avant 
 
-##Installation
+## Installation
 
 Afin de faire fonctionner l'interface du LIARA il faut l'installer de la façon suivante :
  * git clone ...
  
 
-##Utilisation
+## Utilisation
 
-###Démarrer l'application
+### Démarrer l'application
 
 **/!\ IMPORTANT : Veuillez disposer la pièce LIARA comme présenté sur la maquêtte de l'applicaton avant le démarrage de l'application /!\**
 
@@ -32,7 +32,7 @@ sans impacter le fonctionnement des autres websockets ni même de l'application.
 Comme nous vous l'avons déjà dit, l'application va essayer de se connecter aux websockets continuellement avec un intervale de 
 30 secondes modifiable dans le fichier **WebsocketManager.js:76**.
 
-###Animation de l'application
+### Animation de l'application
 
 * Ouverture des portes
 
@@ -79,7 +79,7 @@ suivante présente en dessous de la maquête.
 Ils sont tout simplement représenté par le nom sur l'interface et ils se déplaceront en temps réel sur cette dernière. Malheuresement
 les antênnes RFID ne permettent pour le moment pas de sortir de la cuisine.
 
-###Ajouter des devices
+### Ajouter des devices
 
 * Ajouter un websocket
 
@@ -130,8 +130,8 @@ Ici rien de plus facile, vous devrez déclarer votre objets de la manière suiva
     },
 ```
 
-##Plus d'information
+## Plus d'information
 
-##Auteur
+## Auteur
 
 ##Licence
