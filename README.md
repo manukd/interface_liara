@@ -1,19 +1,19 @@
 # Interface LIARA
 
-##Description
+## Description
 Création d'une interface pour le laboratoire LIARA qui met en avant 
 
-##Installation
+## Installation
 
 Afin de faire fonctionner l'interface du LIARA il faut l'installer de la façon suivante :
  * git clone ...
  
 
-##Utilisation
+## Utilisation
 
-###Démarrer l'application
+### Démarrer l'application
 
-/!\ IMPORTANT : Veuillez disposer la pièce LIARA comme présenté sur la maquêtte de l'applicaton avant le démarrage de l'application /!\
+**/!\ IMPORTANT : Veuillez disposer la pièce LIARA comme présenté sur la maquêtte de l'applicaton avant le démarrage de l'application /!\**
 
 L'application démarre dès lors qu'elle est sur votre navigateur et va chercher à se connecter au websockets déclarés dans **`config.json["websockets"]`**.
 Si elle se connecte correctement à un websocket, vous en serez notifié par le log ci-dessous.
@@ -32,7 +32,7 @@ sans impacter le fonctionnement des autres websockets ni même de l'application.
 Comme nous vous l'avons déjà dit, l'application va essayer de se connecter aux websockets continuellement avec un intervale de 
 30 secondes modifiable dans le fichier **WebsocketManager.js:76**.
 
-###Animation de l'application
+### Animation de l'application
 
 * Ouverture des portes
 
@@ -52,7 +52,7 @@ Cinq capteurs de mouvement sont présent dans la pièce, ces derniers s'afficher
 
 L'état de toutes les portes du mobilié de la cuisine vous seront affiché sur l'application à l'été ouvert ou fermé.
 
-![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/porte frigo ouverte.PNG "Porte ouverte du réfrigérateur")
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/porte_frigo_ouverte.PNG "Porte ouverte du réfrigérateur")
 
 * Plaque de préssion
 
@@ -60,7 +60,7 @@ Deux plaques de pression sont présente dans l'appartement, une devant le lit da
 devant le lavabo, ces dernières vous indiquerement si une pression est exercé sur ces dernières par une personne ou un objet,
 de la manière suivante.
 
-![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/plque de pression.PNG "Plaque de pression activée")
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/plque_de_pression.PNG "Plaque de pression activée")
 
 * Le lit
 
@@ -79,7 +79,7 @@ suivante présente en dessous de la maquête.
 Ils sont tout simplement représenté par le nom sur l'interface et ils se déplaceront en temps réel sur cette dernière. Malheuresement
 les antênnes RFID ne permettent pour le moment pas de sortir de la cuisine.
 
-###Ajouter des devices
+### Ajouter des devices
 
 * Ajouter un websocket
 
@@ -94,7 +94,7 @@ le nom du votre websocket.
 Ainsi le fichier **WebsocketManager.js** gérera automatiquement votre websocket de l'initialisation jusqu'à la déconnexion.
 
 * Ajouter des éléments animés
-  * Élément avec animation animeJS
+  ##### Élément avec animation animeJS
   
   Pour ajouter une élements animés comme une porte par exemple, il vous faudra vous rendre dans le fichier **config.json** à la clé
   `["sensor"]` Vous devrez ensuite déclarer votre objet de la façon suivante.
@@ -109,8 +109,7 @@ Ainsi le fichier **WebsocketManager.js** gérera automatiquement votre websocket
     },
  ```
   Ici nous déclarons une porte mais comme vous pourrez le remarqué il est possible de changer la couleur avec **colorOrigine** et **colorFinal** ou encore déplacé des objets avec **translateOrigineX** et **translateFinalX**.
-  
-  * Élément sans animation animeJS
+   ##### Élément sans animation animeJS
   
   Il est aussi possible d'ajouter des animations ou des changements d'état sans animeJS, cependant il est nécessaire de minimifier
   l'utilisation de cette solution. Il faudra déclarer le fonctionnement de votre animation dans la fonction **Objets(event)** 
@@ -130,8 +129,8 @@ Ici rien de plus facile, vous devrez déclarer votre objets de la manière suiva
     },
 ```
 
-##Plus d'information
+## Plus d'information
 
-##Auteur
+## Auteur
 
 ##Licence
