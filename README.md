@@ -27,16 +27,15 @@ Dans le cas contraire un message de log vous le signelera de la même manière.
 A noté que les websockets sont totalement indépendants, il est donc tout à fait possible qu'un websocket n'arrive pas à se connecter 
 sans impacter le fonctionnement des autres websockets ni même de l'application.
 
-> Dans le cas où les deux websockets n'arrivent pas à se connecter, vérifiez que vous êtes bien connéctés au réseau Liara.
+> Dans le cas où les deux websockets n'arrivent pas à se connecter, vérifiez que vous êtes bien connecté au réseau Liara.
 
-Comme nous vous l'avons déjà dit, l'application va essayer de se connecter aux websockets continuellement avec un intervale de 
-30 secondes modifiable dans le fichier **WebsocketManager.js:76**.
+L'application va essayer de se connecter aux websockets continuellement avec un intervale de 30 secondes modifiable dans le fichier **WebsocketManager.js:76**.
 
 ### Animation de l'application
 
 * Ouverture des portes
 
-Chaque ouverture de porte vous sera indiqué par une animation.
+Chaque ouverture de porte vous sera indiquée par une animation.
 
 ![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/porte_ouverte.PNG "Porte ouverte")
 ![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/porte_fermé.PNG "Porte ouverte")
@@ -50,14 +49,14 @@ Cinq capteurs de mouvement sont présent dans la pièce, ces derniers s'afficher
 
 * Portes mobilié
 
-L'état de toutes les portes du mobilié de la cuisine vous seront affiché sur l'application à l'été ouvert ou fermé.
+L'état de toutes les portes du mobilié de la cuisine vous seront affiché sur l'application à l'état ouvert ou fermé.
 
 ![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/porte_frigo_ouverte.PNG "Porte ouverte du réfrigérateur")
 
 * Plaque de préssion
 
-Deux plaques de pression sont présente dans l'appartement, une devant le lit dans la chambre et l'autre dans la salle de bain 
-devant le lavabo, ces dernières vous indiquerement si une pression est exercé sur ces dernières par une personne ou un objet,
+Deux plaques de pression sont présentent dans l'appartement, une devant le lit dans la chambre et l'autre dans la salle de bain 
+devant le lavabo, ces dernières vous indiqueront si une pression est exercée sur ces dernières par une personne ou un objet,
 de la manière suivante.
 
 ![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/plque_de_pression.PNG "Plaque de pression activée")
@@ -74,10 +73,12 @@ donc notifié qu'une personne est couchée.
 Il y a beaucoup d'objets RFID c'est pourquoi il est possible de les activer/désactiver individuellement grâce à l'interface
 suivante présente en dessous de la maquête.
 
-![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/rfid.PNG "Objet RFID poivre présent dans la pièce")
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/interface_rfid "Interface RFID")
 
 Ils sont tout simplement représenté par le nom sur l'interface et ils se déplaceront en temps réel sur cette dernière. Malheuresement
 les antênnes RFID ne permettent pour le moment pas de sortir de la cuisine.
+
+![alt text](https://github.com/manukd/interface_liara/blob/master/ressource/img_readme/rfid.PNG "Objet RFID poivre présent dans la pièce")
 
 ### Ajouter des devices
 
@@ -100,7 +101,7 @@ Ainsi le fichier **WebsocketManager.js** gérera automatiquement votre websocket
   `["sensor"]` Vous devrez ensuite déclarer votre objet de la façon suivante.
   
 ```  {
-      "id_laboratory": "[Le nom du capteur sur le websocket]",
+      "id_laboratory": "[Le nom du capteur sur le websocket]", 
       "className": "[La classe de votre élement SVG]",
       "rotateOrigine": [La rotation avant l'animation],
       "rotateFinal": [La rotation après l'animation],
@@ -108,6 +109,8 @@ Ainsi le fichier **WebsocketManager.js** gérera automatiquement votre websocket
       "duration" : [La durée de votre animation]
     },
  ```
+ > Certaine ligne son optionnelle
+ 
   Ici nous déclarons une porte mais comme vous pourrez le remarqué il est possible de changer la couleur avec **colorOrigine** et **colorFinal** ou encore déplacé des objets avec **translateOrigineX** et **translateFinalX**.
    ##### Élément sans animation animeJS
   
@@ -133,4 +136,22 @@ Ici rien de plus facile, vous devrez déclarer votre objets de la manière suiva
 
 ## Auteur
 
+@#3kevinchapron --_Superviseur_
+@PierreWenzel --_Developpeur_
+@manukd --_Developpeur_
+
 ##Licence
+
+```
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
